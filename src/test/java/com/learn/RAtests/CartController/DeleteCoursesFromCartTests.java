@@ -66,7 +66,7 @@ public class DeleteCoursesFromCartTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(tokenCC)
                 .when()
-                .delete("cart/167/2")
+                .delete("cart/1667/2")
                 .then()
                 .assertThat().statusCode(404)
                 .extract().response();
@@ -100,7 +100,7 @@ public class DeleteCoursesFromCartTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(tokenCC)
                 .when()
-                .delete("cart/clear/190")
+                .delete("cart/clear/1900")
                 .then()
                 .assertThat().statusCode(404)
                 .extract().response();

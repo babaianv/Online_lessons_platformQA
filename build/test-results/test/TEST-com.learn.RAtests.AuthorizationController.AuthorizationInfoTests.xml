@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.AuthorizationController.AuthorizationInfoTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:26:59" hostname="DESKTOP-M6NQQR2" time="1.342">
+  <properties/>
+  <testcase name="authorizedInfoPositiveTest" classname="com.learn.RAtests.AuthorizationController.AuthorizationInfoTests" time="0.979"/>
+  <testcase name="getAuthInfoWithInvalidPathNegTest" classname="com.learn.RAtests.AuthorizationController.AuthorizationInfoTests" time="0.143"/>
+  <testcase name="getAuthInfoWithoutAuthNegTest" classname="com.learn.RAtests.AuthorizationController.AuthorizationInfoTests" time="0.026"/>
+  <system-out><![CDATA[16:26:59.178 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: authorizedInfoPositiveTest
+{"authenticated":true,"cartId":2,"name":"Test1","principal":"Test1","authorities":[{"id":1,"authority":"ROLE_USER"}],"credentials":null,"details":null}
+16:27:00.160 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: authorizedInfoPositiveTest
+16:27:00.161 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.161 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+{"timestamp":"2024-04-08T14:27:00.465+00:00","status":404,"error":"Not Found","path":"/api/auth/auinfo"}
+16:27:00.491 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAuthInfoWithInvalidPathNegTest
+16:27:00.491 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.491 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.494 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAuthInfoWithoutAuthNegTest
+User is not authenticated
+16:27:00.522 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAuthInfoWithoutAuthNegTest
+16:27:00.522 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.522 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

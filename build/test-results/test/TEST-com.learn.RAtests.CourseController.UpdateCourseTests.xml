@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CourseController.UpdateCourseTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:27:02" hostname="DESKTOP-M6NQQR2" time="3.436">
+  <properties/>
+  <testcase name="changeCourseTitlePositiveTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.091"/>
+  <testcase name="changeCoursePricePositiveTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.033"/>
+  <testcase name="changeCoursePhotoPositiveTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.066"/>
+  <testcase name="changeCourseDescriptionPositiveTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.036"/>
+  <testcase name="updateCourseTitleToEmptyNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.028"/>
+  <testcase name="updateCourseTitleToShortNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.039"/>
+  <testcase name="updateCourseTitleNumbersNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.026"/>
+  <testcase name="updateCourseNegativePriceNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.029"/>
+  <testcase name="updateCourseEmptyPhotoNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.021"/>
+  <testcase name="setShortCourseDescriptionNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.025"/>
+  <testcase name="updateCourseWithoutAuthNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.018"/>
+  <testcase name="updateCourseWithWrongPathNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseTests" time="0.024"/>
+  <system-out><![CDATA[16:27:02.192 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changeCourseTitlePositiveTest
+Request method:	GET
+Request URI:	http://localhost:8069/api/courses/193
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+CourseDto(id=193, title=Testte change Title, price=600, photoPath=https://plus.unsplash.com/premium_photo-1661281350976-59b9514e5364?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, presentationPath=null, description=A DevOps course can teach participants various essential skills and concepts related to software development, IT operations, and collaboration. Students can learn about continuous integration and continuous delivery (CI/CD) pipelines, automation tools like Docker and Kubernetes, cloud computing platforms such as AWS or Azure, infrastructure as code (IaC) principles with tools like Terraform, configuration management tools like Ansible, monitoring and logging techniques, and best practices for collaboration and communication among development and operations teams. Additionally, they may gain insights into agile methodologies, DevOps culture, and the importance of feedback loops for iterative improvement. Overall, a DevOps course equips learners with the knowledge and skills needed to streamline development processes, enhance deployment efficiency, and foster a culture of collaboration and innovation within organizations.)
+16:27:02.402 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: changeCourseTitlePositiveTest
+16:27:02.402 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:02.403 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+CourseDto(id=195, title=Devops from begin to advance, price=300, photoPath=https://plus.unsplash.com/premium_photo-1661281350976-59b9514e5364?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, presentationPath=null, description=A DevOps course can teach participants various essential skills and concepts related to software development, IT operations, and collaboration. Students can learn about continuous integration and continuous delivery (CI/CD) pipelines, automation tools like Docker and Kubernetes, cloud computing platforms such as AWS or Azure, infrastructure as code (IaC) principles with tools like Terraform, configuration management tools like Ansible, monitoring and logging techniques, and best practices for collaboration and communication among development and operations teams. Additionally, they may gain insights into agile methodologies, DevOps culture, and the importance of feedback loops for iterative improvement. Overall, a DevOps course equips learners with the knowledge and skills needed to streamline development processes, enhance deployment efficiency, and foster a culture of collaboration and innovation within organizations.)
+16:27:02.894 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: changeCoursePricePositiveTest
+16:27:02.894 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:02.894 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:02.897 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordBoundaryValue8Test
+CourseDto(id=196, title=Devops from begin to advance, price=600, photoPath=https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, presentationPath=null, description=A DevOps course can teach participants various essential skills and concepts related to software development, IT operations, and collaboration. Students can learn about continuous integration and continuous delivery (CI/CD) pipelines, automation tools like Docker and Kubernetes, cloud computing platforms such as AWS or Azure, infrastructure as code (IaC) principles with tools like Terraform, configuration management tools like Ansible, monitoring and logging techniques, and best practices for collaboration and communication among development and operations teams. Additionally, they may gain insights into agile methodologies, DevOps culture, and the importance of feedback loops for iterative improvement. Overall, a DevOps course equips learners with the knowledge and skills needed to streamline development processes, enhance deployment efficiency, and foster a culture of collaboration and innovation within organizations.)
+16:27:03.977 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: changeCoursePhotoPositiveTest
+16:27:03.977 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:03.977 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:03.979 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePassWithEmptyOldPasswordNegTest
+CourseDto(id=198, title=Devops from begin to advance, price=600, photoPath=https://plus.unsplash.com/premium_photo-1661281350976-59b9514e5364?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D, presentationPath=null, description=In a DevOps course, students can learn about the fundamental principles of DevOps, including collaboration, automation, and continuous improvement. They can gain practical experience with various DevOps tools and technologies such as version control systems like Git, build automation tools like Jenkins, infrastructure automation tools like Chef and Puppet, and monitoring tools like Prometheus and Grafana. Additionally, they may explore topics such as microservices architecture, containerization with Docker, infrastructure provisioning on cloud platforms, and security practices in DevOps. The course may also cover DevOps culture and organizational change management, emphasizing the importance of teamwork, communication, and shared responsibility. )
+16:27:04.314 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: changeCourseDescriptionPositiveTest
+16:27:04.314 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:04.314 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:04.315 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePassWithEmptyNewPasswordNegTest
+Validation failed for argument [1] in public de.aittr.online_lessons.domain.dto.CourseDto de.aittr.online_lessons.controllers.CourseController.updateCourse(int,de.aittr.online_lessons.domain.dto.CourseDto): [Field error in object 'courseDto' on field 'title': rejected value []; codes [Pattern.courseDto.title,Pattern.title,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [courseDto.title,title]; arguments []; default message [title],[Ljakarta.validation.constraints.Pattern$Flag;@25fe4c67,[A-ZА-Яa-zа-я\s]{5,}]; default message [The title field must contain only letters and be a minimum of 5 characters.]] 
+16:27:04.706 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseTitleToEmptyNegTest
+16:27:04.706 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:04.706 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:04.707 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePassWithShortLength7NegTest
+Validation failed for argument [1] in public de.aittr.online_lessons.domain.dto.CourseDto de.aittr.online_lessons.controllers.CourseController.updateCourse(int,de.aittr.online_lessons.domain.dto.CourseDto): [Field error in object 'courseDto' on field 'title': rejected value [Dev]; codes [Pattern.courseDto.title,Pattern.title,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [courseDto.title,title]; arguments []; default message [title],[Ljakarta.validation.constraints.Pattern$Flag;@25fe4c67,[A-ZА-Яa-zа-я\s]{5,}]; default message [The title field must contain only letters and be a minimum of 5 characters.]] 
+16:27:05.062 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseTitleToShortNegTest
+16:27:05.062 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.062 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.063 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordWithOnlyNumbersNegTest
+Validation failed for argument [1] in public de.aittr.online_lessons.domain.dto.CourseDto de.aittr.online_lessons.controllers.CourseController.updateCourse(int,de.aittr.online_lessons.domain.dto.CourseDto): [Field error in object 'courseDto' on field 'title': rejected value [1234567]; codes [Pattern.courseDto.title,Pattern.title,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [courseDto.title,title]; arguments []; default message [title],[Ljakarta.validation.constraints.Pattern$Flag;@25fe4c67,[A-ZА-Яa-zа-я\s]{5,}]; default message [The title field must contain only letters and be a minimum of 5 characters.]] 
+16:27:05.178 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseTitleNumbersNegTest
+16:27:05.178 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.178 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.179 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordWithOnlyLettersNegTest
+Validation failed for argument [1] in public de.aittr.online_lessons.domain.dto.CourseDto de.aittr.online_lessons.controllers.CourseController.updateCourse(int,de.aittr.online_lessons.domain.dto.CourseDto): [Field error in object 'courseDto' on field 'price': rejected value [-300]; codes [Min.courseDto.price,Min.price,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [courseDto.price,price]; arguments []; default message [price],0]; default message [The price must be positive.]] 
+16:27:05.279 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseNegativePriceNegTest
+16:27:05.279 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.279 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.280 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordWithOnlyValidSymbolsNegTest
+Validation failed for argument [1] in public de.aittr.online_lessons.domain.dto.CourseDto de.aittr.online_lessons.controllers.CourseController.updateCourse(int,de.aittr.online_lessons.domain.dto.CourseDto): [Field error in object 'courseDto' on field 'photoPath': rejected value []; codes [NotBlank.courseDto.photoPath,NotBlank.photoPath,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [courseDto.photoPath,photoPath]; arguments []; default message [photoPath]]; default message [must not be blank]] 
+16:27:05.395 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseEmptyPhotoNegTest
+16:27:05.395 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.395 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.396 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordWithOnlyInvalidSymbolsNegTest
+Validation failed for argument [1] in public de.aittr.online_lessons.domain.dto.CourseDto de.aittr.online_lessons.controllers.CourseController.updateCourse(int,de.aittr.online_lessons.domain.dto.CourseDto): [Field error in object 'courseDto' on field 'description': rejected value [In a DevOps course, students can learn about the fundamental principles of DevOps, including collaboration, automation, and continuous improvement.]; codes [Length.courseDto.description,Length.description,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [courseDto.description,description]; arguments []; default message [description],2147483647,300]; default message [The description field must contain minimum 300 characters.]] 
+16:27:05.494 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: setShortCourseDescriptionNegTest
+16:27:05.494 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.494 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.495 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordWithOnlyLowercaseNegTest
+Forbidden 403
+16:27:05.584 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseWithoutAuthNegTest
+16:27:05.585 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.585 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.585 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordWithOnlyUppercaseNegTest
+{"timestamp":"2024-04-08T14:27:05.665+00:00","status":404,"error":"Not Found","path":"/api/cous/2230"}
+16:27:05.684 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseWithWrongPathNegTest
+16:27:05.684 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.684 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

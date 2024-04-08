@@ -3,14 +3,11 @@ package com.learn.RAtests.AuthorizationController;
 import com.learn.RAtests.TestBase;
 import com.learn.dto.TokenResponseDto;
 import com.learn.dto.UserLoginDto;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.lessThan;
