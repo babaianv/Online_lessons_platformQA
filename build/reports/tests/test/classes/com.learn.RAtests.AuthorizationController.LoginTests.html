@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.learn.RAtests.AuthorizationController.LoginTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.learn.RAtests.AuthorizationController.LoginTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.learn.RAtests.AuthorizationController.html">com.learn.RAtests.AuthorizationController</a> &gt; LoginTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.556s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">loginSuccessTest</td>
+<td class="success">0.171s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginWithEmptyEmailTest</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginWithEmptyPasswordTest</td>
+<td class="success">0.074s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginWithWrongEmailTest</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginWithWrongPasswordTest</td>
+<td class="success">0.076s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginWithWrongPathTest</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">loginWithoutContentTypeTest</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">positiveContentTypeTest</td>
+<td class="success">0.076s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">responseTimeIsLessThan500msTest</td>
+<td class="success">0.093s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:27:00.612 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginSuccessTest
+Access Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMjY3MjgyMCwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6Mn0.6o7zsFJg__BscKM3w9WzpFzGa8HHDppkHSEun2A5Xjc
+Refresh Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMzE5MTIyMH0.C5LSpRJCURF7QL_DCFI2yMUi1-MgEe2tRXDa3mtvSv8
+Message: null
+16:27:00.784 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginSuccessTest
+16:27:00.784 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.784 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.785 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyEmailTest
+Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
+16:27:00.802 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyEmailTest
+16:27:00.802 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.802 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.804 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyPasswordTest
+Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
+16:27:00.878 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyPasswordTest
+16:27:00.879 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.879 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.880 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongEmailTest
+Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
+16:27:00.897 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongEmailTest
+16:27:00.897 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.898 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.899 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPasswordTest
+Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
+16:27:00.977 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPasswordTest
+16:27:00.978 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.978 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.979 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPathTest
+{&quot;timestamp&quot;:&quot;2024-04-08T14:27:00.989+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/api/auth/log&quot;}
+16:27:00.992 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPathTest
+16:27:00.992 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.993 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.994 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithoutContentTypeTest
+Response body: {&quot;timestamp&quot;:&quot;2024-04-08T14:27:01.014+00:00&quot;,&quot;status&quot;:415,&quot;error&quot;:&quot;Unsupported Media Type&quot;,&quot;path&quot;:&quot;/api/auth/login&quot;}
+16:27:01.018 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithoutContentTypeTest
+16:27:01.018 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:01.018 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+Content-Type: application/json
+16:27:01.173 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: positiveContentTypeTest
+16:27:01.173 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:01.173 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+Response time: 72 milliseconds
+16:27:02.077 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: responseTimeIsLessThan500msTest
+16:27:02.078 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:02.078 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.0</a> at Apr 8, 2024, 4:27:06 PM</p>
+</div>
+</div>
+</body>
+</html>

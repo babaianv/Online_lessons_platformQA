@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CartController.CartTests" tests="13" skipped="0" failures="2" errors="0" timestamp="2024-04-08T14:27:02" hostname="DESKTOP-M6NQQR2" time="3.595">
+  <properties/>
+  <testcase name="addCourseToCartPositiveTest" classname="com.learn.RAtests.CartController.CartTests" time="0.031"/>
+  <testcase name="addAlreadyExistsCourseToCartNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.035">
+    <failure message="java.lang.AssertionError: 1 expectation failed.&#10;Expected status code &lt;409&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.learn.RAtests.CartController.CartTests.addAlreadyExistsCourseToCartNegTest(CartTests.java:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:145)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:92)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="addNotExistsCourseToCartNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.032"/>
+  <testcase name="addCourseToCarWithoutAuthNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.008"/>
+  <testcase name="addCourseToCarWithInvalidPathNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.01"/>
+  <testcase name="getCoursesInCartPositiveTest" classname="com.learn.RAtests.CartController.CartTests" time="0.025"/>
+  <testcase name="getNotExistsCourseInCartNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.014"/>
+  <testcase name="getCoursesInCartWithoutAUTHTest" classname="com.learn.RAtests.CartController.CartTests" time="0.008"/>
+  <testcase name="getCoursesInCartWithWrongPathTest" classname="com.learn.RAtests.CartController.CartTests" time="0.013"/>
+  <testcase name="purchaseCourseInNonExistentCartNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.012"/>
+  <testcase name="purchaseCourseWithoutAuthNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.007"/>
+  <testcase name="payCourseFromCartPositiveTest" classname="com.learn.RAtests.CartController.CartTests" time="0.01"/>
+  <testcase name="courseAlreadyPurchasedNegTest" classname="com.learn.RAtests.CartController.CartTests" time="0.054">
+    <failure message="java.lang.AssertionError: 1 expectation failed.&#10;Expected status code &lt;409&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;409&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:60)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor115.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.learn.RAtests.CartController.CartTests.courseAlreadyPurchasedNegTest(CartTests.java:235)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:145)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:92)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[16:27:02.159 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: addCourseToCartPositiveTest
+16:27:02.190 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addCourseToCartPositiveTest
+16:27:02.191 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:02.191 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:02.807 [Test worker] ERROR com.learn.RAtests.TestBase -- FAILED: addAlreadyExistsCourseToCartNegTest
+16:27:02.807 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:02.807 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:02.809 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changeCoursePricePositiveTest
+Course not found with id 30
+16:27:03.852 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addNotExistsCourseToCartNegTest
+16:27:03.852 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:03.852 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:03.854 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changeCoursePhotoPositiveTest
+Forbidden 403
+16:27:04.229 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addCourseToCarWithoutAuthNegTest
+16:27:04.229 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:04.229 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:04.230 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changeCourseDescriptionPositiveTest
+{"timestamp":"2024-04-08T14:27:04.529+00:00","status":404,"error":"Not Found","path":"/api/cart/adding/122/6"}
+16:27:04.532 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addCourseToCarWithInvalidPathNegTest
+16:27:04.532 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:04.532 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:04.533 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePassWithEmptyConfirmPasswordNegTest
+16:27:04.848 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesInCartPositiveTest
+16:27:04.848 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:04.848 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:04.849 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateCourseTitleToShortNegTest
+Cart with ID 180 not found
+16:27:05.110 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getNotExistsCourseInCartNegTest
+16:27:05.110 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.110 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.111 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateCourseTitleNumbersNegTest
+Forbidden 403
+16:27:05.201 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesInCartWithoutAUTHTest
+16:27:05.201 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.201 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.202 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUserCoursesWithInvalidPathTest
+{"timestamp":"2024-04-08T14:27:05.304+00:00","status":404,"error":"Not Found","path":"/api/carts/122"}
+16:27:05.306 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesInCartWithWrongPathTest
+16:27:05.306 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.306 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.307 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCoursesPurchasedByUserPositiveTest
+Cart with ID 180 not found
+16:27:05.433 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: purchaseCourseInNonExistentCartNegTest
+16:27:05.433 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.433 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.434 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: setShortCourseDescriptionNegTest
+Forbidden 403
+16:27:05.531 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: purchaseCourseWithoutAuthNegTest
+16:27:05.531 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.531 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.532 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateCourseWithoutAuthNegTest
+16:27:05.623 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: payCourseFromCartPositiveTest
+16:27:05.623 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.623 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:05.625 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateCourseWithWrongPathNegTest
+16:27:05.755 [Test worker] ERROR com.learn.RAtests.TestBase -- FAILED: courseAlreadyPurchasedNegTest
+16:27:05.755 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:05.755 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

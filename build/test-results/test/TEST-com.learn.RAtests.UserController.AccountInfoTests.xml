@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.UserController.AccountInfoTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:27:00" hostname="DESKTOP-M6NQQR2" time="0.443">
+  <properties/>
+  <testcase name="getAllContactsSuccessTest" classname="com.learn.RAtests.UserController.AccountInfoTests" time="0.178"/>
+  <testcase name="getUserInfoForNotExistUserNegTest" classname="com.learn.RAtests.UserController.AccountInfoTests" time="0.025"/>
+  <testcase name="getUserInfoWithoutAUTHTest" classname="com.learn.RAtests.UserController.AccountInfoTests" time="0.021"/>
+  <testcase name="getUsersInfoWithWrongPath" classname="com.learn.RAtests.UserController.AccountInfoTests" time="0.025"/>
+  <system-out><![CDATA[16:27:00.164 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAllContactsSuccessTest
+UserDto(id=3, nickname=Test1, email=test1@gmail.com, password=password is hidden, roles=[Role(id=1, authority=ROLE_USER)])
+16:27:00.344 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAllContactsSuccessTest
+16:27:00.344 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.345 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.346 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAuthInfoWithInvalidPathNegTest
+User with this username not found
+16:27:00.552 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUserInfoForNotExistUserNegTest
+16:27:00.552 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.552 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.555 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUserInfoWithoutAUTHTest
+Forbidden 403
+16:27:00.578 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUserInfoWithoutAUTHTest
+16:27:00.578 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.578 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:27:00.582 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUsersInfoWithWrongPath
+{"timestamp":"2024-04-08T14:27:00.606+00:00","status":404,"error":"Not Found","path":"/api/users/info/Test1"}
+16:27:00.609 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUsersInfoWithWrongPath
+16:27:00.609 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:27:00.609 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
