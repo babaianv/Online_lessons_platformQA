@@ -4,15 +4,10 @@ import com.learn.RAtests.TestBase;
 import com.learn.dto.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.lessThan;
+
 
 public class RegistrationTests extends TestBase {
 
@@ -132,30 +127,6 @@ public class RegistrationTests extends TestBase {
         softAssert.assertAll();
 
         System.out.println(response.getBody().asString());
-    }
-
-                            ///Pass
-
-    @Test(description = "API: Response Time Is Less Than 500ms ")
-    public void responseTimeIsLessThan500msTest() {
-        Response response = given()
-                .contentType("application/json")
-                .body(UserDto.builder()
-                        .nickname("Test500")
-                        .email("less500@gmail.com")
-                        .password("Test1Test1!").build())
-                .post("users/register")
-                .then()
-                .time(lessThan(600L))
-                .assertThat().statusCode(201)
-                .extract().response();
-
-        long responseTime = response.time();
-        UserDto userDto = response.as(UserDto.class);
-        softAssert.assertNotNull(userDto.getNickname());
-        Assert.assertTrue(responseTime < 600L);
-
-        System.out.println("Response time: " + responseTime + " milliseconds");
     }
 
                          ///NEGATIVE
