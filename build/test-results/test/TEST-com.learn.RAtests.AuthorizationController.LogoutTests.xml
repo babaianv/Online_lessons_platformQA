@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.RAtests.AuthorizationController.LogoutTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:27:01" hostname="DESKTOP-M6NQQR2" time="0.073">
+<testsuite name="com.learn.RAtests.AuthorizationController.LogoutTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-08T16:57:10" hostname="DESKTOP-M6NQQR2" time="0.084">
   <properties/>
-  <testcase name="logoutPositiveTest" classname="com.learn.RAtests.AuthorizationController.LogoutTests" time="0.023"/>
-  <testcase name="logoutWithInvalidPathNegTest" classname="com.learn.RAtests.AuthorizationController.LogoutTests" time="0.032"/>
-  <testcase name="logoutWithoutAuthNegTest" classname="com.learn.RAtests.AuthorizationController.LogoutTests" time="0.01"/>
-  <system-out><![CDATA[16:27:01.020 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: logoutPositiveTest
-16:27:01.044 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: logoutPositiveTest
-16:27:01.045 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:01.045 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:01.047 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: logoutWithInvalidPathNegTest
-{"timestamp":"2024-04-08T14:27:01.075+00:00","status":404,"error":"Not Found","path":"/api/auth/logoutuser"}
-16:27:01.081 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: logoutWithInvalidPathNegTest
-16:27:01.081 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:01.081 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:01.083 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: logoutWithoutAuthNegTest
+  <testcase name="logoutPositiveTest" classname="com.learn.RAtests.AuthorizationController.LogoutTests" time="0.022"/>
+  <testcase name="logoutWithInvalidPathNegTest" classname="com.learn.RAtests.AuthorizationController.LogoutTests" time="0.034"/>
+  <testcase name="logoutWithoutAuthNegTest" classname="com.learn.RAtests.AuthorizationController.LogoutTests" time="0.02"/>
+  <system-out><![CDATA[18:57:10.527 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: logoutPositiveTest
+18:57:10.551 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: logoutPositiveTest
+18:57:10.552 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.552 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.554 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: logoutWithInvalidPathNegTest
+{"timestamp":"2024-04-08T16:57:10.583+00:00","status":404,"error":"Not Found","path":"/api/auth/logoutuser"}
+18:57:10.590 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: logoutWithInvalidPathNegTest
+18:57:10.590 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.590 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.592 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: logoutWithoutAuthNegTest
 Forbidden 403
-16:27:01.094 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: logoutWithoutAuthNegTest
-16:27:01.094 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:01.094 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.613 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: logoutWithoutAuthNegTest
+18:57:10.613 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.613 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

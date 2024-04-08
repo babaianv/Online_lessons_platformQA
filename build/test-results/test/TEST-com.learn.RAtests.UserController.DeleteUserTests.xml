@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.RAtests.UserController.DeleteUserTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:27:02" hostname="DESKTOP-M6NQQR2" time="1.724">
+<testsuite name="com.learn.RAtests.UserController.DeleteUserTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-08T16:57:12" hostname="DESKTOP-M6NQQR2" time="1.919">
   <properties/>
-  <testcase name="deleteUserWithoutAUTHNegTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.013"/>
-  <testcase name="deleteUserSuccessTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.643"/>
-  <testcase name="deleteNotExistsUserNegTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.015"/>
-  <testcase name="deleteUserWithInvalidPathNegTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.014"/>
-  <system-out><![CDATA[16:27:02.651 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteUserWithoutAUTHNegTest
+  <testcase name="deleteUserWithoutAUTHNegTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.01"/>
+  <testcase name="deleteUserSuccessTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.845"/>
+  <testcase name="deleteNotExistsUserNegTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.012"/>
+  <testcase name="deleteUserWithInvalidPathNegTest" classname="com.learn.RAtests.UserController.DeleteUserTests" time="0.012"/>
+  <system-out><![CDATA[18:57:12.529 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteUserWithoutAUTHNegTest
 Forbidden 403
-16:27:02.665 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserWithoutAUTHNegTest
-16:27:02.665 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:02.665 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:12.540 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserWithoutAUTHNegTest
+18:57:12.540 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:12.540 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 Response body: 
-16:27:03.732 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserSuccessTest
-16:27:03.732 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:03.732 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:03.733 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getNotExistCourseByIdNegTest
+18:57:13.883 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserSuccessTest
+18:57:13.884 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:13.884 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:13.887 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getNotExistCourseByIdNegTest
 User with this username not found
-16:27:04.154 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistsUserNegTest
-16:27:04.154 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:04.154 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:04.155 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCourseByIdWithInvalidPathNegTest
-{"timestamp":"2024-04-08T14:27:04.373+00:00","status":404,"error":"Not Found","path":"/api/users/del/TestdelA"}
-16:27:04.375 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserWithInvalidPathNegTest
-16:27:04.375 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:04.375 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:14.231 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistsUserNegTest
+18:57:14.231 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:14.231 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:14.233 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCourseByIdWithInvalidPathNegTest
+{"timestamp":"2024-04-08T16:57:14.448+00:00","status":404,"error":"Not Found","path":"/api/users/del/TestdelA"}
+18:57:14.450 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserWithInvalidPathNegTest
+18:57:14.450 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:14.450 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

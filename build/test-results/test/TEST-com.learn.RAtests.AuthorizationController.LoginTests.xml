@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.RAtests.AuthorizationController.LoginTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:27:00" hostname="DESKTOP-M6NQQR2" time="1.464">
+<testsuite name="com.learn.RAtests.AuthorizationController.LoginTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-04-08T16:57:09" hostname="DESKTOP-M6NQQR2" time="2.039">
   <properties/>
-  <testcase name="loginSuccessTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.171"/>
-  <testcase name="loginWithEmptyEmailTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.016"/>
-  <testcase name="loginWithEmptyPasswordTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.074"/>
-  <testcase name="loginWithWrongEmailTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.016"/>
-  <testcase name="loginWithWrongPasswordTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.076"/>
-  <testcase name="loginWithWrongPathTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.012"/>
-  <testcase name="loginWithoutContentTypeTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.022"/>
-  <testcase name="positiveContentTypeTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.076"/>
-  <testcase name="responseTimeIsLessThan500msTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.093"/>
-  <system-out><![CDATA[16:27:00.612 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginSuccessTest
-Access Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMjY3MjgyMCwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6Mn0.6o7zsFJg__BscKM3w9WzpFzGa8HHDppkHSEun2A5Xjc
-Refresh Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMzE5MTIyMH0.C5LSpRJCURF7QL_DCFI2yMUi1-MgEe2tRXDa3mtvSv8
+  <testcase name="loginSuccessTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.17"/>
+  <testcase name="loginWithEmptyEmailTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.023"/>
+  <testcase name="loginWithEmptyPasswordTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.126"/>
+  <testcase name="loginWithWrongEmailTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.022"/>
+  <testcase name="loginWithWrongPasswordTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.126"/>
+  <testcase name="loginWithWrongPathTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.024"/>
+  <testcase name="loginWithoutContentTypeTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.026"/>
+  <testcase name="positiveContentTypeTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.112"/>
+  <testcase name="responseTimeIsLessThan500msTest" classname="com.learn.RAtests.AuthorizationController.LoginTests" time="0.168"/>
+  <system-out><![CDATA[18:57:09.973 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginSuccessTest
+Access Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMjY4MTgzMCwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6Mn0.qQoD7GUQpIq69ax5xMycUdsGKT1j6e1UqSUZ1Vgs2oc
+Refresh Token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMzIwMDIzMH0.SVLFTn6x5FOenGar8BKyNtsHdpctSbufNRka0kA8hQA
 Message: null
-16:27:00.784 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginSuccessTest
-16:27:00.784 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:00.784 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:00.785 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyEmailTest
+18:57:10.145 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginSuccessTest
+18:57:10.145 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.146 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.148 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyEmailTest
 Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
-16:27:00.802 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyEmailTest
-16:27:00.802 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:00.802 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:00.804 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyPasswordTest
+18:57:10.173 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyEmailTest
+18:57:10.174 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.174 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.177 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyPasswordTest
 Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
-16:27:00.878 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyPasswordTest
-16:27:00.879 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:00.879 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:00.880 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongEmailTest
+18:57:10.307 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyPasswordTest
+18:57:10.307 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.307 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.310 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongEmailTest
 Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
-16:27:00.897 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongEmailTest
-16:27:00.897 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:00.898 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:00.899 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPasswordTest
+18:57:10.334 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongEmailTest
+18:57:10.334 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.334 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.337 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPasswordTest
 Response body: TokenResponseDto(accessToken=null, refreshToken=null, message=Email or password is incorrect)
-16:27:00.977 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPasswordTest
-16:27:00.978 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:00.978 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:00.979 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPathTest
-{"timestamp":"2024-04-08T14:27:00.989+00:00","status":404,"error":"Not Found","path":"/api/auth/log"}
-16:27:00.992 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPathTest
-16:27:00.992 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:00.993 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:00.994 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithoutContentTypeTest
-Response body: {"timestamp":"2024-04-08T14:27:01.014+00:00","status":415,"error":"Unsupported Media Type","path":"/api/auth/login"}
-16:27:01.018 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithoutContentTypeTest
-16:27:01.018 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:01.018 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.464 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPasswordTest
+18:57:10.465 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.465 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.467 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPathTest
+{"timestamp":"2024-04-08T16:57:10.483+00:00","status":404,"error":"Not Found","path":"/api/auth/log"}
+18:57:10.494 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPathTest
+18:57:10.494 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.494 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.496 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithoutContentTypeTest
+Response body: {"timestamp":"2024-04-08T16:57:10.521+00:00","status":415,"error":"Unsupported Media Type","path":"/api/auth/login"}
+18:57:10.524 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithoutContentTypeTest
+18:57:10.525 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.525 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 Content-Type: application/json
-16:27:01.173 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: positiveContentTypeTest
-16:27:01.173 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:01.173 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-Response time: 72 milliseconds
-16:27:02.077 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: responseTimeIsLessThan500msTest
-16:27:02.078 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:02.078 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:10.729 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: positiveContentTypeTest
+18:57:10.729 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:10.729 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+Response time: 135 milliseconds
+18:57:12.014 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: responseTimeIsLessThan500msTest
+18:57:12.014 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:12.014 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
