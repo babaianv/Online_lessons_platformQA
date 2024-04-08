@@ -72,7 +72,7 @@ public class DeleteCoursesFromCartTests extends TestBase {
                 .extract().response();
 
         CartNotFoundError cartNotFoundError = response.as(CartNotFoundError.class);
-        softAssert.assertEquals(cartNotFoundError.getMessage(),"Cart with ID 167 not found");
+        softAssert.assertEquals(cartNotFoundError.getMessage(),"Cart with ID 1667 not found");
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertEquals(response.getHeader("x-frame-options"), "DENY");
         softAssert.assertAll();
@@ -106,7 +106,7 @@ public class DeleteCoursesFromCartTests extends TestBase {
                 .extract().response();
 
         CartNotFoundError cartNotFoundError = response.as(CartNotFoundError.class);
-        softAssert.assertEquals(cartNotFoundError.getMessage(),"Cart with ID 190 not found");
+        softAssert.assertEquals(cartNotFoundError.getMessage(),"Cart with ID 1900 not found");
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertEquals(response.getHeader("x-frame-options"), "DENY");
         softAssert.assertAll();
