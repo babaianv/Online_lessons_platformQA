@@ -18,8 +18,32 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.16'
     testCompileOnly 'org.projectlombok:lombok:1.18.16'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    implementation 'org.assertj:assertj-core:3.25.3'
+    implementation 'ch.qos.logback:logback-classic:1.5.3'
+    implementation 'org.awaitility:awaitility:4.1.0'
 }
 
 test {
     useTestNG()
 }
+
+task runApiTestSuite(type: Test) {
+    useTestNG() {
+        def suite1 = project.hasProperty("suite1")
+        def suite2 = project.hasProperty("suite2")
+        def suite3 = project.hasProperty("suite3")
+        def suite4 = project.hasProperty("suite4")
+
+        if (suite1) {
+            suites 'src/test/resources/auth.xml'
+        }else if (suite2) {
+            suites 'src/test/resources/cart.xml'
+        }else if (suite3){
+            suites 'src/test/resources/courses.xml'
+        }else if(suite4){
+            suites 'src/test/resources/user.xml'
+        }
+    }
+}
+
+

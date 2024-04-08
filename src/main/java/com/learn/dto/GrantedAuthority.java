@@ -1,15 +1,15 @@
 package com.learn.dto;
 
+import groovy.transform.ToString;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Setter
 @Getter
 @ToString
 @Builder
-public class UserAlreadyExistsErrorDto {
-    private String message;
+public class GrantedAuthority {
+    private String authority;
 }
 

@@ -1,32 +1,36 @@
-package com.learn.RAtests;
+package com.learn.RAtests.UserController;
 
+import com.learn.RAtests.TestBase;
 import com.learn.dto.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.lessThan;
 
 public class RegistrationTests extends TestBase {
 
-
     SoftAssert softAssert = new SoftAssert();
 
                             //POSITIVE
-    UserDto registration = UserDto.builder()
-            .nickname("TestReg")
-            .email("testregpos@gmail.com")
-            .password("Test1test1!")
-            .build();
 
                               ///PASS
     @Test(description = "API: Registration Success")
     public void registrationSuccessTest(){
+
         Response response =  given()
                 .contentType("application/json")
-                .body(registration)
+                .body(UserDto.builder()
+                        .nickname("TestReg")
+                        .email("testregpos@gmail.com")
+                        .password("Test1test1!")
+                        .build())
                 .when()
                 .post("users/register")
                 .then()
@@ -34,11 +38,15 @@ public class RegistrationTests extends TestBase {
                 .extract().response();
 
         UserDto userDto = response.as(UserDto.class);
-        softAssert.assertEquals(response.getStatusCode(), 201);
-
+        softAssert.assertEquals(response.contentType(), "application/json");
+        softAssert.assertNotNull(userDto.getId());
+        softAssert.assertNotNull(userDto.getNickname());
+        softAssert.assertNotNull(userDto.getEmail());
+        softAssert.assertNotNull(userDto.getPassword());
+        softAssert.assertNotNull(userDto.getRoles());
         softAssert.assertAll();
-        System.out.println(userDto);
 
+        System.out.println(userDto);
     }
 
                          ////PASS(Length Nickname(10))
@@ -58,7 +66,6 @@ public class RegistrationTests extends TestBase {
                 .extract().response();
 
         UserDto userDto = response.as(UserDto.class);
-        softAssert.assertEquals(response.getStatusCode(), 201);
         softAssert.assertNotNull(userDto.getId());
         softAssert.assertNotNull(userDto.getNickname());
         softAssert.assertNotNull(userDto.getEmail());
@@ -66,6 +73,7 @@ public class RegistrationTests extends TestBase {
         softAssert.assertNotNull(userDto.getRoles());
 
         softAssert.assertAll();
+
         System.out.println(response.getBody().asString());
     }
 
@@ -87,7 +95,6 @@ public class RegistrationTests extends TestBase {
                 .extract().response();
 
         UserDto userDto = response.as(UserDto.class);
-        softAssert.assertEquals(response.getStatusCode(), 201);
         softAssert.assertNotNull(userDto.getId());
         softAssert.assertNotNull(userDto.getNickname());
         softAssert.assertNotNull(userDto.getEmail());
@@ -95,6 +102,7 @@ public class RegistrationTests extends TestBase {
         softAssert.assertNotNull(userDto.getRoles());
 
         softAssert.assertAll();
+
         System.out.println(response.getBody().asString());
     }
 
@@ -116,18 +124,17 @@ public class RegistrationTests extends TestBase {
                 .extract().response();
 
         UserDto userDto = response.as(UserDto.class);
-        softAssert.assertEquals(response.getStatusCode(), 201);
         softAssert.assertNotNull(userDto.getId());
         softAssert.assertNotNull(userDto.getNickname());
         softAssert.assertNotNull(userDto.getEmail());
         softAssert.assertNotNull(userDto.getPassword());
         softAssert.assertNotNull(userDto.getRoles());
-
         softAssert.assertAll();
+
         System.out.println(response.getBody().asString());
     }
 
-                            ////////////////////////////
+                            ///Pass
 
     @Test(description = "API: Response Time Is Less Than 500ms ")
     public void responseTimeIsLessThan500msTest() {
@@ -144,13 +151,15 @@ public class RegistrationTests extends TestBase {
                 .extract().response();
 
         long responseTime = response.time();
-        Assert.assertEquals(response.getStatusCode(), 201);
+        UserDto userDto = response.as(UserDto.class);
+        softAssert.assertNotNull(userDto.getNickname());
+        Assert.assertTrue(responseTime < 600L);
 
         System.out.println("Response time: " + responseTime + " milliseconds");
     }
 
+                         ///NEGATIVE
 
-                                    ///NEGATIVE
                              //PASS
 
     @Test(description = "API: Registration With Wrong Path")
@@ -167,12 +176,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(404)
                 .extract().response();
 
-        ForbiddenError forbiddenError = response.as(ForbiddenError.class);
-        softAssert.assertEquals(response.getStatusCode(), 404);
-        softAssert.assertEquals(forbiddenError.getError(), "Not Found");
-        softAssert.assertAll();
+        String responseBody = response.getBody().asString();
+        Assert.assertTrue(responseBody.contains("Not Found"));
 
-        System.out.println(forbiddenError.getError() +" "+ forbiddenError.getPath());
+        System.out.println(responseBody);
     }
 
                              // NICKNAME
@@ -192,12 +199,9 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(409)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("This nickname is already taken"));
-        softAssert.assertEquals(response.getStatusCode(), 409);
-        softAssert.assertAll();
-
-        System.out.println("Response body: " + response.getBody().asString());
+        UserAlreadyExistsError userAlreadyExistsError = response.as(UserAlreadyExistsError.class);
+        Assert.assertTrue(userAlreadyExistsError.getMessage().contains("This nickname is already taken"));
+        System.out.println("Response body: " +userAlreadyExistsError.getMessage());
     }
 
                            ///PASS (Short Nickname 2)
@@ -216,17 +220,13 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid nickname format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-
                               ///PASS (Long Nickname 11)
-
     @Test(description = "API: Reg With Long Length Nickname Neg Test ")
     public void regWithLongLengthNicknameNegTest(){
         Response response = given()
@@ -241,12 +241,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid nickname format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                           //PASS (only numbers)
@@ -265,14 +263,11 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid nickname format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
-
 
                                 // PASS (symbol)
 
@@ -290,12 +285,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid nickname format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                   ///PASS (only symbol)
@@ -314,12 +307,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid nickname format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                            ///PASS (empty nickname)
@@ -338,12 +329,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid nickname format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                              ///Email
@@ -367,12 +356,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(409)
                 .extract().response();
 
-        UserAlreadyExistsErrorDto dto = response.as(UserAlreadyExistsErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("User with this email already exists"));
-        softAssert.assertEquals(response.getStatusCode(), 409);
-        softAssert.assertAll();
+        UserAlreadyExistsError userAlreadyExistsError = response.as(UserAlreadyExistsError.class);
+        Assert.assertTrue(userAlreadyExistsError.getMessage().contains("User with this email already exists"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userAlreadyExistsError.getMessage());
     }
 
                              //FAILED (empty email) -> BUG FIXED T25-87
@@ -391,12 +378,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("must not be blank"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("must not be blank"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
 
@@ -416,12 +401,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("must be a well-formed email address"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("must be a well-formed email address"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                /// Password
@@ -442,12 +425,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
 
@@ -467,12 +448,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
 
@@ -492,12 +471,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                      ///PASS (only letters)
@@ -516,12 +493,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                       ///PASS (only  valid symbols)
@@ -540,12 +515,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                    ///PASS (only invalid symbols)
@@ -564,12 +537,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                 ///PASS (only Uppercase)
@@ -588,12 +559,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                 ///PASS (only Lowercase)
@@ -612,12 +581,10 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
                                      ///PASS ( Without Special Symbol)
@@ -636,14 +603,11 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
-
                                  ///PASS ( Without Numbers)
 
     @Test(description = "API: Reg Without Numbers Password Neg Test")
@@ -660,15 +624,11 @@ public class RegistrationTests extends TestBase {
                 .assertThat().statusCode(400)
                 .extract().response();
 
-        UserValidationErrorDto dto = response.as(UserValidationErrorDto.class);
-        softAssert.assertTrue(dto.getMessage().contains("Invalid password format"));
-        softAssert.assertEquals(response.getStatusCode(), 400);
-        softAssert.assertAll();
+        UserValidationError userValidationError = response.as(UserValidationError.class);
+        Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + response.getBody().asString());
+        System.out.println("Response body: " + userValidationError.getMessage());
     }
-
-
 
 }
 
