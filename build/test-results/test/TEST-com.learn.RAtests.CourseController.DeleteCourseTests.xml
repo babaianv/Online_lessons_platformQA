@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.RAtests.CourseController.DeleteCourseTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-08T14:27:02" hostname="DESKTOP-M6NQQR2" time="1.499">
+<testsuite name="com.learn.RAtests.CourseController.DeleteCourseTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-08T16:57:12" hostname="DESKTOP-M6NQQR2" time="1.707">
   <properties/>
-  <testcase name="deleteCourseWithOutAuthTest" classname="com.learn.RAtests.CourseController.DeleteCourseTests" time="0.01"/>
-  <testcase name="deleteNotExistCourseNgTest" classname="com.learn.RAtests.CourseController.DeleteCourseTests" time="0.02"/>
-  <testcase name="deleteCourseByIdPositiveTest" classname="com.learn.RAtests.CourseController.DeleteCourseTests" time="0.045"/>
-  <system-out><![CDATA[16:27:02.636 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteCourseWithOutAuthTest
+  <testcase name="deleteCourseWithOutAuthTest" classname="com.learn.RAtests.CourseController.DeleteCourseTests" time="0.018"/>
+  <testcase name="deleteNotExistCourseNgTest" classname="com.learn.RAtests.CourseController.DeleteCourseTests" time="0.021"/>
+  <testcase name="deleteCourseByIdPositiveTest" classname="com.learn.RAtests.CourseController.DeleteCourseTests" time="0.039"/>
+  <system-out><![CDATA[18:57:12.508 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteCourseWithOutAuthTest
 Forbidden 403
-16:27:02.648 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteCourseWithOutAuthTest
-16:27:02.649 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:02.649 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:12.527 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteCourseWithOutAuthTest
+18:57:12.528 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:12.528 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 Course not found with id 1200
-16:27:03.086 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistCourseNgTest
-16:27:03.086 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:03.086 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
-16:27:03.087 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteUserSuccessTest
+18:57:13.035 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistCourseNgTest
+18:57:13.035 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:13.035 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:13.037 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteUserSuccessTest
 Request method:	DELETE
-Request URI:	http://localhost:8069/api/courses/197
+Request URI:	http://localhost:8069/api/courses/295
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
@@ -27,9 +27,9 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 null
-16:27:04.136 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteCourseByIdPositiveTest
-16:27:04.137 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
-16:27:04.137 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+18:57:14.217 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteCourseByIdPositiveTest
+18:57:14.217 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+18:57:14.217 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

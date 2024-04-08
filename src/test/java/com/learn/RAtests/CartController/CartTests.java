@@ -42,7 +42,7 @@ public class CartTests extends TestBase {
 
                                    //Pass
 
-    @Test(description = "API: Add already exists course to cart neg test", priority = 2)
+    @Test(description = "API: Add already exists course to cart neg test", priority = 3)
     public void addAlreadyExistsCourseToCartNegTest(){
         Response response = given()
                 .contentType("application/json")
@@ -64,7 +64,7 @@ public class CartTests extends TestBase {
 
 
                                          //Pass
-    @Test(description = "API: Add NOT exists course to cart neg test", priority = 3)
+    @Test(description = "API: Add NOT exists course to cart neg test", priority = 2)
     public void addNotExistsCourseToCartNegTest(){
         Response response = given()
                 .contentType("application/json")
@@ -220,6 +220,7 @@ public class CartTests extends TestBase {
         given()
                 .contentType("application/json")
                 .auth().oauth2(tokenCC)
+
                 .when()
                 .put("cart/add/122/1")
                 .then()
