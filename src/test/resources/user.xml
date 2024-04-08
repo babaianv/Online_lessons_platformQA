@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite4" verbose="1">
+    <test name="UserControllerTests">
+        <classes>
+            <class name="com.learn.RAtests.UserController.RegistrationTests"/>
+            <class name="com.learn.RAtests.UserController.AccountInfoTests"/>
+            <class name="com.learn.RAtests.UserController.ChangePasswordTests"/>
+            <class name="com.learn.RAtests.UserController.DeleteUserTests"/>
+        </classes>
+    </test>
+</suite>

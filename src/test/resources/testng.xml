@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite" verbose="1">
+    <test name="AuthorizationController">
+        <classes>
+           <class name="com.learn.RAtests.AuthorizationController.LoginTests"/>
+           <class name="com.learn.RAtests.AuthorizationController.AuthorizationInfoTests"/>
+           <class name="com.learn.RAtests.AuthorizationController.LogoutTests"/>
+       </classes>
+    </test>
+    <test name="UserControllerTests">
+        <classes>
+            <class name="com.learn.RAtests.UserController.RegistrationTests"/>
+            <class name="com.learn.RAtests.UserController.AccountInfoTests"/>
+            <class name="com.learn.RAtests.UserController.ChangePasswordTests"/>
+            <class name="com.learn.RAtests.UserController.DeleteUserTests"/>
+        </classes>
+    </test>
+    <test name="CourseControllerTests">
+        <classes>
+            <class name="com.learn.RAtests.CourseController.CreateCourseTest"/>
+            <class name="com.learn.RAtests.CourseController.GetCoursesTests"/>
+            <class name="com.learn.RAtests.CourseController.UpdateCourseTests"/>
+            <class name="com.learn.RAtests.CourseController.DeleteCourseTests"/>
+        </classes>
+    </test>
+    <test name="CartControllerTests">
+        <classes>
+            <class name="com.learn.RAtests.CartController.CartTests"/>
+            <class name="com.learn.RAtests.CartController.DeleteCoursesFromCartTests"/>
+        </classes>
+    </test>
+
+</suite>

@@ -9,7 +9,8 @@ import lombok.ToString;
 @Getter
 @ToString
 @Builder
-public class UserValidationErrorDto {
+public class CourseValidationError {
+
     private String message;
 }
 
