@@ -173,7 +173,7 @@ public class CreateCourseTest extends TestBase {
                 .extract().response();
 
         CourseValidationError courseValidationError = response.as(CourseValidationError.class);
-        softAssert.assertEquals(courseValidationError.getMessage(),
+        Assert.assertEquals(courseValidationError.getMessage(),
                 "The price must be positive.");
 
         System.out.println(courseValidationError.getMessage());
@@ -205,7 +205,7 @@ public class CreateCourseTest extends TestBase {
                 .extract().response();
 
         CourseValidationError courseValidationError = response.as(CourseValidationError.class);
-        softAssert.assertNotNull(courseValidationError.getMessage());
+        Assert.assertNotNull(courseValidationError.getMessage());
 
         System.out.println(courseValidationError.getMessage());
     }

@@ -48,7 +48,6 @@ public class UpdateCourseTests extends TestBase {
 
         Response getResponse = given()
                 .contentType("application/json")
-                .log().all()
                 .auth().oauth2(tokenCC)
                 .when()
                 .get("courses/"+courseId)

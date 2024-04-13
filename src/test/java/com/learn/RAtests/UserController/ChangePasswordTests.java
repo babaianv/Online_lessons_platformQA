@@ -41,8 +41,8 @@ public class ChangePasswordTests extends TestBase {
     @Test(description = "API: Change password with Boundary Value 8 Password Test", priority = 2)
     public void changePasswordBoundaryValue8Test(){
         passwordDto.setOldPassword("Test2test2!");
-        passwordDto.setNewPassword("Test1test1!");
-        passwordDto.setConfirmNewPassword("Test1test1!");
+        passwordDto.setNewPassword("Test123!");
+        passwordDto.setConfirmNewPassword("Test123!");
 
         Response response = given()
                 .contentType("application/json")

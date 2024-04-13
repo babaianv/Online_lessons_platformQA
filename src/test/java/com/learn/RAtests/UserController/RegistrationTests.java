@@ -111,7 +111,7 @@ public class RegistrationTests extends TestBase {
                 .body(UserDto.builder()
                         .nickname("Testpass8")
                         .email("lenghtpswd8@gmail.com")
-                        .password("Test1test1!").build())
+                        .password("Testes1!").build())
                 .when()
                 .post("users/register")
                 .then()

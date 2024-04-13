@@ -15,7 +15,7 @@ public class TestBase {
     Logger logger = LoggerFactory.getLogger(TestBase.class);
     public static final String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMjYxOTkwNSwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6Mn0.12Z5TMquz4I0T1j02A6ENG-MdfzdjR9ku53Dc08UQLY";
     public static final String tokenD = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0ZGVsQSIsImV4cCI6MTcxMjYyNjg4MSwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0ZGVsQSIsImNhcnRJZCI6MTIwfQ.4UjtQ0o0H99ihpd_VqRwU7GUxh4jcqD2OOuUAmv5RX8";
-    public static final String tokenCC = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0Y2MiLCJleHAiOjE3MTI2MDQyODgsInJvbGVzIjpbeyJpZCI6MSwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJuYW1lIjoiVGVzdGNjIiwiY2FydElkIjoxMjJ9.cbm8jdC4DtuimaGr0uj8s8yDWKKGq2FUcqns1l9jdFo";
+    public static final String tokenCC = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0Y2MiLCJleHAiOjE3MTI2OTUyNjQsInJvbGVzIjpbeyJpZCI6MSwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJuYW1lIjoiVGVzdGNjIiwiY2FydElkIjoxMjJ9.4Bqk4ZJ5Wb_L2MdObxxz-wGQXUI_s8p6jQlckFugQIA";
 
     @BeforeMethod
     public void init(){
