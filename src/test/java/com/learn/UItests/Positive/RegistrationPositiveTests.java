@@ -1,7 +1,7 @@
 package com.learn.UItests.Positive;
 
 import com.learn.UItests.TestBase;
-import org.openqa.selenium.Alert;
+import com.learn.models.User;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -13,111 +13,70 @@ public class RegistrationPositiveTests extends TestBase {
 
     @AfterMethod
     public void clean(){
-        driver.findElement(By.cssSelector(".burgerMenuContent a[href='/my_account']")).click();
-
-        driver.findElement(By.cssSelector("#delete-btn")).click();
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        app.getUserHelper().click(By.cssSelector(".burgerMenuContent a[href='/my_account']"));
+        app.getUserHelper().clickOnDeleteAccountBtn();
+        app.getUserHelper().isAlertAppears();
+        app.getUserHelper().pause(1500);
     }
 
     @Test(description = "UI: Registration Positive Test")
     public void registrationPositiveTest(){
-        driver.findElement(By.cssSelector("a.signUpBtn[href='/reg']")).click();
-
-        driver.findElement(By.cssSelector("#nickname")).click();
-        driver.findElement(By.cssSelector("#nickname")).clear();
-        driver.findElement(By.cssSelector("#nickname")).sendKeys("Testregp");
-
-        driver.findElement(By.cssSelector("#email")).click();
-        driver.findElement(By.cssSelector("#email")).clear();
-        driver.findElement(By.cssSelector("#email")).sendKeys("testregp@gmail.com");
-
-        driver.findElement(By.cssSelector("#password")).click();
-        driver.findElement(By.cssSelector("#password")).clear();
-        driver.findElement(By.cssSelector("#password")).sendKeys("Test1test1!");
-
-        driver.findElement(By.cssSelector("button.submit-reg-button")).click();
-        driver.findElement(By.cssSelector(".burgerMenu")).click();
-
-        softAssert.assertTrue(isElementPresent(By.xpath("//div[contains(text(), 'Account has been created and you are logged in.')]")));
-        softAssert.assertTrue(isElementPresent(By.cssSelector(".burgerMenuContent a[href='/']")));
+        app.getUserHelper().clickOnSignUpBtn();
+        app.getUserHelper().fillRegisterForm(new User()
+                .setNickname("Testregp")
+                .setEmail("testregp@gmail.com")
+                .setPassword("Test1test1!"));
+        app.getUserHelper().clickSubmitSignUpBtn();
+        app.getUserHelper().clickBurgerMenu();
+        softAssert.assertTrue(app.getUserHelper().isRegisterSuccessPopUpPresent());
+        softAssert.assertTrue(app.getUserHelper().isLogoutLinkPresent());
         softAssert.assertAll();
     }
 
     @Test(description = "UI: Reg with Boundary Value 10 Nickname")
     public void regWithBoundaryValue10NicknameTest(){
-        driver.findElement(By.cssSelector("a.signUpBtn[href='/reg']")).click();
+        app.getUserHelper().clickOnSignUpBtn();
+        app.getUserHelper().fillRegisterForm(new User()
+                .setNickname("Testreg10")
+                .setEmail("testregp10@gmail.com")
+                .setPassword("Test1test1!"));
+        app.getUserHelper().clickSubmitSignUpBtn();
+        app.getUserHelper().clickBurgerMenu();
 
-        driver.findElement(By.cssSelector("#nickname")).click();
-        driver.findElement(By.cssSelector("#nickname")).clear();
-        driver.findElement(By.cssSelector("#nickname")).sendKeys("Testreg10");
-
-        driver.findElement(By.cssSelector("#email")).click();
-        driver.findElement(By.cssSelector("#email")).clear();
-        driver.findElement(By.cssSelector("#email")).sendKeys("testregp10@gmail.com");
-
-        driver.findElement(By.cssSelector("#password")).click();
-        driver.findElement(By.cssSelector("#password")).clear();
-        driver.findElement(By.cssSelector("#password")).sendKeys("Test1test1!");
-
-        driver.findElement(By.cssSelector("button.submit-reg-button")).click();
-        driver.findElement(By.cssSelector(".burgerMenu")).click();
-
-        softAssert.assertTrue(isElementPresent(By.xpath("//div[contains(text(), 'Account has been created and you are logged in.')]")));
-        softAssert.assertTrue(isElementPresent(By.cssSelector(".burgerMenuContent a[href='/']")));
+        softAssert.assertTrue(app.getUserHelper().isRegisterSuccessPopUpPresent());
+        softAssert.assertTrue(app.getUserHelper().isLogoutLinkPresent());
         softAssert.assertAll();
     }
 
     @Test(description = "UI: Reg with Boundary Value 3 Nickname")
     public void regWithBoundaryValue3NicknameTest(){
-        driver.findElement(By.cssSelector("a.signUpBtn[href='/reg']")).click();
+        app.getUserHelper().clickOnSignUpBtn();
+        app.getUserHelper().fillRegisterForm(new User()
+                .setNickname("Tes")
+                .setEmail("testregp10@gmail.com")
+                .setPassword("Test1test1!"));
+        app.getUserHelper().clickSubmitSignUpBtn();
+        app.getUserHelper().clickBurgerMenu();
 
-        driver.findElement(By.cssSelector("#nickname")).click();
-        driver.findElement(By.cssSelector("#nickname")).clear();
-        driver.findElement(By.cssSelector("#nickname")).sendKeys("Tes");
-
-        driver.findElement(By.cssSelector("#email")).click();
-        driver.findElement(By.cssSelector("#email")).clear();
-        driver.findElement(By.cssSelector("#email")).sendKeys("testregp10@gmail.com");
-
-        driver.findElement(By.cssSelector("#password")).click();
-        driver.findElement(By.cssSelector("#password")).clear();
-        driver.findElement(By.cssSelector("#password")).sendKeys("Test1test1!");
-
-        driver.findElement(By.cssSelector("button.submit-reg-button")).click();
-        driver.findElement(By.cssSelector(".burgerMenu")).click();
-
-        softAssert.assertTrue(isElementPresent(By.xpath("//div[contains(text(), 'Account has been created and you are logged in.')]")));
-        softAssert.assertTrue(isElementPresent(By.cssSelector(".burgerMenuContent a[href='/']")));
+        softAssert.assertTrue(app.getUserHelper().isRegisterSuccessPopUpPresent());
+        softAssert.assertTrue(app.getUserHelper().isLogoutLinkPresent());
         softAssert.assertAll();
     }
 
     @Test(description = "UI: Reg with Boundary Value 8 Password Test")
     public void regWithBoundaryValue8PasswordTest(){
-        driver.findElement(By.cssSelector("a.signUpBtn[href='/reg']")).click();
+        app.getUserHelper().clickOnSignUpBtn();
+        app.getUserHelper().fillRegisterForm(new User()
+                .setNickname("Testp8")
+                .setEmail("testp8@gmail.com")
+                .setPassword("Test1test1!"));
+        app.getUserHelper().clickSubmitSignUpBtn();
+        app.getUserHelper().clickBurgerMenu();
 
-        driver.findElement(By.cssSelector("#nickname")).click();
-        driver.findElement(By.cssSelector("#nickname")).clear();
-        driver.findElement(By.cssSelector("#nickname")).sendKeys("Testp8");
-
-        driver.findElement(By.cssSelector("#email")).click();
-        driver.findElement(By.cssSelector("#email")).clear();
-        driver.findElement(By.cssSelector("#email")).sendKeys("testp8@gmail.com");
-
-        driver.findElement(By.cssSelector("#password")).click();
-        driver.findElement(By.cssSelector("#password")).clear();
-        driver.findElement(By.cssSelector("#password")).sendKeys("Testes1!");
-
-        driver.findElement(By.cssSelector("button.submit-reg-button")).click();
-        driver.findElement(By.cssSelector(".burgerMenu")).click();
-
-        softAssert.assertTrue(isElementPresent(By.xpath("//div[contains(text(), 'Account has been created and you are logged in.')]")));
-        softAssert.assertTrue(isElementPresent(By.cssSelector(".burgerMenuContent a[href='/']")));
+        softAssert.assertTrue(app.getUserHelper().isRegisterSuccessPopUpPresent());
+        softAssert.assertTrue(app.getUserHelper().isLogoutLinkPresent());
         softAssert.assertAll();
     }
-
-
-
 
 }
 

@@ -2,12 +2,13 @@ package com.learn.UItests.Positive;
 
 import com.learn.UItests.TestBase;
 import com.learn.models.User;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class LoginPositiveTests extends TestBase {
+public class LogoutTest extends TestBase {
 
     SoftAssert softAssert = new SoftAssert();
 
@@ -20,33 +21,31 @@ public class LoginPositiveTests extends TestBase {
 
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testlog")
-                .setEmail("testlog@gmail.com")
+                .setNickname("Testlogout")
+                .setEmail("testlogout@gmail.com")
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
-        app.getUserHelper().clickBurgerMenuLogoutBtn();
     }
 
     @AfterMethod
     public void clean(){
+        app.getUserHelper().clickOnLoginBtn();
+        app.getUserHelper().fillLoginForm(new User()
+                .setEmail("testlogout@gmail.com")
+                .setPassword( "Test1test1!"));
+        app.getUserHelper().clickSubmitLoginBtn();
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
         app.getUserHelper().pause(1500);
     }
 
-    @Test(description = "UI: Login positive test")
-    public void loginPositiveTest(){
-        app.getUserHelper().clickOnLoginBtn();
-        app.getUserHelper().fillLoginForm(new User()
-                .setEmail("testlog@gmail.com")
-                .setPassword( "Test1test1!"));
-        app.getUserHelper().clickSubmitLoginBtn();
-        app.getUserHelper().clickBurgerMenu();
+    @Test(description = "Logout Positive Test")
+    public void logoutPositiveTest(){
+        app.getUserHelper().clickBurgerMenuLogoutBtn();
 
-        softAssert.assertTrue(app.getUserHelper().isLoginPopUpPresent());
         softAssert.assertTrue(app.getUserHelper().isLogoutLinkPresent());
-        softAssert.assertAll();
+        softAssert.assertTrue(app.getUserHelper().isLoginBtnPresent());
     }
 
 

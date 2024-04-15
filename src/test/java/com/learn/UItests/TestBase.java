@@ -1,32 +1,24 @@
 package com.learn.UItests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-
-import java.time.Duration;
+import com.learn.fw.ApplicationManager;
+import org.openqa.selenium.remote.Browser;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-   protected WebDriver driver;
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", Browser.CHROME.browserName()));
 
-    @BeforeMethod
+    @BeforeSuite
     public void setUp(){
-        driver = new ChromeDriver();
-        driver.get("http://localhost:5173/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        app.init();
     }
 
-    @AfterMethod(enabled = true)
+    @AfterSuite
     public void tearDown(){
-        driver.quit();
+        app.stop();
     }
 
-    public boolean isElementPresent(By locator){
-        return driver.findElements(locator).size()>0;
-    }
+
 }
 
