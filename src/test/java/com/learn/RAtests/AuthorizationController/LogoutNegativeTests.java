@@ -9,29 +9,8 @@ import org.testng.asserts.SoftAssert;
 
 import static io.restassured.RestAssured.given;
 
-public class LogoutTests extends TestBase {
+public class LogoutNegativeTests extends TestBase {
     SoftAssert softAssert = new SoftAssert();
-
-                              ///POSITIVE
-
-                              ///Pass
-
-    @Test(description = "API: Logout Positive Test")
-    public void logoutPositiveTest(){
-
-        Response response = given()
-                .contentType("application/json")
-                .auth().oauth2(token)
-                .when()
-                .get("auth/logout")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
-
-        Assert.assertEquals(response.header("content-length"), "0");
-    }
-                                        //NEGATIVE
-                                        //PASS (Without AUTH)
 
     @Test(description = "API: Logout without AUTH Neg Test")
     public void logoutWithoutAuthNegTest(){
@@ -49,11 +28,8 @@ public class LogoutTests extends TestBase {
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
         softAssert.assertEquals(forbiddenError.getPath(), "/api/auth/logout");
         softAssert.assertAll();
-
-        System.out.println(forbiddenError.getError() +" "+ forbiddenError.getStatus());
     }
 
-                                      ///PASS
 
     @Test(description = "API: Logout with invalid PATH Neg Test")
     public void logoutWithInvalidPathNegTest(){
@@ -71,8 +47,6 @@ public class LogoutTests extends TestBase {
         softAssert.assertEquals(response.getStatusCode(), 404);
         softAssert.assertTrue(responseBody.contains("Not Found"));
         softAssert.assertAll();
-
-        System.out.println(responseBody);
     }
 }
 

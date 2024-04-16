@@ -3,10 +3,14 @@
 <suite name="TestSuite4" verbose="1">
     <test name="UserControllerTests">
         <classes>
-            <class name="com.learn.RAtests.UserController.RegistrationTests"/>
-            <class name="com.learn.RAtests.UserController.AccountInfoTests"/>
-            <class name="com.learn.RAtests.UserController.ChangePasswordTests"/>
-            <class name="com.learn.RAtests.UserController.DeleteUserTests"/>
+            <class name="com.learn.RAtests.UserController.RegistrationPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.AccountInfoPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.ChangePasswordPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.DeleteUserPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.RegistrationNegativeTests"/>
+            <class name="com.learn.RAtests.UserController.RegistrationNegativeTests"/>
+            <class name="com.learn.RAtests.UserController.ChangePasswordNegativeTests"/>
+            <class name="com.learn.RAtests.UserController.DeleteUserNegativeTests"/>
         </classes>
     </test>
 </suite>

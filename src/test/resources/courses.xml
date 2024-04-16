@@ -3,10 +3,14 @@
 <suite name="TestSuite3" verbose="1">
     <test name="CourseControllerTests">
         <classes>
-            <class name="com.learn.RAtests.CourseController.CreateCourseTest"/>
-            <class name="com.learn.RAtests.CourseController.GetCoursesTests"/>
-            <class name="com.learn.RAtests.CourseController.UpdateCourseTests"/>
-            <class name="com.learn.RAtests.CourseController.DeleteCourseTests"/>
+            <class name="com.learn.RAtests.CourseController.CreateCoursePositiveTests"/>
+            <class name="com.learn.RAtests.CourseController.GetCoursesPositiveTests"/>
+            <class name="com.learn.RAtests.CourseController.UpdateCoursePositiveTests"/>
+            <class name="com.learn.RAtests.CourseController.DeleteCoursePositiveTests"/>
+            <class name="com.learn.RAtests.CourseController.CreateCourseNegativeTests"/>
+            <class name="com.learn.RAtests.CourseController.GetCoursesNegativeTests"/>
+            <class name="com.learn.RAtests.CourseController.UpdateCourseNegativeTests"/>
+            <class name="com.learn.RAtests.CourseController.DeleteCourseNegativeTests"/>
         </classes>
     </test>
 </suite>

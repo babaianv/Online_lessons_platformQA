@@ -5,133 +5,11 @@ import com.learn.dto.*;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import static io.restassured.RestAssured.given;
 
 
-public class RegistrationTests extends TestBase {
+public class RegistrationNegativeTests extends TestBase {
 
-    SoftAssert softAssert = new SoftAssert();
-
-                            //POSITIVE
-
-                              ///PASS
-    @Test(description = "API: Registration Success")
-    public void registrationSuccessTest(){
-
-        Response response =  given()
-                .contentType("application/json")
-                .body(UserDto.builder()
-                        .nickname("TestReg")
-                        .email("testregpos@gmail.com")
-                        .password("Test1test1!")
-                        .build())
-                .when()
-                .post("users/register")
-                .then()
-                .assertThat().statusCode(201)
-                .extract().response();
-
-        UserDto userDto = response.as(UserDto.class);
-        softAssert.assertEquals(response.contentType(), "application/json");
-        softAssert.assertNotNull(userDto.getId());
-        softAssert.assertNotNull(userDto.getNickname());
-        softAssert.assertNotNull(userDto.getEmail());
-        softAssert.assertNotNull(userDto.getPassword());
-        softAssert.assertNotNull(userDto.getRoles());
-        softAssert.assertAll();
-
-        System.out.println(userDto);
-    }
-
-                         ////PASS(Length Nickname(10))
-
-    @Test(description = "API: Reg with Boundary Value 10 Nickname")
-    public void regWithBoundaryValue10NicknameTest(){
-        Response response = given()
-                .contentType("application/json")
-                .body(UserDto.builder()
-                        .nickname("Testleng10")
-                        .email("lenghtnick15@gmail.com")
-                        .password("Test1test1!").build())
-                .when()
-                .post("users/register")
-                .then()
-                .assertThat().statusCode(201)
-                .extract().response();
-
-        UserDto userDto = response.as(UserDto.class);
-        softAssert.assertNotNull(userDto.getId());
-        softAssert.assertNotNull(userDto.getNickname());
-        softAssert.assertNotNull(userDto.getEmail());
-        softAssert.assertNotNull(userDto.getPassword());
-        softAssert.assertNotNull(userDto.getRoles());
-
-        softAssert.assertAll();
-
-        System.out.println(response.getBody().asString());
-    }
-
-                          ////PASS(Length Nickname(3))
-
-    @Test(description = "API: Reg with Boundary Value 3 Nickname")
-    public void regWithBoundaryValue3NicknameTest(){
-
-        Response response = given()
-                .contentType("application/json")
-                .body(UserDto.builder()
-                        .nickname("Testleng3")
-                        .email("lenghtnick3@gmail.com")
-                        .password("Test1test1!").build())
-                .when()
-                .post("users/register")
-                .then()
-                .assertThat().statusCode(201)
-                .extract().response();
-
-        UserDto userDto = response.as(UserDto.class);
-        softAssert.assertNotNull(userDto.getId());
-        softAssert.assertNotNull(userDto.getNickname());
-        softAssert.assertNotNull(userDto.getEmail());
-        softAssert.assertNotNull(userDto.getPassword());
-        softAssert.assertNotNull(userDto.getRoles());
-
-        softAssert.assertAll();
-
-        System.out.println(response.getBody().asString());
-    }
-
-                          ////PASS(Length Password(8))
-
-    @Test(description = "API: Reg with Boundary Value 8 Password Test ")
-    public void regWithBoundaryValue8PasswordTest(){
-
-        Response response = given()
-                .contentType("application/json")
-                .body(UserDto.builder()
-                        .nickname("Testpass8")
-                        .email("lenghtpswd8@gmail.com")
-                        .password("Testes1!").build())
-                .when()
-                .post("users/register")
-                .then()
-                .assertThat().statusCode(201)
-                .extract().response();
-
-        UserDto userDto = response.as(UserDto.class);
-        softAssert.assertNotNull(userDto.getId());
-        softAssert.assertNotNull(userDto.getNickname());
-        softAssert.assertNotNull(userDto.getEmail());
-        softAssert.assertNotNull(userDto.getPassword());
-        softAssert.assertNotNull(userDto.getRoles());
-        softAssert.assertAll();
-
-        System.out.println(response.getBody().asString());
-    }
-
-                         ///NEGATIVE
-
-                             //PASS
 
     @Test(description = "API: Registration With Wrong Path")
     public void registrationWithWrongPathTest(){
@@ -149,12 +27,7 @@ public class RegistrationTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
-
-        System.out.println(responseBody);
     }
-
-                             // NICKNAME
-                            ///PASS(exist Nickname)
 
     @Test(description = "API: Reg With Existing Nickname Neg Test")
     public void regWithExNicknameNegTest(){
@@ -172,10 +45,8 @@ public class RegistrationTests extends TestBase {
 
         UserAlreadyExistsError userAlreadyExistsError = response.as(UserAlreadyExistsError.class);
         Assert.assertTrue(userAlreadyExistsError.getMessage().contains("This nickname is already taken"));
-        System.out.println("Response body: " +userAlreadyExistsError.getMessage());
     }
 
-                           ///PASS (Short Nickname 2)
 
     @Test(description = "API: Reg With Short Length Nickname Neg Test")
     public void regWithShortLengthNicknameNegTest(){
@@ -193,11 +64,9 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                              ///PASS (Long Nickname 11)
+
     @Test(description = "API: Reg With Long Length Nickname Neg Test ")
     public void regWithLongLengthNicknameNegTest(){
         Response response = given()
@@ -214,11 +83,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                          //PASS (only numbers)
 
     @Test(description = "API: Reg With Only Numbers Nickname Neg Test")
     public void regWithOnlyNumbersNicknameNegTest(){
@@ -236,11 +102,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                // PASS (symbol)
 
     @Test(description = "API: Reg With Invalid Nickname Neg Test")
     public void regWithInvalidNicknameNegTest(){
@@ -258,11 +121,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                  ///PASS (only symbol)
 
     @Test(description = "API: Reg With Only Invalid Symbol Nickname Neg Test")
     public void regWithOnlyInvalidSymbolNicknameNegTest(){
@@ -281,10 +141,8 @@ public class RegistrationTests extends TestBase {
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid nickname format"));
 
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                           ///PASS (empty nickname)
 
     @Test(description = "API: Reg With Empty Nickname Neg Test")
     public void regWithEmptyNicknameNegTest(){
@@ -306,14 +164,8 @@ public class RegistrationTests extends TestBase {
         System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                             ///Email
-
-                           ///FAILED (email in DB exist) -> BUG FIXED T25-86
-
     @Test(description = "API: Reg With Existing Email Neg Test")
     public void regWithExEmailNegTest(){
-
-
 
         Response response = given()
                 .contentType("application/json")
@@ -329,11 +181,8 @@ public class RegistrationTests extends TestBase {
 
         UserAlreadyExistsError userAlreadyExistsError = response.as(UserAlreadyExistsError.class);
         Assert.assertTrue(userAlreadyExistsError.getMessage().contains("User with this email already exists"));
-
-        System.out.println("Response body: " + userAlreadyExistsError.getMessage());
     }
 
-                             //FAILED (empty email) -> BUG FIXED T25-87
 
     @Test(description = "API: Reg With Empty Email Neg Test")
     public void regWithEmptyEmailNegTest(){
@@ -351,12 +200,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("must not be blank"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-
-                                 ////PASS(wrong format)
 
     @Test(description = "API: Reg With Wrong Email Format Neg Test")
     public void regWithWrongEmailFormatNegTest(){
@@ -374,13 +219,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("must be a well-formed email address"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                               /// Password
-
-                              ///PASS (empty)
 
     @Test(description = "API: Reg With Empty Password Neg Test")
     public void regWithEmptyPasswordNegTest(){
@@ -398,12 +238,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-
-                            ///PASS (Length 7)
 
     @Test(description = "API: Reg With Short Length 7 Password Neg Test")
     public void regWithShortLength7PasswordNegTest(){
@@ -421,12 +257,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-
-                               ///PASS (only numbers)
 
     @Test(description = "API: Reg With Only Numbers Password Neg Test")
     public void regWithOnlyNumbersPasswordNegTest(){
@@ -444,11 +276,9 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                     ///PASS (only letters)
+
 
     @Test(description = "API: Reg With Only Letters Password Neg Test")
     public void regWithOnlyLettersPasswordNegTest(){
@@ -466,11 +296,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                      ///PASS (only  valid symbols)
 
     @Test(description = "API: Reg With Only Valid Symbols Password Neg Test")
     public void regWithOnlyValidSymbolsPasswordNegTest(){
@@ -489,10 +316,9 @@ public class RegistrationTests extends TestBase {
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                   ///PASS (only invalid symbols)
+
 
     @Test(description = "API: Reg With Only Invalid Symbols Password Neg Test")
     public void regWithOnlyInvalidSymbolsPasswordNegTest(){
@@ -511,10 +337,7 @@ public class RegistrationTests extends TestBase {
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
 
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
-
-                                ///PASS (only Uppercase)
 
     @Test(description = "API: Reg With Only Uppercase Password Neg Test")
     public void regWithOnlyUppercasePasswordNegTest(){
@@ -532,11 +355,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                ///PASS (only Lowercase)
 
     @Test(description = "API: Reg With Only Lowercase Password Neg Test")
     public void regWithOnlyLowercasePasswordNegTest(){
@@ -558,7 +378,7 @@ public class RegistrationTests extends TestBase {
         System.out.println("Response body: " + userValidationError.getMessage());
     }
 
-                                     ///PASS ( Without Special Symbol)
+
 
     @Test(description = "API: Reg Without Special Symbol Password Neg Test")
     public void regWithoutSpecialSymbolPasswordNegTest(){
@@ -576,10 +396,8 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
-                                 ///PASS ( Without Numbers)
+
 
     @Test(description = "API: Reg Without Numbers Password Neg Test")
     public void regWithoutNumbersPasswordNegTest(){
@@ -597,8 +415,6 @@ public class RegistrationTests extends TestBase {
 
         UserValidationError userValidationError = response.as(UserValidationError.class);
         Assert.assertTrue(userValidationError.getMessage().contains("Invalid password format"));
-
-        System.out.println("Response body: " + userValidationError.getMessage());
     }
 
 }

@@ -8,86 +8,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.lessThan;
 
-public class LoginTests extends TestBase {
-
+public class LoginNegativeTests extends TestBase {
     SoftAssert softAssert = new SoftAssert();
 
     UserLoginDto login = UserLoginDto.builder()
             .email("test1@gmail.com")
             .password("Test1test1!")
             .build();
-
-                               ///PASS
-
-    @Test(description = "API: Test for successful login")
-    public void loginSuccessTest(){
-
-        Response response = given()
-                .contentType("application/json")
-                .body(login)
-                .when()
-                .post("auth/login")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
-
-        TokenResponseDto dto = response.as(TokenResponseDto.class);
-
-        softAssert.assertNotNull(dto.getAccessToken(), "Access token should not be null");
-        softAssert.assertNotNull(dto.getRefreshToken(), "Refresh token should not be null");
-        softAssert.assertEquals(dto.getMessage(), null,"Message should be null for successful login");
-
-        softAssert.assertAll();
-
-        System.out.println("Access Token: " + dto.getAccessToken());
-        System.out.println("Refresh Token: " + dto.getRefreshToken());
-        System.out.println("Message: " + dto.getMessage());
-    }
-
-                   ///PASS (Content-Type)
-
-    @Test(description = "API: Positive test for Content-Type")
-    public void positiveContentTypeTest() {
-        Response response = given()
-                .contentType("application/json")
-                .body(login)
-                .post("auth/login")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
-
-        Assert.assertEquals(response.contentType(),"application/json");
-
-        System.out.println("Content-Type: " + response.contentType());
-    }
-
-
-                         //PASS (Response time)
-
-    @Test(description = "API: Response Time Is Less Than 500ms ")
-    public void responseTimeIsLessThan500msTest() {
-        Response response = given()
-                .contentType("application/json")
-                .body(login)
-                .post("auth/login")
-                .then()
-                .time(lessThan(500L))
-                .assertThat().statusCode(200)
-                .extract().response();
-
-        long responseTime = response.time();
-        Assert.assertEquals(response.getStatusCode(), 200);
-
-        System.out.println("Response time: " + responseTime + " milliseconds");
-    }
-
-                                     ///NEGATIVE
-
-                                    ///PASS
 
     @Test(description = "API: Login without Content-Type")
     public void loginWithoutContentTypeTest() {
@@ -104,7 +33,7 @@ public class LoginTests extends TestBase {
         System.out.println("Response body: " + responseBody);
     }
 
-                              //PASS (Wrong PATH)
+
 
     @Test(description = "API: Login with wrong Path")
     public void loginWithWrongPathTest(){
@@ -127,7 +56,7 @@ public class LoginTests extends TestBase {
         System.out.println(responseBody);
     }
 
-                                 // PASS (Wrong EMAIL)
+
 
     @Test(description = "API: Login with wrong Email ")
     public void loginWithWrongEmailTest(){
@@ -152,7 +81,7 @@ public class LoginTests extends TestBase {
         System.out.println("Response body: " +dto);
     }
 
-                        //PASS (EMPTY EMAIL)
+
 
     @Test(description = "API: Login with empty Email")
     public void loginWithEmptyEmailTest(){
@@ -176,7 +105,6 @@ public class LoginTests extends TestBase {
         System.out.println("Response body: " +dto);
     }
 
-                                 //PASS (Wrong Password)
 
     @Test(description = "API: Login with wrong Password")
     public void loginWithWrongPasswordTest(){
@@ -200,7 +128,6 @@ public class LoginTests extends TestBase {
         System.out.println("Response body: " +dto);
     }
 
-                                   //PASS (EMPTY PASSWORD)
 
     @Test(description = "API: Login with empty Password")
     public void loginWithEmptyPasswordTest(){
@@ -223,7 +150,5 @@ public class LoginTests extends TestBase {
 
         System.out.println("Response body: " +dto);
     }
-
-
 }
 

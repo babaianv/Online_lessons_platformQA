@@ -3,9 +3,12 @@
 <suite name="TestSuite1" verbose="1">
     <test name="AuthorizationController">
         <classes>
-            <class name="com.learn.RAtests.AuthorizationController.LoginTests"/>
-            <class name="com.learn.RAtests.AuthorizationController.AuthorizationInfoTests"/>
-            <class name="com.learn.RAtests.AuthorizationController.LogoutTests"/>
+            <class name="com.learn.RAtests.AuthorizationController.AuthorizationInfoPositiveTests"/>
+            <class name="com.learn.RAtests.AuthorizationController.LoginPositiveTests"/>
+            <class name="com.learn.RAtests.AuthorizationController.LogoutPositiveTests"/>
+            <class name="com.learn.RAtests.AuthorizationController.AuthorizationInfoNegativeTests"/>
+            <class name="com.learn.RAtests.AuthorizationController.LoginNegativeTests"/>
+            <class name="com.learn.RAtests.AuthorizationController.LogoutNegativeTests"/>
         </classes>
     </test>
 </suite>

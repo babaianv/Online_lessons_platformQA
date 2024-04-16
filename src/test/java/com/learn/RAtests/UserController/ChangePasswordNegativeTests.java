@@ -1,7 +1,10 @@
 package com.learn.RAtests.UserController;
 
 import com.learn.RAtests.TestBase;
-import com.learn.dto.*;
+import com.learn.dto.ChangePasswordDto;
+import com.learn.dto.ForbiddenError;
+import com.learn.dto.PasswordMismatchError;
+import com.learn.dto.UserNotFoundError;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,57 +12,12 @@ import org.testng.asserts.SoftAssert;
 
 import static io.restassured.RestAssured.given;
 
-public class ChangePasswordTests extends TestBase {
+public class ChangePasswordNegativeTests extends TestBase {
 
     ChangePasswordDto passwordDto = new ChangePasswordDto();
     SoftAssert softAssert = new SoftAssert();
 
-                              //POSITIVE
-
-                                //PASS
-
-    @Test(description = "API: Change Password Positive Test", priority = 1)
-    public void changePasswordPositiveTest(){
-        passwordDto.setOldPassword("Test1test1!");
-        passwordDto.setNewPassword("Test2test2!");
-        passwordDto.setConfirmNewPassword("Test2test2!");
-
-        Response response = given()
-                .contentType("application/json")
-                .auth().oauth2(token)
-                .body(passwordDto)
-                .when()
-                .put("/users/change_password/Test2")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
-
-    }
-
-                            ////PASS(Length Password(8))
-
-    @Test(description = "API: Change password with Boundary Value 8 Password Test", priority = 2)
-    public void changePasswordBoundaryValue8Test(){
-        passwordDto.setOldPassword("Test2test2!");
-        passwordDto.setNewPassword("Test123!");
-        passwordDto.setConfirmNewPassword("Test123!");
-
-        Response response = given()
-                .contentType("application/json")
-                .auth().oauth2(token)
-                .body(passwordDto)
-                .when()
-                .put("/users/change_password/Test2")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
-    }
-
-                         ///NEGATIVE
-
-                        ///PASS (empty field old password)
-
-    @Test(description = "API: Change Password With Empty field Old Password Neg Test", priority = 3)
+    @Test(description = "API: Change Password With Empty field Old Password Neg Test")
     public void changePassWithEmptyOldPasswordNegTest(){
         passwordDto.setOldPassword("");
         passwordDto.setNewPassword("Test4test4!");
@@ -70,7 +28,7 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
@@ -81,9 +39,7 @@ public class ChangePasswordTests extends TestBase {
         System.out.println(passwordMismatchError.getMessage());
     }
 
-                               ///PASS (empty field new password)
-
-    @Test(description = "API: Change Password With Empty field New Password Neg Test", priority = 4)
+    @Test(description = "API: Change Password With Empty field New Password Neg Test")
     public void changePassWithEmptyNewPasswordNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("");
@@ -94,21 +50,17 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
-
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                             ///PASS (empty field confirm password)
 
-    @Test(description = "API: Change Password With Empty field New Password Neg Test", priority = 5)
+    @Test(description = "API: Change Password With Empty field New Password Neg Test")
     public void changePassWithEmptyConfirmPasswordNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test4test4!");
@@ -119,20 +71,17 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertEquals(passwordMismatchError.getMessage(), "New password and confirm password mismatch");
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                                       ///PASS (Length 7)
 
-    @Test(description = "API: Reg With Short Length 7 Password Neg Test", priority = 6)
+    @Test(description = "API: Reg With Short Length 7 Password Neg Test")
     public void changePassWithShortLength7NegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test01!");
@@ -143,20 +92,17 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                                 ///PASS (Only numbers)
 
-    @Test(description = "API: Change Password With Only Numbers Neg Test", priority = 7)
+    @Test(description = "API: Change Password With Only Numbers Neg Test")
     public void changePasswordWithOnlyNumbersNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("1234567890");
@@ -167,7 +113,7 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
@@ -175,12 +121,11 @@ public class ChangePasswordTests extends TestBase {
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
 
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                                     ///PASS (Only letters)
 
-    @Test(description = "API: Change Password With Only Letters Neg Test", priority = 8)
+
+    @Test(description = "API: Change Password With Only Letters Neg Test")
     public void changePasswordWithOnlyLettersNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Testtest");
@@ -191,7 +136,7 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
@@ -202,9 +147,9 @@ public class ChangePasswordTests extends TestBase {
         System.out.println(passwordMismatchError.getMessage());
     }
 
-                                      ///PASS (Only valid symbols)
 
-    @Test(description = "API: Change Password With Only Valid Symbols Neg Test", priority = 9)
+
+    @Test(description = "API: Change Password With Only Valid Symbols Neg Test")
     public void changePasswordWithOnlyValidSymbolsNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("!$#%!$#%!");
@@ -215,20 +160,17 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                                 ///PASS (Only invalid symbols)
 
-    @Test(description = "API: Change Password With Only Invalid Symbols Neg Test", priority = 10)
+    @Test(description = "API: Change Password With Only Invalid Symbols Neg Test")
     public void changePasswordWithOnlyInvalidSymbolsNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("*@,.)&?-==");
@@ -239,21 +181,17 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
 
-                                    ///PASS (only Lowercase)
-
-    @Test(description = "API: Change Password With Only Lowercase Neg Test", priority = 11)
+    @Test(description = "API: Change Password With Only Lowercase Neg Test")
     public void changePasswordWithOnlyLowercaseNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("testtest1!");
@@ -264,20 +202,18 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                                      ///PASS (only Uppercase)
 
-    @Test(description = "API: Change Password With Only Uppercase Neg Test", priority = 12)
+
+    @Test(description = "API: Change Password With Only Uppercase Neg Test")
     public void changePasswordWithOnlyUppercaseNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("TESTTEST1!");
@@ -288,21 +224,16 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-
-                                ///PASS (Without Special Symbol)
-
-    @Test(description = "API: Change Password Without Special Symbol Neg Test", priority = 13)
+    @Test(description = "API: Change Password Without Special Symbol Neg Test")
     public void changePasswordWithoutSpecialSymbolNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test1test1");
@@ -313,20 +244,18 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                               ///PASS (Without Numbers)
 
-    @Test(description = "API: Change Password Without Numbers Neg Test", priority = 14)
+
+    @Test(description = "API: Change Password Without Numbers Neg Test")
     public void changePasswordWithoutNumbersNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Testtest!");
@@ -337,20 +266,17 @@ public class ChangePasswordTests extends TestBase {
                 .auth().oauth2(token)
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(400)
                 .extract().response();
 
         PasswordMismatchError passwordMismatchError = response.as(PasswordMismatchError.class);
         Assert.assertTrue(passwordMismatchError.getMessage().contains("Invalid password format"));
-
-        System.out.println(passwordMismatchError.getMessage());
     }
 
-                                ///PASS (without AUTH)
 
-    @Test(description = "API: Change Password without AUTH Test", priority = 15)
+    @Test(description = "API: Change Password without AUTH Test")
     public void changePasswordWithoutAUTHNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test4test4!");
@@ -360,20 +286,17 @@ public class ChangePasswordTests extends TestBase {
                 .contentType("application/json")
                 .body(passwordDto)
                 .when()
-                .put("/users/change_password/Test2")
+                .put("/users/change_password/Test1")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
-
-        System.out.println(forbiddenError.getError() +" "+ forbiddenError.getStatus());
     }
 
-                                  ///PASS (for not exist user)
 
-    @Test(description = "API: Change Password for not exist user Test", priority = 16)
+    @Test(description = "API: Change Password for not exist user Test")
     public void changePasswordForNotExistUserNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test4test4!");
@@ -392,13 +315,10 @@ public class ChangePasswordTests extends TestBase {
 
         UserNotFoundError userNotFoundError = response.as(UserNotFoundError.class);
         Assert.assertEquals(userNotFoundError.getMessage(),"User with this username not found");
-
-        System.out.println(userNotFoundError.getMessage());
     }
 
-                     //PASS (Wrong PATH)
 
-    @Test(description = "API: Change Password with wrong PATH Test", priority = 17)
+    @Test(description = "API: Change Password with wrong PATH Test")
     public void changePasswordWrongPathNegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test4test4!");
@@ -416,8 +336,6 @@ public class ChangePasswordTests extends TestBase {
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         Assert.assertEquals(forbiddenError.getError(), "Not Found");
-
-        System.out.println(forbiddenError.getError() +" "+ forbiddenError.getPath());
     }
 
 }
