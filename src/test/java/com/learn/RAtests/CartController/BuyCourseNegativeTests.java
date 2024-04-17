@@ -22,7 +22,7 @@ public class BuyCourseNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/buy/830")
+                .put("cart/buy/1")
                 .then()
                 .assertThat().statusCode(409)
                 .extract().response();
@@ -57,7 +57,7 @@ public class BuyCourseNegativeTests extends TestBase {
         Response response = given()
                 .contentType("application/json")
                 .when()
-                .put("cart/buy/830")
+                .put("cart/buy/1")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();
@@ -72,7 +72,7 @@ public class BuyCourseNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .delete("cart/clear/830")
+                .delete("cart/clear/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();

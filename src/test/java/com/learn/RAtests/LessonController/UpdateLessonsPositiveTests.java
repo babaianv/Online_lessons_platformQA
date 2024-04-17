@@ -28,7 +28,7 @@ public class UpdateLessonsPositiveTests extends TestBase {
                 .auth().oauth2(token)
                 .body(lessonDto)
                 .when()
-                .post("lessons/606")
+                .post("lessons/2")
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();

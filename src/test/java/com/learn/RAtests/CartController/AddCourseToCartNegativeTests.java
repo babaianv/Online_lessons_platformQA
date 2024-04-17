@@ -21,7 +21,7 @@ public class AddCourseToCartNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/1")
+                .put("cart/add/1/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
@@ -30,7 +30,7 @@ public class AddCourseToCartNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/1")
+                .put("cart/add/1/1")
                 .then()
                 .assertThat().statusCode(409)
                 .extract().response();
@@ -49,7 +49,7 @@ public class AddCourseToCartNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/300")
+                .put("cart/add/1/300")
                 .then()
                 .assertThat().statusCode(404)
                 .extract().response();
@@ -67,14 +67,14 @@ public class AddCourseToCartNegativeTests extends TestBase {
         Response response = given()
                 .contentType("application/json")
                 .when()
-                .put("cart/add/830/5")
+                .put("cart/add/1/5")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
-        softAssert.assertEquals(forbiddenError.getPath(), "/api/cart/add/830/5");
+        softAssert.assertEquals(forbiddenError.getPath(), "/api/cart/add/1/5");
         softAssert.assertAll();
     }
 
@@ -84,7 +84,7 @@ public class AddCourseToCartNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/adding/830/5")
+                .put("cart/adding/1/5")
                 .then()
                 .assertThat().statusCode(404)
                 .extract().response();

@@ -92,7 +92,7 @@ public class GetCoursesPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/3")
+                .put("cart/add/1/3")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
@@ -100,7 +100,7 @@ public class GetCoursesPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/buy/830")
+                .put("cart/buy/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();

@@ -18,7 +18,7 @@ public class DeleteCoursesFromCartPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .delete("cart/830/1")
+                .delete("cart/1/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
@@ -31,7 +31,7 @@ public class DeleteCoursesFromCartPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/3")
+                .put("cart/add/1/3")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
@@ -40,7 +40,7 @@ public class DeleteCoursesFromCartPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/4")
+                .put("cart/add/1/4")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
@@ -49,7 +49,7 @@ public class DeleteCoursesFromCartPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .delete("cart/clear/830")
+                .delete("cart/clear/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();

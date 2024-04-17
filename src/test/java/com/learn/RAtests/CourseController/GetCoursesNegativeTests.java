@@ -95,7 +95,7 @@ public class GetCoursesNegativeTests extends TestBase {
         Response response = given()
                 .contentType("application/json")
                 .when()
-                .get("courses/available/Testcc")
+                .get("courses/available/Test1")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();
@@ -113,7 +113,7 @@ public class GetCoursesNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .get("courses/available/Testw")
+                .get("courses/available/Testnoex")
                 .then()
                 .assertThat().statusCode(404)
                 .extract().response();
