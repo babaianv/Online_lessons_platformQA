@@ -1,6 +1,7 @@
 package com.learn.RAtests;
 
 import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.ITestResult;
@@ -8,14 +9,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.lang.reflect.Method;
-import java.util.Arrays;
 
 public class TestBase {
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
-    public static final String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMjYxOTkwNSwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6Mn0.12Z5TMquz4I0T1j02A6ENG-MdfzdjR9ku53Dc08UQLY";
-    public static final String tokenD = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0ZGVsQSIsImV4cCI6MTcxMjYyNjg4MSwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0ZGVsQSIsImNhcnRJZCI6MTIwfQ.4UjtQ0o0H99ihpd_VqRwU7GUxh4jcqD2OOuUAmv5RX8";
-    public static final String tokenCC = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0Y2MiLCJleHAiOjE3MTI2MDQyODgsInJvbGVzIjpbeyJpZCI6MSwiYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJuYW1lIjoiVGVzdGNjIiwiY2FydElkIjoxMjJ9.cbm8jdC4DtuimaGr0uj8s8yDWKKGq2FUcqns1l9jdFo";
+
+    public static final String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMzkxMjkzMiwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6MX0.MW1af56xcDAU3FX4fPw2j42mqqNt7or7_5adLfwqkQo";
 
     @BeforeMethod
     public void init(){
@@ -38,5 +37,17 @@ public class TestBase {
         logger.info("Stop test");
         logger.info("*******************************");
     }
+
+//    public static String loginAndGetToken(String email, String password) {
+//        Response response = given()
+//                .contentType("application/json")
+//                .body("{ \"email\": \"" + email + "\", \"password\": \"" + password + "\" }")
+//                .when()
+//                .post("auth/login")
+//                .then()
+//                .extract().response();
+//
+//        return response.getBody().jsonPath().getString("accessToken");
+//    }
 }
 

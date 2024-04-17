@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite1" verbose="1">
+    <test name="User">
+        <classes>
+            <class name="com.learn.UItests.Positive.HomePagePositiveTests"/>
+            <class name="com.learn.UItests.Positive.RegistrationPositiveTests"/>
+            <class name="com.learn.UItests.Positive.LoginPositiveTests"/>
+            <class name="com.learn.UItests.Positive.ChangePasswordPositiveTests"/>
+            <class name="com.learn.UItests.Positive.LogoutPositiveTest"/>
+            <class name="com.learn.UItests.Positive.DeleteAccountPositiveTests"/>
+            <class name="com.learn.UItests.Negative.RegistrationNegativeTests"/>
+            <class name="com.learn.UItests.Negative.LoginNegativeTests"/>
+            <class name="com.learn.UItests.Negative.ChangePasswordNegativeTests"/>
+        </classes>
+    </test>
+</suite>

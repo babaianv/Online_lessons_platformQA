@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite2" verbose="1">
+    <test name="CartControllerTests">
+        <classes>
+            <class name="com.learn.RAtests.CartController.AddCourseToCartPositiveTests"/>
+            <class name="com.learn.RAtests.CartController.GetCoursesFromCartPositiveTests"/>
+            <class name="com.learn.RAtests.CartController.DeleteCoursesFromCartPositiveTests"/>
+            <class name="com.learn.RAtests.CartController.BuyCoursePositiveTests"/>
+            <class name="com.learn.RAtests.CartController.AddCourseToCartNegativeTests"/>
+            <class name="com.learn.RAtests.CartController.GetCoursesFromCartNegativeTests"/>
+            <class name="com.learn.RAtests.CartController.DeleteCoursesFromCartNegativeTests"/>
+            <class name="com.learn.RAtests.CartController.BuyCourseNegativeTests"/>
+        </classes>
+    </test>
+
+</suite>
