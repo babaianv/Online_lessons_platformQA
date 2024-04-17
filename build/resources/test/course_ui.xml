@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite1" verbose="1">
+    <test name="Course">
+        <classes>
+            <class name="com.learn.UItests.Positive.CreateCoursePositiveTests"/>
+            <class name="com.learn.UItests.Positive.UpdateCoursesPositiveTests"/>
+            <class name="com.learn.UItests.Positive.CoursePurchasingPositiveTests"/>
+            <class name="com.learn.UItests.Positive.DeleteCoursePositiveTests"/>
+            <class name="com.learn.UItests.Negative.CreateCourseNegativeTests"/>
+            <class name="com.learn.UItests.Negative.UpdateCoursesNegativeTests"/>
+        </classes>
+    </test>
+</suite>

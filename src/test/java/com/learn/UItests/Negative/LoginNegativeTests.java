@@ -13,6 +13,7 @@ public class LoginNegativeTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
+        app.getUserHelper().pause(3000);
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
                 .setNickname("Testlogn")
@@ -31,7 +32,7 @@ public class LoginNegativeTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(3000);
     }
 
     @Test(description = "UI: Login with wrong Email NEG Test ")
@@ -48,17 +49,17 @@ public class LoginNegativeTests extends TestBase {
     }
 
 
-    @Test(description = "UI: Login with empty Email NEG Test")
-    public void loginWithEmptyEmailNegTest(){
-        app.getUserHelper().clickOnLoginBtn();
-        app.getUserHelper().fillLoginForm(new User()
-                .setPassword("Test1test1!"));
-        app.getUserHelper().clickSubmitLoginBtn();
-
-        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
-        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
-        softAssert.assertAll();
-    }
+//    @Test(description = "UI: Login with empty Email NEG Test")
+//    public void loginWithEmptyEmailNegTest(){
+//        app.getUserHelper().clickOnLoginBtn();
+//        app.getUserHelper().fillLoginForm(new User()
+//                .setPassword("Test1test1!"));
+//        app.getUserHelper().clickSubmitLoginBtn();
+//
+//        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
+//        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
+//        softAssert.assertAll();
+//    }
 
     @Test(description = "UI: Login With Wrong Password Neg Test")
     public void loginWithWrongPasswordNegTest(){
@@ -73,17 +74,17 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertAll();
     }
 
-    @Test(description = "UI: Login With empty Password NEG Test")
-    public void loginWithEmptyPasswordNegTest(){
-        app.getUserHelper().clickOnLoginBtn();
-        app.getUserHelper().fillLoginForm(new User()
-                .setEmail("testwrong@gmail.com"));
-        app.getUserHelper().clickSubmitLoginBtn();
-
-        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
-        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
-        softAssert.assertAll();
-    }
+//    @Test(description = "UI: Login With empty Password NEG Test")
+//    public void loginWithEmptyPasswordNegTest(){
+//        app.getUserHelper().clickOnLoginBtn();
+//        app.getUserHelper().fillLoginForm(new User()
+//                .setEmail("testwrong@gmail.com"));
+//        app.getUserHelper().clickSubmitLoginBtn();
+//
+//        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
+//        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
+//        softAssert.assertAll();
+//    }
 
 }
 

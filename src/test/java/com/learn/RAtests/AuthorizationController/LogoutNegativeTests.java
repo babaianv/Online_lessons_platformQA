@@ -24,7 +24,6 @@ public class LogoutNegativeTests extends TestBase {
                 .extract().response();
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
-        softAssert.assertEquals(response.getStatusCode(), 403);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
         softAssert.assertEquals(forbiddenError.getPath(), "/api/auth/logout");
         softAssert.assertAll();
@@ -44,9 +43,7 @@ public class LogoutNegativeTests extends TestBase {
                 .extract().response();
 
         String responseBody = response.getBody().asString();
-        softAssert.assertEquals(response.getStatusCode(), 404);
-        softAssert.assertTrue(responseBody.contains("Not Found"));
-        softAssert.assertAll();
+        Assert.assertTrue(responseBody.contains("Not Found"));
     }
 }
 

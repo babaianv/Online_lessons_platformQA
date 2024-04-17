@@ -11,19 +11,21 @@ public class CleanCartPositiveTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
+
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
                 .setNickname("Testbc")
                 .setEmail("testbc@gmail.com")
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
+        app.getUserHelper().pause(5000);
     }
     @AfterMethod
     public void clean(){
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
 

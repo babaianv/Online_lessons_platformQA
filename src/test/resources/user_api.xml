@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite4" verbose="1">
+    <test name="UserControllerTests">
+        <classes>
+            <class name="com.learn.RAtests.UserController.RegistrationPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.AccountInfoPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.ChangePasswordPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.DeleteUserPositiveTests"/>
+            <class name="com.learn.RAtests.UserController.RegistrationNegativeTests"/>
+            <class name="com.learn.RAtests.UserController.RegistrationNegativeTests"/>
+            <class name="com.learn.RAtests.UserController.ChangePasswordNegativeTests"/>
+            <class name="com.learn.RAtests.UserController.DeleteUserNegativeTests"/>
+        </classes>
+    </test>
+</suite>

@@ -3,7 +3,6 @@ package com.learn.RAtests.LessonController;
 import com.learn.RAtests.TestBase;
 import com.learn.dto.*;
 import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -29,7 +28,7 @@ public class CreateLessonPositiveTests extends TestBase {
                 .auth().oauth2(token)
                 .body(lessonDto)
                 .when()
-                .post("lessons/606")
+                .post("lessons/1")
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();

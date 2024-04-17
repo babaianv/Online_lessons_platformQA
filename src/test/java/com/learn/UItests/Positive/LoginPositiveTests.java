@@ -13,11 +13,6 @@ public class LoginPositiveTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
-//        if (!isElementPresent(By.cssSelector("a.signUpBtn[href='/reg']"))){
-//            click(By.cssSelector(".burgerMenu"));
-//            click(By.cssSelector(".burgerMenuContent a[href='/']"));
-//        }
-
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
                 .setNickname("Testlog")
@@ -25,6 +20,7 @@ public class LoginPositiveTests extends TestBase {
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickBurgerMenuLogoutBtn();
+        app.getUserHelper().pause(5000);
     }
 
     @AfterMethod
@@ -32,7 +28,7 @@ public class LoginPositiveTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @Test(description = "UI: Login positive test")

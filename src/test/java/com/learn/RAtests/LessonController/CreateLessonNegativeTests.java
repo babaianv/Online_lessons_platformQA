@@ -36,8 +36,6 @@ public class CreateLessonNegativeTests extends TestBase {
 
         LessonValidationError lessonValidationError = response.as(LessonValidationError.class);
         Assert.assertTrue(lessonValidationError.getMessage().contains("must not be null"));
-
-        System.out.println(lessonValidationError.getMessage());
     }
 
     @Test(description = "API: Create Lesson with Empty Content Neg Test")
@@ -59,8 +57,6 @@ public class CreateLessonNegativeTests extends TestBase {
 
         LessonValidationError lessonValidationError = response.as(LessonValidationError.class);
         Assert.assertTrue(lessonValidationError.getMessage().contains("must not be null"));
-
-        System.out.println(lessonValidationError.getMessage());
     }
 
     @Test(description = "API: Create Lesson with Empty Photo Neg Test")
@@ -82,8 +78,6 @@ public class CreateLessonNegativeTests extends TestBase {
 
         LessonValidationError lessonValidationError = response.as(LessonValidationError.class);
         Assert.assertTrue(lessonValidationError.getMessage().contains("must not be null"));
-
-        System.out.println(lessonValidationError.getMessage());
     }
 
 
@@ -108,8 +102,6 @@ public class CreateLessonNegativeTests extends TestBase {
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
         softAssert.assertAll();
-
-        System.out.println(forbiddenError.getError() + " " + forbiddenError.getStatus());
     }
 
     @Test(description = "API: Create Lesson with wrong Path Neg Test")
@@ -132,8 +124,6 @@ public class CreateLessonNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
-
-        System.out.println(responseBody);
     }
 
     @Test(description = "API: Create Lesson for NOT exist Course Neg Test")
@@ -157,5 +147,7 @@ public class CreateLessonNegativeTests extends TestBase {
         LessonNotFoundError lessonNotFoundError = response.as(LessonNotFoundError.class);
         Assert.assertEquals(lessonNotFoundError.getMessage(), "Course not found with id 6060");
     }
+
+
 }
 

@@ -15,6 +15,7 @@ public class LessonHelper extends BaseHelper{
     }
 
     public void fillLessonForm(Lesson lesson){
+        type(By.cssSelector("#number"), lesson.getNumber());
         type(By.cssSelector("#title"),lesson.getTitle());
         type(By.cssSelector("#content"),lesson.getContent());
     }

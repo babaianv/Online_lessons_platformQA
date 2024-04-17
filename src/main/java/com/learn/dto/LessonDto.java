@@ -15,5 +15,6 @@ public class LessonDto {
     private String title;
     private String photoPath;
     private String content;
+    private String number;
 }
 

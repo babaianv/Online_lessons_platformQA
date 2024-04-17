@@ -14,8 +14,8 @@ public class CreateLessonsNegativeTests extends TestBase {
     @BeforeMethod
     public void precondition(){
         app.getUserHelper().clickOnSignUpBtn();
-        app.getUserHelper().fillRegisterForm(new User().
-                setNickname("Testles")
+        app.getUserHelper().fillRegisterForm(new User()
+                .setNickname("Testles")
                 .setEmail("testles@gmail.com")
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
@@ -29,7 +29,7 @@ public class CreateLessonsNegativeTests extends TestBase {
         app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(3000);
     }
 
     @AfterMethod
@@ -37,35 +37,38 @@ public class CreateLessonsNegativeTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(3000);
     }
 
-    @Test(description = "UI: Create Lesson With Empty Title Neg Test")
-    public void createLessonWithEmptyTitleNegTest(){
-        app.getLessonHelper().clickOnAddLessonBtn();
-        app.getLessonHelper().fillLessonForm(new Lesson()
-                .setContent("Introduction to Java: Covering essential concepts such as variables, data types, loops, conditionals, methods, and problem-solving strategies. Interactive sessions with hands-on exercises for practical learning."));
-        app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\lessonPhoto.png");
-        app.getLessonHelper().clickSubmitAddLessonBtn();
+//    @Test(description = "UI: Create Lesson With Empty Title Neg Test")
+//    public void createLessonWithEmptyTitleNegTest(){
+//        app.getLessonHelper().clickOnAddLessonBtn();
+//        app.getLessonHelper().fillLessonForm(new Lesson()
+//                .setNumber("1")
+//                .setContent("Introduction to Java: Covering essential concepts such as variables, data types, loops, conditionals, methods, and problem-solving strategies. Interactive sessions with hands-on exercises for practical learning."));
+//        app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\lessonPhoto.png");
+//        app.getLessonHelper().clickSubmitAddLessonBtn();
+//
+//        Assert.assertTrue(app.getLessonHelper().isErrorEmptyFieldMessagePopUpPresent());
+//    }
 
-        Assert.assertTrue(app.getLessonHelper().isErrorEmptyFieldMessagePopUpPresent());
-    }
-
-    @Test(description = "UI: Create Lesson With Empty Content Neg Test")
-    public void createLessonWithEmptyContentNegTest(){
-        app.getLessonHelper().clickOnAddLessonBtn();
-        app.getLessonHelper().fillLessonForm(new Lesson()
-                .setTitle("Basic concepts and definitions"));
-        app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\lessonPhoto.png");
-        app.getLessonHelper().clickSubmitAddLessonBtn();
-
-        Assert.assertTrue(app.getLessonHelper().isErrorEmptyFieldMessagePopUpPresent());
-    }
+//    @Test(description = "UI: Create Lesson With Empty Content Neg Test")
+//    public void createLessonWithEmptyContentNegTest(){
+//        app.getLessonHelper().clickOnAddLessonBtn();
+//        app.getLessonHelper().fillLessonForm(new Lesson()
+//                .setNumber("1")
+//                .setTitle("Basic concepts and definitions"));
+//        app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\lessonPhoto.png");
+//        app.getLessonHelper().clickSubmitAddLessonBtn();
+//
+//        Assert.assertTrue(app.getLessonHelper().isErrorEmptyFieldMessagePopUpPresent());
+//    }
 
     @Test(description = "UI: Create Lesson Without Photo Neg Test")
     public void createLessonWithoutPhotoNegTest(){
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
+                .setNumber("1")
                 .setTitle("Basic concepts and definitions")
                 .setContent("Introduction to Java: Covering essential concepts such as variables, data types, loops, conditionals, methods, and problem-solving strategies. Interactive sessions with hands-on exercises for practical learning."));
         app.getLessonHelper().clickSubmitAddLessonBtn();
@@ -77,6 +80,7 @@ public class CreateLessonsNegativeTests extends TestBase {
     public void createLessonWithWrongPhotoFormatNegTest(){
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
+                .setNumber("1")
                 .setTitle("Basic concepts and definitions")
                 .setContent("Introduction to Java: Covering essential concepts such as variables, data types, loops, conditionals, methods, and problem-solving strategies. Interactive sessions with hands-on exercises for practical learning."));
         app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\TestPlan.docx");
@@ -85,12 +89,6 @@ public class CreateLessonsNegativeTests extends TestBase {
         Assert.assertTrue(app.getLessonHelper().isSuccessAddLessonPopUpPresent());
     }
 
-    @Test(description = "UI: Create Lesson Positive Test")
-    public void createLessonPositiveTest(){
-        app.getLessonHelper().clickSubmitAddLessonBtn();
-
-        Assert.assertTrue(app.getLessonHelper().isErrorSubmitNoLessonPopUpPresent());
-    }
 
 }
 

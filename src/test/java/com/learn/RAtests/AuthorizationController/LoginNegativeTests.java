@@ -29,8 +29,6 @@ public class LoginNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Unsupported Media Type"));
-
-        System.out.println("Response body: " + responseBody);
     }
 
 
@@ -52,8 +50,6 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertTrue(responseBody.contains("Not Found"));
         softAssert.assertTrue(responseBody.contains("/api/auth/log"));
         softAssert.assertAll();
-
-        System.out.println(responseBody);
     }
 
 
@@ -75,10 +71,7 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertEquals(dto.getAccessToken(),null);
         softAssert.assertEquals(dto.getRefreshToken(), null);
         softAssert.assertTrue(dto.getMessage().contains("Email or password is incorrect"));
-
         softAssert.assertAll();
-
-        System.out.println("Response body: " +dto);
     }
 
 
@@ -101,8 +94,6 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertEquals(dto.getRefreshToken(), null);
         softAssert.assertTrue(dto.getMessage().contains("Email or password is incorrect"));
         softAssert.assertAll();
-
-        System.out.println("Response body: " +dto);
     }
 
 
@@ -124,8 +115,6 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertEquals(dto.getRefreshToken(), null);
         softAssert.assertTrue(dto.getMessage().contains("Email or password is incorrect"));
         softAssert.assertAll();
-
-        System.out.println("Response body: " +dto);
     }
 
 
@@ -147,8 +136,6 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertEquals(dto.getRefreshToken(), null);
         softAssert.assertTrue(dto.getMessage().contains("Email or password is incorrect"));
         softAssert.assertAll();
-
-        System.out.println("Response body: " +dto);
     }
 }
 

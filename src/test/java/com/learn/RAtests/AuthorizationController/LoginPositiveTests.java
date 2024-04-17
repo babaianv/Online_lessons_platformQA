@@ -69,7 +69,6 @@ public class LoginPositiveTests extends TestBase {
                 .extract().response();
 
         Assert.assertEquals(response.getStatusCode(), 200);
-
     }
 
 }

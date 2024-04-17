@@ -28,7 +28,7 @@ public class UpdateCoursesPositiveTests extends TestBase {
 
         app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
-        app.getCourseHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @AfterMethod
@@ -36,7 +36,7 @@ public class UpdateCoursesPositiveTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @Test(description = "UI: Edit Course Title Positive Test")

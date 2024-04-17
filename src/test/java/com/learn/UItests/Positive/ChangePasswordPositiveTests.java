@@ -21,6 +21,7 @@ public class ChangePasswordPositiveTests extends TestBase {
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickOnBurgerMenuMyAccount();
+        app.getUserHelper().pause(5000);
     }
 
     @AfterMethod
@@ -28,6 +29,7 @@ public class ChangePasswordPositiveTests extends TestBase {
         app.getUserHelper().clickAccountInfo();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
+        app.getUserHelper().pause(5000);
     }
 
 

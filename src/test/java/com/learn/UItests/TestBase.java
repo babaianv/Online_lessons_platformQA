@@ -33,17 +33,17 @@ public class TestBase {
         logger.info("Start test: " +method.getName() + "with data: " + Arrays.asList(p));
     }
 
-//    @AfterMethod
-//    public void stopTest(ITestResult result){
-//        if (result.isSuccess()){
-//            logger.info("PASSED: "+result.getMethod().getMethodName());
-//        }else {
-//            logger.error("FAILED: "+result.getMethod().getMethodName() + " Screenshot -> "
-//                    + app.getUserHelper().takeScreenshot());
-//        }
-//        logger.info("Stop test");
-//        logger.info("************************");
-//    }
+    @AfterMethod
+    public void stopTest(ITestResult result){
+        if (result.isSuccess()){
+            logger.info("PASSED: "+result.getMethod().getMethodName());
+        }else {
+            logger.error("FAILED: "+result.getMethod().getMethodName() + " Screenshot -> "
+                    + app.getUserHelper().takeScreenshot());
+        }
+        logger.info("Stop test");
+        logger.info("************************");
+    }
 
 }
 

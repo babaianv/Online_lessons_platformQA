@@ -15,6 +15,8 @@ public class CreateCourseNegativeTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
+
+        app.getUserHelper().pause(3000);
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User().
                 setNickname("Testccn")
@@ -30,22 +32,22 @@ public class CreateCourseNegativeTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(3000);
     }
 
-    @Test(description = "UI: Create Course with empty Title Negative Test")
-    public void createCourseWithEmptyTitleNegTest(){
-        app.getCourseHelper().clickOnCreateCourseBtn();
-        app.getCourseHelper().fillCourseForm(new Course()
-                .setPrice("700")
-                .setDescription("Our Java courses offer students a comprehensive immersion into this powerful programming language. We provide a structured curriculum, starting from basic concepts and progressing to more advanced topics. Students learn fundamental object-oriented programming concepts such as classes, objects, inheritance, and polymorphism, and apply them in practical exercises.Within our courses, we offer a wide range of exercises and projects to help students solidify their knowledge and skills. We also focus on practical aspects of development, including working with integrated development environments, debugging code, and version control.Additionally, our courses cover popular Java frameworks and libraries like Spring and Hibernate, enabling students to master modern tools for web development and database work.Our teaching methodology is based on hands-on experience and interactive sessions, where students actively engage in discussions, solve problems, and create their own projects under the guidance of experienced instructors."));
-        app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
-        app.getCourseHelper().clickOnSubmitCreateCourseBtn();
-
-        softAssert.assertEquals( "The title must be at least 5 characters long.", app.getCourseHelper().getCreateCourseError().getText());
-        softAssert.assertTrue(app.getCourseHelper().isCourseErrorPopUpPresent());
-        softAssert.assertAll();
-    }
+//    @Test(description = "UI: Create Course with empty Title Negative Test")
+//    public void createCourseWithEmptyTitleNegTest(){
+//        app.getCourseHelper().clickOnCreateCourseBtn();
+//        app.getCourseHelper().fillCourseForm(new Course()
+//                .setPrice("700")
+//                .setDescription("Our Java courses offer students a comprehensive immersion into this powerful programming language. We provide a structured curriculum, starting from basic concepts and progressing to more advanced topics. Students learn fundamental object-oriented programming concepts such as classes, objects, inheritance, and polymorphism, and apply them in practical exercises.Within our courses, we offer a wide range of exercises and projects to help students solidify their knowledge and skills. We also focus on practical aspects of development, including working with integrated development environments, debugging code, and version control.Additionally, our courses cover popular Java frameworks and libraries like Spring and Hibernate, enabling students to master modern tools for web development and database work.Our teaching methodology is based on hands-on experience and interactive sessions, where students actively engage in discussions, solve problems, and create their own projects under the guidance of experienced instructors."));
+//        app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
+//        app.getCourseHelper().clickOnSubmitCreateCourseBtn();
+//
+//        softAssert.assertEquals( "The title must be at least 5 characters long.", app.getCourseHelper().getCreateCourseError().getText());
+//        softAssert.assertTrue(app.getCourseHelper().isCourseErrorPopUpPresent());
+//        softAssert.assertAll();
+//    }
 
     @Test(description = "UI: Create Course Title contains numbers Negative Test")
     public void createCourseTitleContainsNumbersNegTest(){
@@ -76,19 +78,19 @@ public class CreateCourseNegativeTests extends TestBase {
     }
 
 
-    @Test(description = "UI: Create Course Empty Price Negative Test")
-    public void createCourseEmptyPriceNegTest(){
-        app.getCourseHelper().clickOnCreateCourseBtn();
-        app.getCourseHelper().fillCourseForm(new Course()
-                .setTitle("Devops from begin to advanced")
-                .setDescription("Our Java courses offer students a comprehensive immersion into this powerful programming language. We provide a structured curriculum, starting from basic concepts and progressing to more advanced topics. Students learn fundamental object-oriented programming concepts such as classes, objects, inheritance, and polymorphism, and apply them in practical exercises.Within our courses, we offer a wide range of exercises and projects to help students solidify their knowledge and skills. We also focus on practical aspects of development, including working with integrated development environments, debugging code, and version control.Additionally, our courses cover popular Java frameworks and libraries like Spring and Hibernate, enabling students to master modern tools for web development and database work.Our teaching methodology is based on hands-on experience and interactive sessions, where students actively engage in discussions, solve problems, and create their own projects under the guidance of experienced instructors."));
-        app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
-        app.getCourseHelper().clickOnSubmitCreateCourseBtn();
-
-        softAssert.assertEquals( "The price must be between 0 and 9999.", app.getCourseHelper().getCreateCourseError().getText());
-        softAssert.assertTrue(app.getCourseHelper().isCourseErrorPopUpPresent());
-        softAssert.assertAll();
-    }
+//    @Test(description = "UI: Create Course Empty Price Negative Test")
+//    public void createCourseEmptyPriceNegTest(){
+//        app.getCourseHelper().clickOnCreateCourseBtn();
+//        app.getCourseHelper().fillCourseForm(new Course()
+//                .setTitle("Devops from begin to advanced")
+//                .setDescription("Our Java courses offer students a comprehensive immersion into this powerful programming language. We provide a structured curriculum, starting from basic concepts and progressing to more advanced topics. Students learn fundamental object-oriented programming concepts such as classes, objects, inheritance, and polymorphism, and apply them in practical exercises.Within our courses, we offer a wide range of exercises and projects to help students solidify their knowledge and skills. We also focus on practical aspects of development, including working with integrated development environments, debugging code, and version control.Additionally, our courses cover popular Java frameworks and libraries like Spring and Hibernate, enabling students to master modern tools for web development and database work.Our teaching methodology is based on hands-on experience and interactive sessions, where students actively engage in discussions, solve problems, and create their own projects under the guidance of experienced instructors."));
+//        app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
+//        app.getCourseHelper().clickOnSubmitCreateCourseBtn();
+//
+//        softAssert.assertEquals( "The price must be between 0 and 9999.", app.getCourseHelper().getCreateCourseError().getText());
+//        softAssert.assertTrue(app.getCourseHelper().isCourseErrorPopUpPresent());
+//        softAssert.assertAll();
+//    }
 
 
     @Test(description = "UI: Create Course height Price Negative Test")

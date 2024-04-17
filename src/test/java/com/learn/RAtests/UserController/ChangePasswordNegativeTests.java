@@ -81,7 +81,7 @@ public class ChangePasswordNegativeTests extends TestBase {
     }
 
 
-    @Test(description = "API: Reg With Short Length 7 Password Neg Test")
+    @Test(description = "API: Change Password With Short Length 7 Neg Test")
     public void changePassWithShortLength7NegTest(){
         passwordDto.setOldPassword("Test1test1!");
         passwordDto.setNewPassword("Test01!");

@@ -35,8 +35,6 @@ public class GetCoursesPositiveTests extends TestBase {
         softAssert.assertNull(courseDto.getPresentationPath());
         softAssert.assertNotNull(courseDto.getDescription());
         softAssert.assertAll();
-
-        System.out.println(courseDto);
     }
 
     @Test(description = "API: Get All Courses Positive Test")
@@ -67,7 +65,7 @@ public class GetCoursesPositiveTests extends TestBase {
     public void getCourseByUserCreatedPositiveTest() {
         Response response = given()
                 .contentType("application/json")
-                .auth().oauth2(tokenCC)
+                .auth().oauth2(token)
                 .when()
                 .get("courses/created/Test1")
                 .then()
@@ -84,8 +82,6 @@ public class GetCoursesPositiveTests extends TestBase {
             softAssert.assertNotNull(courseDto.getPhotoPath());
             softAssert.assertNull(courseDto.getPresentationPath());
             softAssert.assertNotNull(courseDto.getDescription());
-
-            System.out.println(courseDtoList);
         }
         softAssert.assertAll();
     }

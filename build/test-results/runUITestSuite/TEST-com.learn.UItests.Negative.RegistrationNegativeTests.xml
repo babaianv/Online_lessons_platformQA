@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Negative.RegistrationNegativeTests" tests="17" skipped="0" failures="0" errors="0" timestamp="2024-04-17T10:54:06" hostname="DESKTOP-M6NQQR2" time="89.339">
+  <properties/>
+  <testcase name="regWithExistNicknameNegativeTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="1.28"/>
+  <testcase name="regWithShortLengthNicknameNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.501"/>
+  <testcase name="regWithLongLengthNicknameNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.488"/>
+  <testcase name="regWithOnlyNumbersNicknameNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.457"/>
+  <testcase name="regWithInvalidSymbolNicknameNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.441"/>
+  <testcase name="regWithOnlySymbolNicknameNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.442"/>
+  <testcase name="regWithExistEmailNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="1.12"/>
+  <testcase name="regWithWrongEmailFormatNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.45"/>
+  <testcase name="regWithShortPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.446"/>
+  <testcase name="regWithOnlyNumbersPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.432"/>
+  <testcase name="regWithOnlyLettersPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.465"/>
+  <testcase name="regWithOnlyValidSymbolPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.441"/>
+  <testcase name="regWithOnlyValidInSymbolPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.432"/>
+  <testcase name="regWithOnlyUppercasePasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.429"/>
+  <testcase name="regWithOnlyLowercasePasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.42"/>
+  <testcase name="regWithoutSpecialSymbolPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.445"/>
+  <testcase name="regWithoutNumbersPasswordNegTest" classname="com.learn.UItests.Negative.RegistrationNegativeTests" time="0.469"/>
+  <system-out><![CDATA[12:54:01.478 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithExistNicknameNegativeTestwith data: []
+12:54:07.764 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithExistNicknameNegativeTest
+12:54:07.764 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:07.764 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:07.765 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithShortLengthNicknameNegTestwith data: []
+12:54:13.278 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithShortLengthNicknameNegTest
+12:54:13.278 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:13.278 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:13.279 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithLongLengthNicknameNegTestwith data: []
+12:54:18.781 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithLongLengthNicknameNegTest
+12:54:18.781 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:18.781 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:18.782 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyNumbersNicknameNegTestwith data: []
+12:54:24.248 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyNumbersNicknameNegTest
+12:54:24.248 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:24.248 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:24.249 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithInvalidSymbolNicknameNegTestwith data: []
+12:54:29.695 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithInvalidSymbolNicknameNegTest
+12:54:29.695 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:29.695 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:29.696 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlySymbolNicknameNegTestwith data: []
+12:54:35.155 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlySymbolNicknameNegTest
+12:54:35.155 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:35.155 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:35.156 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithExistEmailNegTestwith data: []
+12:54:41.290 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithExistEmailNegTest
+12:54:41.290 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:41.290 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:41.291 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithWrongEmailFormatNegTestwith data: []
+12:54:46.751 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithWrongEmailFormatNegTest
+12:54:46.751 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:46.751 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:46.752 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithShortPasswordNegTestwith data: []
+12:54:52.209 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithShortPasswordNegTest
+12:54:52.209 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:52.209 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:52.210 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyNumbersPasswordNegTestwith data: []
+12:54:57.650 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyNumbersPasswordNegTest
+12:54:57.650 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:54:57.650 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:54:57.651 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyLettersPasswordNegTestwith data: []
+12:55:03.129 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyLettersPasswordNegTest
+12:55:03.129 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:03.129 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:55:03.130 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyValidSymbolPasswordNegTestwith data: []
+12:55:08.572 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyValidSymbolPasswordNegTest
+12:55:08.572 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:08.572 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:55:08.573 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyValidInSymbolPasswordNegTestwith data: []
+12:55:14.012 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyValidInSymbolPasswordNegTest
+12:55:14.012 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:14.012 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:55:14.013 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyUppercasePasswordNegTestwith data: []
+12:55:19.456 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyUppercasePasswordNegTest
+12:55:19.456 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:19.456 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:55:19.457 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyLowercasePasswordNegTestwith data: []
+12:55:24.888 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithOnlyLowercasePasswordNegTest
+12:55:24.889 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:24.889 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:55:24.889 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithoutSpecialSymbolPasswordNegTestwith data: []
+12:55:30.342 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithoutSpecialSymbolPasswordNegTest
+12:55:30.343 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:30.343 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+12:55:30.344 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithoutNumbersPasswordNegTestwith data: []
+12:55:35.823 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithoutNumbersPasswordNegTest
+12:55:35.823 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+12:55:35.823 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

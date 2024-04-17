@@ -1,9 +1,11 @@
 package com.learn.UItests.Positive;
 
 import com.learn.UItests.TestBase;
+import com.learn.data.UserData;
 import com.learn.models.User;
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -16,16 +18,16 @@ public class RegistrationPositiveTests extends TestBase {
         app.getUserHelper().click(By.cssSelector(".burgerMenuContent a[href='/my_account']"));
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @Test(description = "UI: Registration Positive Test")
     public void registrationPositiveTest(){
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testregp")
-                .setEmail("testregp@gmail.com")
-                .setPassword("Test1test1!"));
+                .setNickname(UserData.NICKNAME)
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickBurgerMenu();
         softAssert.assertTrue(app.getUserHelper().isRegisterSuccessPopUpPresent());

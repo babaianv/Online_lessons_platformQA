@@ -29,7 +29,7 @@ public class CreateLessonsPositiveTests extends TestBase {
         app.getCourseHelper().uploadCoverPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\coverPhoto.jpg");
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @AfterMethod
@@ -37,13 +37,14 @@ public class CreateLessonsPositiveTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @Test(description = "UI: Create Lesson Positive Test")
     public void createLessonPositiveTest(){
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
+                .setNumber("1")
                 .setTitle("Basic concepts and definitions")
                 .setContent("Introduction to Java: Covering essential concepts such as variables, data types, loops, conditionals, methods, and problem-solving strategies. Interactive sessions with hands-on exercises for practical learning."));
         app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\lessonPhoto.png");
@@ -56,6 +57,7 @@ public class CreateLessonsPositiveTests extends TestBase {
     public void submitCreatedLessonPositiveTest(){
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
+                .setNumber("1")
                 .setTitle("Basic concepts and definitions")
                 .setContent("Introduction to Java: Covering essential concepts such as variables, data types, loops, conditionals, methods, and problem-solving strategies. Interactive sessions with hands-on exercises for practical learning."));
         app.getLessonHelper().uploadLessonPhoto("C:\\Online_lesson_platform\\src\\coverPhoto\\lessonPhoto.png");

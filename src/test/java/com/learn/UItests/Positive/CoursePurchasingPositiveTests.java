@@ -11,12 +11,14 @@ public class CoursePurchasingPositiveTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
+
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
                 .setNickname("Testcart")
                 .setEmail("testcart@gmail.com")
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
+        app.getUserHelper().pause(5000);
     }
 
     @AfterMethod

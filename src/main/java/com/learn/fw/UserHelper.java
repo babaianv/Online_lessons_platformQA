@@ -11,10 +11,11 @@ public class UserHelper extends BaseHelper {
         super(driver);
     }
 
-    public WebElement getRegisterError() {
-        WebElement errorReg = ApplicationManager.driver.findElement(By.className("registration-error-message"));
-        return errorReg ;
+    public String getRegisterError() {
+        WebElement errorElement = driver.findElement(By.className("registration-error-message"));
+        return errorElement.getText();
     }
+
 
     public void fillRegisterForm(User user) {
         type(By.cssSelector("#nickname"), user.getNickname());

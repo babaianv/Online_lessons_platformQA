@@ -13,6 +13,7 @@ public class CreateCoursePositiveTests extends TestBase {
 
     @BeforeMethod
     public void precondition(){
+
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
                 .setNickname("Test_CC")
@@ -20,6 +21,7 @@ public class CreateCoursePositiveTests extends TestBase {
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getCourseHelper().clickOnBurgerMenuMyCourses();
+        app.getUserHelper().pause(5000);
     }
 
     @AfterMethod
@@ -27,7 +29,7 @@ public class CreateCoursePositiveTests extends TestBase {
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(1500);
+        app.getUserHelper().pause(5000);
     }
 
     @Test(description = "UI: Create Course Positive Test")

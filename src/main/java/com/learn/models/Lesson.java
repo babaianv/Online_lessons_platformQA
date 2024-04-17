@@ -1,6 +1,8 @@
 package com.learn.models;
 
 public class Lesson {
+
+    private String number;
     private  String title;
     private  String content;
     private  String lessonPhoto;
@@ -18,6 +20,15 @@ public class Lesson {
     public Lesson setLessonPhoto(String lessonPhoto) {
         this.lessonPhoto = lessonPhoto;
         return this;
+    }
+
+    public Lesson setNumber(String number) {
+        this.number = number;
+        return this;
+    }
+
+    public String getNumber() {
+        return number;
     }
 
     public String getTitle() {

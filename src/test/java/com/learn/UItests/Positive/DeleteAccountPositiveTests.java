@@ -17,6 +17,7 @@ public class DeleteAccountPositiveTests extends TestBase {
                 .setPassword("Test1test1!"));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickBurgerMenu();
+        app.getUserHelper().pause(5000);
     }
 
     @Test(description = "UI: Delete User Account")

@@ -13,11 +13,8 @@ import java.lang.reflect.Method;
 public class TestBase {
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
-    public static final String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMzgyOTk5OSwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6ODMwfQ.-3vNutbUvDabQaXnSKV01ekc94s9p8EvEI41nzXt_kQ";
-    public static final String tokenD = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0ZGVsQSIsImV4cCI6MTcxMjYyNjg4MSwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0ZGVsQSIsImNhcnRJZCI6MTIwfQ.4UjtQ0o0H99ihpd_VqRwU7GUxh4jcqD2OOuUAmv5RX8";
-    public static final String tokenCC = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MiIsImV4cCI6MTcxMzgyOTYzMiwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MiIsImNhcnRJZCI6NjB9.tgY1jGUMsOLC7K4bGE0UdHsRCnW3-Dm8gALF-nUeaVo";
 
-
+    public static final String token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0MSIsImV4cCI6MTcxMzkxMjkzMiwicm9sZXMiOlt7ImlkIjoxLCJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sIm5hbWUiOiJUZXN0MSIsImNhcnRJZCI6MX0.MW1af56xcDAU3FX4fPw2j42mqqNt7or7_5adLfwqkQo";
 
     @BeforeMethod
     public void init(){

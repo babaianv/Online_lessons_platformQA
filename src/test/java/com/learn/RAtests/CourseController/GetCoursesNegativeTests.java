@@ -25,8 +25,6 @@ public class GetCoursesNegativeTests extends TestBase {
 
         CourseNotFoundError courseNotFoundDto = response.as(CourseNotFoundError.class);
         Assert.assertEquals(courseNotFoundDto.getMessage(), "Course not found with id 1200");
-
-        System.out.println(courseNotFoundDto);
     }
 
 
@@ -42,8 +40,6 @@ public class GetCoursesNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
-
-        System.out.println(responseBody);
     }
 
 
@@ -59,8 +55,6 @@ public class GetCoursesNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
-
-        System.out.println(responseBody);
     }
 
     @Test(description = "API: Get user Course without AUTH Neg Test")
@@ -77,8 +71,6 @@ public class GetCoursesNegativeTests extends TestBase {
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
         softAssert.assertAll();
-
-        System.out.println(forbiddenError.getError() + " " + forbiddenError.getStatus());
     }
 
 
@@ -94,8 +86,6 @@ public class GetCoursesNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
-
-        System.out.println(responseBody);
     }
 
 
@@ -114,7 +104,6 @@ public class GetCoursesNegativeTests extends TestBase {
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
         softAssert.assertEquals(forbiddenError.getPath(), "/api/courses/available/Testcc");
         softAssert.assertAll();
-        System.out.println(forbiddenError.getError() +" "+ forbiddenError.getStatus());
     }
 
 
@@ -134,8 +123,6 @@ public class GetCoursesNegativeTests extends TestBase {
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertEquals(response.getHeader("x-frame-options"), "DENY");
         softAssert.assertAll();
-
-        System.out.println(userNotFoundError.getMessage());
     }
 
 
@@ -152,8 +139,6 @@ public class GetCoursesNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
-
-        System.out.println(responseBody);
     }
 
 }

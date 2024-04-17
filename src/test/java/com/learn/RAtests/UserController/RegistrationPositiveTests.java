@@ -1,7 +1,9 @@
 package com.learn.RAtests.UserController;
 
 import com.learn.RAtests.TestBase;
+import com.learn.dto.TokenResponseDto;
 import com.learn.dto.UserDto;
+import com.learn.dto.UserLoginDto;
 import io.restassured.response.Response;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -12,7 +14,11 @@ import static io.restassured.RestAssured.given;
 public class RegistrationPositiveTests extends TestBase {
 
     SoftAssert softAssert = new SoftAssert();
+    UserLoginDto userLoginDto;
     int id;
+    String nickname;
+    String email;
+    String password;
 
     @Test(description = "API: Registration Success")
     public void registrationSuccessTest(){
@@ -39,10 +45,13 @@ public class RegistrationPositiveTests extends TestBase {
         softAssert.assertNotNull(userDto.getRoles());
         softAssert.assertAll();
 
+        UserLoginDto userLoginDto = response.as(UserLoginDto.class);
         id = userDto.getId();
+        nickname = userDto.getNickname();
+        email = userLoginDto.getEmail();
+        password =  "Test1test1!";
     }
 
-    ////PASS(Length Nickname(10))
 
     @Test(description = "API: Reg with Boundary Value 10 Nickname")
     public void regWithBoundaryValue10NicknameTest(){
@@ -66,7 +75,11 @@ public class RegistrationPositiveTests extends TestBase {
         softAssert.assertNotNull(userDto.getRoles());
         softAssert.assertAll();
 
+        UserLoginDto userLoginDto = response.as(UserLoginDto.class);
         id = userDto.getId();
+        nickname = userDto.getNickname();
+        email = userLoginDto.getEmail();
+        password =  "Test1test1!";
     }
 
 
@@ -93,7 +106,11 @@ public class RegistrationPositiveTests extends TestBase {
         softAssert.assertNotNull(userDto.getRoles());
         softAssert.assertAll();
 
+        UserLoginDto userLoginDto = response.as(UserLoginDto.class);
         id = userDto.getId();
+        nickname = userDto.getNickname();
+        email = userLoginDto.getEmail();
+        password =  "Test1test1!";
     }
 
 
@@ -120,9 +137,36 @@ public class RegistrationPositiveTests extends TestBase {
         softAssert.assertNotNull(userDto.getRoles());
         softAssert.assertAll();
 
+        UserLoginDto userLoginDto = response.as(UserLoginDto.class);
+        email = userLoginDto.getEmail();
+        password =  "Testes1!";
         id = userDto.getId();
+        nickname = userDto.getNickname();
     }
 
+    @AfterMethod
+    public void cleanup() {
+
+        Response response = given()
+                .contentType("application/json")
+                .body(UserLoginDto.builder()
+                        .email(email)
+                        .password(password)
+                        .build())
+                .when()
+                .post("auth/login")
+                .then()
+                .assertThat().statusCode(200)
+                .extract().response();
+
+        TokenResponseDto dto = response.as(TokenResponseDto.class);
+        String accessToken = dto.getAccessToken();
+        given()
+                .contentType("application/json")
+                .auth().oauth2(accessToken)
+                .when()
+                .delete("users/delete/"+nickname);
+    }
 
 }
 

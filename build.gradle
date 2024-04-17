@@ -40,15 +40,37 @@ task runApiTestSuite(type: Test) {
         def suite2 = project.hasProperty("suite2")
         def suite3 = project.hasProperty("suite3")
         def suite4 = project.hasProperty("suite4")
+        def suite5 = project.hasProperty("suite5")
 
         if (suite1) {
-            suites 'src/test/resources/auth.xml'
+            suites 'src/test/resources/auth_api.xml'
         }else if (suite2) {
-            suites 'src/test/resources/cart.xml'
+            suites 'src/test/resources/cart_api.xml'
         }else if (suite3){
-            suites 'src/test/resources/courses.xml'
+            suites 'src/test/resources/course_api.xml'
         }else if(suite4){
-            suites 'src/test/resources/user.xml'
+            suites 'src/test/resources/user_api.xml'
+        }else if (suite5){
+            'src/test/resources/lesson_api.xml'
+        }
+    }
+}
+
+task runUITestSuite(type: Test) {
+    useTestNG() {
+        def suite1 = project.hasProperty("suite1")
+        def suite2 = project.hasProperty("suite2")
+        def suite3 = project.hasProperty("suite3")
+        def suite4 = project.hasProperty("suite4")
+
+        if (suite1) {
+            suites 'src/test/resources/user_ui.xml'
+        }else if (suite2) {
+            suites 'src/test/resources/cart_ui.xml'
+        }else if (suite3){
+            suites 'src/test/resources/course_ui.xml'
+        }else if(suite4){
+            suites 'src/test/resources/lesson_ui.xml'
         }
     }
 }
