@@ -14,8 +14,6 @@ public class Course {
     private String title;
     private int price;
     private String photoPath;
-    private String presentationPath;
     private String description;
-    private User[] user;
 }
 

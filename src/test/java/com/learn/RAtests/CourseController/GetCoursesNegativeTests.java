@@ -102,7 +102,7 @@ public class GetCoursesNegativeTests extends TestBase {
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
-        softAssert.assertEquals(forbiddenError.getPath(), "/api/courses/available/Testcc");
+        softAssert.assertEquals(forbiddenError.getPath(), "/api/courses/available/Test1");
         softAssert.assertAll();
     }
 

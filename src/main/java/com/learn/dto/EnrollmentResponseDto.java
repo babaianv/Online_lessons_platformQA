@@ -15,5 +15,7 @@ public class EnrollmentResponseDto {
     private String enrollmentDate;
     private String status;
     private Course course;
+    private User user;
+    private Token token;
 }
 
