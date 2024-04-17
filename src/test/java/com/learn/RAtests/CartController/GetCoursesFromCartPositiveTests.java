@@ -20,7 +20,7 @@ public class GetCoursesFromCartPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .get("cart/830")
+                .get("cart/1")
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();

@@ -54,7 +54,6 @@ public class DeleteCoursePositiveTests extends TestBase {
                 .assertThat().statusCode(200)
                 .extract().response();
 
-        CourseDto courseDto = response.as(CourseDto.class);
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertEquals(response.header("content-length"), "0");
     }

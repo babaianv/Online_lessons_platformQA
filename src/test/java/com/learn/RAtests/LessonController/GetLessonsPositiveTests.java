@@ -27,7 +27,7 @@ public class GetLessonsPositiveTests extends TestBase {
                 .auth().oauth2(token)
                 .body(lesson)
                 .when()
-                .post("lessons/606")
+                .post("lessons/2")
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();
@@ -56,7 +56,7 @@ public class GetLessonsPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .get("lessons/606")
+                .get("lessons/2")
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();

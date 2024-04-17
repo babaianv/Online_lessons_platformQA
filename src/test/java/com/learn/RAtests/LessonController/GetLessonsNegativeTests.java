@@ -20,14 +20,14 @@ public class GetLessonsNegativeTests extends TestBase {
                 given()
                         .contentType("application/json")
                         .when()
-                        .get("lessons/606")
+                        .get("lessons/1")
                         .then()
                         .assertThat().statusCode(403)
                         .extract().response();
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
-        softAssert.assertEquals(forbiddenError.getPath(), "/api/lessons/606");
+        softAssert.assertEquals(forbiddenError.getPath(), "/api/lessons/1");
         softAssert.assertAll();
     }
 
@@ -59,7 +59,7 @@ public class GetLessonsNegativeTests extends TestBase {
                         .contentType("application/json")
                         .auth().oauth2(token)
                         .when()
-                        .get("less/606")
+                        .get("less/1")
                         .then()
                         .assertThat().statusCode(404)
                         .extract().response();
@@ -68,7 +68,7 @@ public class GetLessonsNegativeTests extends TestBase {
 
         softAssert.assertEquals(response.contentType(), "application/json");
         softAssert.assertTrue(responseBody.contains("Not Found"));
-        softAssert.assertTrue(responseBody.contains("/api/less/606"));
+        softAssert.assertTrue(responseBody.contains("/api/less/1"));
         softAssert.assertAll();
     }
 

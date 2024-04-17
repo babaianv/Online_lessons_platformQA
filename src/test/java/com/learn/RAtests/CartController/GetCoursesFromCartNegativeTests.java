@@ -38,14 +38,14 @@ public class GetCoursesFromCartNegativeTests extends TestBase {
         Response response =  given()
                 .contentType("application/json")
                 .when()
-                .get("cart/830")
+                .get("cart/1")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
-        softAssert.assertEquals(forbiddenError.getPath(), "/api/cart/830");
+        softAssert.assertEquals(forbiddenError.getPath(), "/api/cart/1");
         softAssert.assertAll();
     }
 
@@ -56,7 +56,7 @@ public class GetCoursesFromCartNegativeTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .get("carts/830")
+                .get("carts/1")
                 .then()
                 .assertThat().statusCode(404)
                 .extract().response();

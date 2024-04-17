@@ -20,14 +20,14 @@ public class DeleteCoursesFromCartNegativeTests extends TestBase {
         Response response = given()
                 .contentType("application/json")
                 .when()
-                .delete("cart/830/1")
+                .delete("cart/1/1")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();
 
         ForbiddenError forbiddenError = response.as(ForbiddenError.class);
         softAssert.assertEquals(forbiddenError.getError(), "Forbidden");
-        softAssert.assertEquals(forbiddenError.getPath(), "/api/cart/830/1");
+        softAssert.assertEquals(forbiddenError.getPath(), "/api/cart/1/1");
         softAssert.assertAll();
     }
 
@@ -75,7 +75,7 @@ public class DeleteCoursesFromCartNegativeTests extends TestBase {
         Response response = given()
                 .contentType("application/json")
                 .when()
-                .delete("cart/clear/830")
+                .delete("cart/clear/1")
                 .then()
                 .assertThat().statusCode(403)
                 .extract().response();

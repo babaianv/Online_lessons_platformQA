@@ -14,7 +14,7 @@ public class BuyCoursePositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/add/830/1")
+                .put("cart/add/1/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
@@ -26,7 +26,7 @@ public class BuyCoursePositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .put("cart/buy/830")
+                .put("cart/buy/1")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();
