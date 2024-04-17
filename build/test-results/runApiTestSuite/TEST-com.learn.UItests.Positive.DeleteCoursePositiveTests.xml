@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.DeleteCoursePositiveTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-04-17T14:33:34" hostname="DESKTOP-M6NQQR2" time="12.426">
+  <properties/>
+  <testcase name="deleteCoursePositiveTest" classname="com.learn.UItests.Positive.DeleteCoursePositiveTests" time="12.426">
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.19.1', revision: 'abe0ee07dc'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\0B62~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63411/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 97e9cc9f95e45b01d44ace4e60e551a4" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.105 (399174dbe6e..., userDataDir: C:\Users\0B62~1\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63411}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63411/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 97e9cc9f95e45b01d44ace4e60e551a4
+	at app//org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at app//com.learn.fw.BaseHelper.isAlertAppears(BaseHelper.java:45)
+	at app//com.learn.UItests.Positive.DeleteCoursePositiveTests.deleteCoursePositiveTest(DeleteCoursePositiveTests.java:47)
+	at java.base@11.0.21/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.21/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.21/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.21/java.lang.reflect.Method.invoke(Method.java:566)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at app//org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at app//org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at app//org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at app//org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at app//org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base@11.0.21/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at app//org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at app//org.testng.TestRunner.run(TestRunner.java:619)
+	at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at app//org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at app//org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at app//org.testng.TestNG.runSuites(TestNG.java:1134)
+	at app//org.testng.TestNG.run(TestNG.java:1101)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:96)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
+	at java.base@11.0.21/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@11.0.21/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base@11.0.21/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@11.0.21/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[16:33:26.857 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: deleteCoursePositiveTestwith data: []
+16:33:52.068 [Test worker] ERROR com.learn.UItests.TestBase -- FAILED: deleteCoursePositiveTest Screenshot -> C:\Online_lesson_platform\screenshots\screen_1713364432047.png
+16:33:52.068 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:33:52.068 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -13,7 +13,6 @@ public class ApplicationManager {
     CourseHelper courseHelper;
     ChangePasswordHelper changePasswordHelper;
     CartHelper cartHelper;
-    HomePageHelper homePageHelper;
     LessonHelper lessonHelper;
 
     public ApplicationManager(String browser) {
@@ -36,7 +35,6 @@ public class ApplicationManager {
         courseHelper = new CourseHelper(driver);
         changePasswordHelper = new ChangePasswordHelper(driver);
         cartHelper = new CartHelper(driver);
-        homePageHelper = new HomePageHelper(driver);
         lessonHelper = new LessonHelper(driver);
     }
 
@@ -60,9 +58,6 @@ public class ApplicationManager {
         return cartHelper;
     }
 
-    public HomePageHelper getHomePageHelper() {
-        return homePageHelper;
-    }
 
     public LessonHelper getLessonHelper() {
         return lessonHelper;

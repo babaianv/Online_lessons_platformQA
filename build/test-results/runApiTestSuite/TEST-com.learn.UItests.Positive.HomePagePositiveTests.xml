@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.HomePagePositiveTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:14" hostname="DESKTOP-M6NQQR2" time="0.162">
+  <properties/>
+  <testcase name="isCourseCardRedirectToCourseDetailsPage" classname="com.learn.UItests.Positive.HomePagePositiveTests" time="0.118"/>
+  <testcase name="isLoginBtnPresent" classname="com.learn.UItests.Positive.HomePagePositiveTests" time="0.018"/>
+  <testcase name="isSignUpBtnPresent" classname="com.learn.UItests.Positive.HomePagePositiveTests" time="0.018"/>
+  <system-out><![CDATA[16:35:14.148 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: isCourseCardRedirectToCourseDetailsPagewith data: []
+16:35:14.268 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: isCourseCardRedirectToCourseDetailsPage
+16:35:14.268 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:35:14.268 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:35:14.271 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: isLoginBtnPresentwith data: []
+16:35:14.290 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: isLoginBtnPresent
+16:35:14.290 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:35:14.290 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:35:14.292 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: isSignUpBtnPresentwith data: []
+16:35:14.311 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: isSignUpBtnPresent
+16:35:14.311 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:35:14.311 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

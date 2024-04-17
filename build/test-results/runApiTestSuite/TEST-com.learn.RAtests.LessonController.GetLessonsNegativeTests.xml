@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.LessonController.GetLessonsNegativeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:14" hostname="DESKTOP-M6NQQR2" time="0.046">
+  <properties/>
+  <testcase name="getLessonsFromCourseWithInvalidPathNegTest" classname="com.learn.RAtests.LessonController.GetLessonsNegativeTests" time="0.015"/>
+  <testcase name="getLessonsFromCourseWithoutAuthNegTest" classname="com.learn.RAtests.LessonController.GetLessonsNegativeTests" time="0.01"/>
+  <testcase name="getLessonsFromNotExistCourseNegTest" classname="com.learn.RAtests.LessonController.GetLessonsNegativeTests" time="0.016"/>
+  <system-out><![CDATA[16:35:14.029 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getLessonsFromCourseWithInvalidPathNegTest
+16:35:14.044 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getLessonsFromCourseWithInvalidPathNegTest
+16:35:14.045 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.045 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.046 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getLessonsFromCourseWithoutAuthNegTest
+16:35:14.057 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getLessonsFromCourseWithoutAuthNegTest
+16:35:14.057 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.057 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.059 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getLessonsFromNotExistCourseNegTest
+16:35:14.076 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getLessonsFromNotExistCourseNegTest
+16:35:14.076 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.076 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

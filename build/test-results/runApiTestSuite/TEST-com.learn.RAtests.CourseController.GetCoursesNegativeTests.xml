@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CourseController.GetCoursesNegativeTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:13" hostname="DESKTOP-M6NQQR2" time="0.383">
+  <properties/>
+  <testcase name="getAllCoursesByUserWithoutAuthNegTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.005"/>
+  <testcase name="getAllCoursesWithInvalidPathTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.01"/>
+  <testcase name="getCourseByIdWithInvalidPathNegTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.008"/>
+  <testcase name="getCoursesPurchasedByNotExistUserNegTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.009"/>
+  <testcase name="getCoursesPurchasedByUserWithWrongPathNegTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.013"/>
+  <testcase name="getCoursesPurchasedByUserWithoutAuthTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.009"/>
+  <testcase name="getNotExistCourseByIdNegTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.014"/>
+  <testcase name="getUserCoursesWithInvalidPathTest" classname="com.learn.RAtests.CourseController.GetCoursesNegativeTests" time="0.009"/>
+  <system-out><![CDATA[16:35:13.721 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAllCoursesByUserWithoutAuthNegTest
+16:35:13.727 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAllCoursesByUserWithoutAuthNegTest
+16:35:13.727 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.727 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.781 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAllCoursesWithInvalidPathTest
+16:35:13.782 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.782 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.866 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCourseByIdWithInvalidPathNegTest
+16:35:13.866 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.866 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.867 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCourseByUserCreatedPositiveTest
+16:35:13.941 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesPurchasedByNotExistUserNegTest
+16:35:13.941 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.941 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.942 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCoursesPurchasedByUserPositiveTest
+16:35:14.016 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesPurchasedByUserWithWrongPathNegTest
+16:35:14.016 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.016 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.018 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCoursesPurchasedByUserWithoutAuthTest
+16:35:14.027 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesPurchasedByUserWithoutAuthTest
+16:35:14.028 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.028 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.093 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getNotExistCourseByIdNegTest
+16:35:14.093 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.093 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.094 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUserCoursesWithInvalidPathTest
+16:35:14.104 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUserCoursesWithInvalidPathTest
+16:35:14.105 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.105 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

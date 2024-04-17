@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.AuthorizationController.AuthorizationInfoNegativeTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:13" hostname="DESKTOP-M6NQQR2" time="0.016">
+  <properties/>
+  <testcase name="getAuthInfoWithInvalidPathNegTest" classname="com.learn.RAtests.AuthorizationController.AuthorizationInfoNegativeTests" time="0.008"/>
+  <testcase name="getAuthInfoWithoutAuthNegTest" classname="com.learn.RAtests.AuthorizationController.AuthorizationInfoNegativeTests" time="0.007"/>
+  <system-out><![CDATA[16:35:13.783 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAuthInfoWithInvalidPathNegTest
+16:35:13.791 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAuthInfoWithInvalidPathNegTest
+16:35:13.791 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.791 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.792 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAuthInfoWithoutAuthNegTest
+16:35:13.799 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAuthInfoWithoutAuthNegTest
+16:35:13.799 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.799 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

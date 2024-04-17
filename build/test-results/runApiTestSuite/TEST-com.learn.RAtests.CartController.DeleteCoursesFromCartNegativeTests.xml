@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CartController.DeleteCoursesFromCartNegativeTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:37:20" hostname="DESKTOP-M6NQQR2" time="0.041">
+  <properties/>
+  <testcase name="removeAllCoursesFromCartWithoutAuthNegTest" classname="com.learn.RAtests.CartController.DeleteCoursesFromCartNegativeTests" time="0.006"/>
+  <testcase name="removeAllCoursesFromNotExistCartNegTest" classname="com.learn.RAtests.CartController.DeleteCoursesFromCartNegativeTests" time="0.009"/>
+  <testcase name="removeCourseFromCartWithoutAuthNegTest" classname="com.learn.RAtests.CartController.DeleteCoursesFromCartNegativeTests" time="0.006"/>
+  <testcase name="removeCourseFromNotExistCartNegTest" classname="com.learn.RAtests.CartController.DeleteCoursesFromCartNegativeTests" time="0.008"/>
+  <system-out><![CDATA[16:37:20.788 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: removeAllCoursesFromCartWithoutAuthNegTest
+16:37:20.794 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: removeAllCoursesFromCartWithoutAuthNegTest
+16:37:20.795 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:20.795 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:20.795 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: removeAllCoursesFromNotExistCartNegTest
+16:37:20.804 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: removeAllCoursesFromNotExistCartNegTest
+16:37:20.804 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:20.804 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:20.805 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: removeCourseFromCartByIdPositiveTest
+16:37:20.820 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: removeCourseFromCartWithoutAuthNegTest
+16:37:20.820 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:20.820 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:20.821 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: removeCourseFromNotExistCartNegTest
+16:37:20.829 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: removeCourseFromNotExistCartNegTest
+16:37:20.829 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:20.829 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

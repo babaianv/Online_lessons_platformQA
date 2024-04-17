@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Negative.CreateLessonsNegativeTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:33:02" hostname="DESKTOP-M6NQQR2" time="9.703">
+  <properties/>
+  <testcase name="createLessonWithWrongPhotoFormatNegTest" classname="com.learn.UItests.Negative.CreateLessonsNegativeTests" time="0.6"/>
+  <testcase name="createLessonWithoutPhotoNegTest" classname="com.learn.UItests.Negative.CreateLessonsNegativeTests" time="0.569"/>
+  <system-out><![CDATA[16:32:56.750 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: createLessonWithWrongPhotoFormatNegTestwith data: []
+16:33:06.286 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: createLessonWithWrongPhotoFormatNegTest
+16:33:06.287 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:33:06.287 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:33:06.287 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: createLessonWithoutAuthNegTest
+16:33:15.397 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: createLessonWithoutPhotoNegTest
+16:33:15.397 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:33:15.397 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

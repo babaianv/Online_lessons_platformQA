@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Negative.UpdateCoursesNegativeTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:34:18" hostname="DESKTOP-M6NQQR2" time="202.829">
+  <properties/>
+  <testcase name="editCourseEmptyDescriptionNegTest" classname="com.learn.UItests.Negative.UpdateCoursesNegativeTests" time="0.3"/>
+  <testcase name="editCourseShortDescriptionNegTest" classname="com.learn.UItests.Negative.UpdateCoursesNegativeTests" time="0.408"/>
+  <testcase name="editCourseShortTitleNegTest" classname="com.learn.UItests.Negative.UpdateCoursesNegativeTests" time="0.336"/>
+  <testcase name="editCourseWithEmptyTitleTest" classname="com.learn.UItests.Negative.UpdateCoursesNegativeTests" time="0.293"/>
+  <testcase name="editCourseHeightPriceNegTest" classname="com.learn.UItests.Negative.UpdateCoursesNegativeTests" time="0.636"/>
+  <system-out><![CDATA[16:34:13.459 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: editCourseEmptyDescriptionNegTestwith data: []
+16:34:22.076 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: editCourseEmptyDescriptionNegTest
+16:34:22.076 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:34:22.076 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:34:22.077 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: editCoursePricePositiveTestwith data: []
+16:34:43.812 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: editCourseShortDescriptionNegTest
+16:34:43.812 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:34:43.812 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:34:43.813 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: editCourseShortTitleNegTestwith data: []
+16:34:52.394 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: editCourseShortTitleNegTest
+16:34:52.394 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:34:52.395 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:34:52.396 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: editCourseTitlePositiveTestwith data: []
+16:35:13.663 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: editCourseWithEmptyTitleTest
+16:35:13.664 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:35:13.664 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:37:44.621 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: editCourseHeightPriceNegTest
+16:37:44.623 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:37:44.623 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

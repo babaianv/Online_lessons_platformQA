@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CartController.DeleteCoursesFromCartPositiveTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:37:09" hostname="DESKTOP-M6NQQR2" time="10.853">
+  <properties/>
+  <testcase name="removeAllCoursesFromCartPositiveTest" classname="com.learn.RAtests.CartController.DeleteCoursesFromCartPositiveTests" time="0.032"/>
+  <testcase name="removeCourseFromCartByIdPositiveTest" classname="com.learn.RAtests.CartController.DeleteCoursesFromCartPositiveTests" time="0.008"/>
+  <system-out><![CDATA[16:37:09.960 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: removeAllCoursesFromCartPositiveTest
+16:37:09.993 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: removeAllCoursesFromCartPositiveTest
+16:37:09.993 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:09.993 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:09.993 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: removeAllCoursesFromCartTestwith data: []
+16:37:20.813 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: removeCourseFromCartByIdPositiveTest
+16:37:20.813 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:20.813 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

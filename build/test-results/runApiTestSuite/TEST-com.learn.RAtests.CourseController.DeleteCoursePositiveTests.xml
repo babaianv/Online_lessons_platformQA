@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CourseController.DeleteCoursePositiveTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:33:15" hostname="DESKTOP-M6NQQR2" time="0.025">
+  <properties/>
+  <testcase name="deleteCourseByIdPositiveTest" classname="com.learn.RAtests.CourseController.DeleteCoursePositiveTests" time="0.025"/>
+  <system-out><![CDATA[16:33:15.398 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteCourseByIdPositiveTest
+16:33:15.443 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteCourseByIdPositiveTest
+16:33:15.443 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:15.443 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CourseController.DeleteCourseNegativeTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:33:52" hostname="DESKTOP-M6NQQR2" time="0.177">
+  <properties/>
+  <testcase name="deleteCourseWithOutAuthTest" classname="com.learn.RAtests.CourseController.DeleteCourseNegativeTests" time="0.006"/>
+  <testcase name="deleteNotExistCourseNgTest" classname="com.learn.RAtests.CourseController.DeleteCourseNegativeTests" time="0.014"/>
+  <system-out><![CDATA[16:33:52.069 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteCourseWithOutAuthTest
+16:33:52.116 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteCourseWithOutAuthTest
+16:33:52.117 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:52.117 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:33:52.289 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistCourseNgTest
+16:33:52.289 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:52.289 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CartController.AddCourseToCartNegativeTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:29:37" hostname="DESKTOP-M6NQQR2" time="1.306">
+  <properties/>
+  <testcase name="addAlreadyExistsCourseToCartNegTest" classname="com.learn.RAtests.CartController.AddCourseToCartNegativeTests" time="1.176"/>
+  <testcase name="addCourseToCarWithInvalidPathNegTest" classname="com.learn.RAtests.CartController.AddCourseToCartNegativeTests" time="0.026"/>
+  <testcase name="addCourseToCarWithoutAuthNegTest" classname="com.learn.RAtests.CartController.AddCourseToCartNegativeTests" time="0.016"/>
+  <testcase name="addNotExistsCourseToCartNegTest" classname="com.learn.RAtests.CartController.AddCourseToCartNegativeTests" time="0.027"/>
+  <system-out><![CDATA[16:29:37.794 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: addAlreadyExistsCourseToCartNegTest
+16:29:38.973 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addAlreadyExistsCourseToCartNegTest
+16:29:38.974 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:29:38.974 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:29:38.977 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: addCourseToCarWithInvalidPathNegTest
+16:29:39.005 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addCourseToCarWithInvalidPathNegTest
+16:29:39.005 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:29:39.006 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:29:39.007 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: addCourseToCarWithoutAuthNegTest
+16:29:39.025 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addCourseToCarWithoutAuthNegTest
+16:29:39.025 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:29:39.025 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:29:39.102 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: addNotExistsCourseToCartNegTest
+16:29:39.102 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:29:39.102 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
