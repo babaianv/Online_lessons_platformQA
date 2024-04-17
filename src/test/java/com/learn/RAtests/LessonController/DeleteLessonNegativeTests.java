@@ -31,7 +31,7 @@ public class DeleteLessonNegativeTests extends TestBase {
                 .auth().oauth2(token)
                 .body(lessonDto)
                 .when()
-                .post("lessons/606")
+                .post("lessons/1")
                 .then()
                 .assertThat().statusCode(201)
                 .extract().response();
