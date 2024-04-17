@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:37:50" hostname="DESKTOP-M6NQQR2" time="33.838">
+  <properties/>
+  <testcase name="updateCourseTitleToEmptyNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.008"/>
+  <testcase name="updateCourseTitleToShortNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.008"/>
+  <testcase name="updateCourseTitleNumbersNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.009"/>
+  <testcase name="updateCourseNegativePriceNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.007"/>
+  <testcase name="updateCourseEmptyPhotoNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.008"/>
+  <testcase name="setShortCourseDescriptionNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.008"/>
+  <testcase name="updateCourseWithoutAuthNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.005"/>
+  <testcase name="updateCourseWithWrongPathNegTest" classname="com.learn.RAtests.CourseController.UpdateCourseNegativeTests" time="0.009"/>
+  <system-out><![CDATA[16:37:50.140 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateCourseTitleToEmptyNegTest
+16:37:50.175 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseTitleToEmptyNegTest
+16:37:50.175 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:50.175 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:50.176 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: changePasswordPositiveTest
+16:37:55.807 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseTitleToShortNegTest
+16:37:55.807 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:55.807 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:55.807 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithLongLengthNicknameNegTestwith data: []
+16:38:01.314 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseTitleNumbersNegTest
+16:38:01.314 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:38:01.314 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:38:01.315 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlyNumbersNicknameNegTestwith data: []
+16:38:06.774 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseNegativePriceNegTest
+16:38:06.774 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:38:06.774 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:38:06.775 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithInvalidSymbolNicknameNegTestwith data: []
+16:38:12.244 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseEmptyPhotoNegTest
+16:38:12.244 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:38:12.244 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:38:12.244 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithOnlySymbolNicknameNegTestwith data: []
+16:38:17.730 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: setShortCourseDescriptionNegTest
+16:38:17.730 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:38:17.730 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:38:17.731 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateCourseWithoutAuthNegTest
+16:38:17.763 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseWithoutAuthNegTest
+16:38:17.764 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:38:17.764 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:38:17.764 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithExistEmailNegTestwith data: []
+16:38:24.004 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateCourseWithWrongPathNegTest
+16:38:24.004 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:38:24.004 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

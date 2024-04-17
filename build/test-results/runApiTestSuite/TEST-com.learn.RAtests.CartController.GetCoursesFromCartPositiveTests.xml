@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CartController.GetCoursesFromCartPositiveTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:13" hostname="DESKTOP-M6NQQR2" time="0.011">
+  <properties/>
+  <testcase name="getCoursesInCartPositiveTest" classname="com.learn.RAtests.CartController.GetCoursesFromCartPositiveTests" time="0.011"/>
+  <system-out><![CDATA[16:35:13.898 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCoursesInCartPositiveTest
+16:35:13.911 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesInCartPositiveTest
+16:35:13.911 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.911 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

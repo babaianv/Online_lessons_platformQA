@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.AuthorizationController.LoginNegativeTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:25" hostname="DESKTOP-M6NQQR2" time="45.274">
+  <properties/>
+  <testcase name="loginWithEmptyEmailTest" classname="com.learn.RAtests.AuthorizationController.LoginNegativeTests" time="0.008"/>
+  <testcase name="loginWithEmptyPasswordTest" classname="com.learn.RAtests.AuthorizationController.LoginNegativeTests" time="0.068"/>
+  <testcase name="loginWithWrongEmailTest" classname="com.learn.RAtests.AuthorizationController.LoginNegativeTests" time="0.007"/>
+  <testcase name="loginWithWrongPasswordTest" classname="com.learn.RAtests.AuthorizationController.LoginNegativeTests" time="0.064"/>
+  <testcase name="loginWithWrongPathTest" classname="com.learn.RAtests.AuthorizationController.LoginNegativeTests" time="0.009"/>
+  <testcase name="loginWithoutContentTypeTest" classname="com.learn.RAtests.AuthorizationController.LoginNegativeTests" time="0.011"/>
+  <system-out><![CDATA[16:35:25.758 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyEmailTest
+16:35:25.766 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyEmailTest
+16:35:25.766 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:25.766 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:25.767 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithEmptyPasswordTest
+16:35:25.836 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithEmptyPasswordTest
+16:35:25.836 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:25.836 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:48.331 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongEmailTest
+16:35:48.331 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:48.331 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:48.332 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: loginWithWrongPasswordNegTestwith data: []
+16:36:11.010 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPasswordTest
+16:36:11.010 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:36:11.010 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:36:11.011 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongPathTest
+16:36:11.020 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithWrongPathTest
+16:36:11.020 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:36:11.020 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:36:11.021 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithoutContentTypeTest
+16:36:11.033 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: loginWithoutContentTypeTest
+16:36:11.033 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:36:11.033 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

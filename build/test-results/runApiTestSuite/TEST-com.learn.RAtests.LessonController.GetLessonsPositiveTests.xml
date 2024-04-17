@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.LessonController.GetLessonsPositiveTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:13" hostname="DESKTOP-M6NQQR2" time="0.146">
+  <properties/>
+  <testcase name="getAllAvailableLessonsPositiveTest" classname="com.learn.RAtests.LessonController.GetLessonsPositiveTests" time="0.011"/>
+  <testcase name="getAvailableLessonsFromCoursePositiveTest" classname="com.learn.RAtests.LessonController.GetLessonsPositiveTests" time="0.011"/>
+  <system-out><![CDATA[16:35:13.665 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getAllAvailableLessonsPositiveTest
+16:35:13.707 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAllAvailableLessonsPositiveTest
+16:35:13.707 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.707 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.845 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getAvailableLessonsFromCoursePositiveTest
+16:35:13.845 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.845 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

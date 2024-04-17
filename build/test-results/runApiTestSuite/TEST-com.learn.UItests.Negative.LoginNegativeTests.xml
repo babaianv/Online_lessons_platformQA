@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Negative.LoginNegativeTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:29" hostname="DESKTOP-M6NQQR2" time="37.932">
+  <properties/>
+  <testcase name="loginWithWrongEmailNegTest" classname="com.learn.UItests.Negative.LoginNegativeTests" time="15.322"/>
+  <testcase name="loginWithWrongPasswordNegTest" classname="com.learn.UItests.Negative.LoginNegativeTests" time="15.413"/>
+  <system-out><![CDATA[16:35:25.837 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: loginWithWrongEmailNegTestwith data: []
+16:35:48.322 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: loginWithWrongEmailNegTest
+16:35:48.322 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:35:48.322 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:35:48.323 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: loginWithWrongEmailTest
+16:36:10.944 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: loginWithWrongPasswordNegTest
+16:36:10.944 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:36:10.945 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

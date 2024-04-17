@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.UserController.DeleteUserNegativeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:33:52" hostname="DESKTOP-M6NQQR2" time="7.197">
+  <properties/>
+  <testcase name="deleteNotExistsUserNegTest" classname="com.learn.RAtests.UserController.DeleteUserNegativeTests" time="0.011"/>
+  <testcase name="deleteUserWithInvalidPathNegTest" classname="com.learn.RAtests.UserController.DeleteUserNegativeTests" time="0.01"/>
+  <testcase name="deleteUserWithoutAUTHNegTest" classname="com.learn.RAtests.UserController.DeleteUserNegativeTests" time="0.009"/>
+  <system-out><![CDATA[16:33:52.339 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteNotExistsUserNegTest
+16:33:52.520 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistsUserNegTest
+16:33:52.520 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:52.520 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:33:59.533 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserWithInvalidPathNegTest
+16:33:59.533 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:59.533 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:33:59.533 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteUserWithoutAUTHNegTest
+16:33:59.706 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteUserWithoutAUTHNegTest
+16:33:59.706 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:59.706 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

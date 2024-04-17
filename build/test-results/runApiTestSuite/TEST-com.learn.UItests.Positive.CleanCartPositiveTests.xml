@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.CleanCartPositiveTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:33:20" hostname="DESKTOP-M6NQQR2" time="234.777">
+  <properties/>
+  <testcase name="deleteCourseFromCartTest" classname="com.learn.UItests.Positive.CleanCartPositiveTests" time="0.846"/>
+  <testcase name="removeAllCoursesFromCartTest" classname="com.learn.UItests.Positive.CleanCartPositiveTests" time="0.223"/>
+  <system-out><![CDATA[16:33:15.445 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: deleteCourseFromCartTestwith data: []
+16:33:26.856 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: deleteCourseFromCartTest
+16:33:26.856 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:33:26.856 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:37:20.787 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: removeAllCoursesFromCartTest
+16:37:20.787 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:37:20.787 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

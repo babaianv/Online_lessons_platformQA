@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.LogoutPositiveTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:36:16" hostname="DESKTOP-M6NQQR2" time="15.12">
+  <properties/>
+  <testcase name="logoutPositiveTest" classname="com.learn.UItests.Positive.LogoutPositiveTest" time="15.12"/>
+  <system-out><![CDATA[16:36:11.050 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: logoutPositiveTestwith data: []
+16:36:37.841 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: logoutPositiveTest
+16:36:37.842 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:36:37.842 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

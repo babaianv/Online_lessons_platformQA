@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestSuite1" verbose="1">
+<suite name="TestSuite2" verbose="1">
     <test name="Cart">
         <classes>
             <class name="com.learn.UItests.Positive.CleanCartPositiveTests"/>

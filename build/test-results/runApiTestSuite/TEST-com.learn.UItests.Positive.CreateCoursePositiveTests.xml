@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.CreateCoursePositiveTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:31:52" hostname="DESKTOP-M6NQQR2" time="2.534">
+  <properties/>
+  <testcase name="createCoursePositiveTest" classname="com.learn.UItests.Positive.CreateCoursePositiveTests" time="2.534"/>
+  <system-out><![CDATA[16:31:47.034 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: createCoursePositiveTestwith data: []
+16:32:00.403 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: createCoursePositiveTest
+16:32:00.404 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:32:00.404 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

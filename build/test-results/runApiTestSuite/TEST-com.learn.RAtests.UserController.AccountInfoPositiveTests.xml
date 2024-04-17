@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.UserController.AccountInfoPositiveTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:14" hostname="DESKTOP-M6NQQR2" time="0.04">
+  <properties/>
+  <testcase name="getUserInfoForNotExistUserNegTest" classname="com.learn.RAtests.UserController.AccountInfoPositiveTests" time="0.013"/>
+  <testcase name="getUserInfoWithoutAUTHTest" classname="com.learn.RAtests.UserController.AccountInfoPositiveTests" time="0.01"/>
+  <testcase name="getUsersInfoWithWrongPath" classname="com.learn.RAtests.UserController.AccountInfoPositiveTests" time="0.013"/>
+  <system-out><![CDATA[16:35:14.106 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUserInfoForNotExistUserNegTest
+16:35:14.120 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUserInfoForNotExistUserNegTest
+16:35:14.120 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.120 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.121 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUserInfoWithoutAUTHTest
+Forbidden 403
+16:35:14.131 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUserInfoWithoutAUTHTest
+16:35:14.132 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.132 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:14.133 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getUsersInfoWithWrongPath
+16:35:14.146 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getUsersInfoWithWrongPath
+16:35:14.146 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:14.146 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

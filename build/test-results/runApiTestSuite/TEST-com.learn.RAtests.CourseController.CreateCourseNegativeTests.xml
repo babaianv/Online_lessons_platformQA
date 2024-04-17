@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CourseController.CreateCourseNegativeTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:31:38" hostname="DESKTOP-M6NQQR2" time="64.748">
+  <properties/>
+  <testcase name="createCourseEmptyTitleNegTest" classname="com.learn.RAtests.CourseController.CreateCourseNegativeTests" time="0.011"/>
+  <testcase name="createCourseNegativePriceNegTest" classname="com.learn.RAtests.CourseController.CreateCourseNegativeTests" time="0.01"/>
+  <testcase name="createCourseShortTitleNegTest" classname="com.learn.RAtests.CourseController.CreateCourseNegativeTests" time="0.009"/>
+  <testcase name="createCourseTitleWithNumbersNegTest" classname="com.learn.RAtests.CourseController.CreateCourseNegativeTests" time="0.01"/>
+  <testcase name="createCourseWithoutPhotoNegTest" classname="com.learn.RAtests.CourseController.CreateCourseNegativeTests" time="0.009"/>
+  <system-out><![CDATA[16:31:38.119 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: createCourseEmptyTitleNegTest
+16:31:38.131 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: createCourseEmptyTitleNegTest
+16:31:38.131 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:31:38.131 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:31:38.132 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: createCourseHeightPriceNegTestwith data: []
+16:31:46.990 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: createCourseNegativePriceNegTest
+16:31:46.991 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:31:46.991 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:32:08.410 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: createCourseShortTitleNegTest
+16:32:08.410 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:32:08.410 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:32:08.411 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: createCourseShortTitleNegTestwith data: []
+16:32:26.038 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: createCourseTitleWithNumbersNegTest
+16:32:26.038 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:32:26.039 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:32:26.039 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: createCourseWithPdfFileNegTestwith data: []
+16:32:42.868 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: createCourseWithoutPhotoNegTest
+16:32:42.868 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:32:42.868 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

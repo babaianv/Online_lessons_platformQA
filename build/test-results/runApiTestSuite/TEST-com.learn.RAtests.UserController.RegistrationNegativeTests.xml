@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.UserController.RegistrationNegativeTests" tests="21" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:37:03" hostname="DESKTOP-M6NQQR2" time="6.178">
+  <properties/>
+  <testcase name="regWithEmptyEmailNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.008"/>
+  <testcase name="regWithEmptyNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.008"/>
+  <testcase name="regWithEmptyPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.007"/>
+  <testcase name="regWithExEmailNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.067"/>
+  <testcase name="regWithExNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.064"/>
+  <testcase name="regWithInvalidNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithLongLengthNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithOnlyInvalidSymbolNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithOnlyInvalidSymbolsPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.005"/>
+  <testcase name="regWithOnlyLettersPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.005"/>
+  <testcase name="regWithOnlyLowercasePasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithOnlyNumbersNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithOnlyNumbersPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithOnlyUppercasePasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithOnlyValidSymbolsPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithShortLength7PasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithShortLengthNicknameNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithWrongEmailFormatNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithoutNumbersPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <testcase name="regWithoutSpecialSymbolPasswordNegTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.005"/>
+  <testcase name="registrationWithWrongPathTest" classname="com.learn.RAtests.UserController.RegistrationNegativeTests" time="0.006"/>
+  <system-out><![CDATA[16:37:03.780 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithEmptyEmailNegTest
+16:37:03.788 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithEmptyEmailNegTest
+16:37:03.789 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.789 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.789 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithEmptyNicknameNegTest
+Response body: Validation failed for argument [0] in public de.aittr.online_lessons.domain.dto.UserDto de.aittr.online_lessons.controllers.UserController.register(de.aittr.online_lessons.domain.dto.UserDto): [Field error in object 'userDto' on field 'nickname': rejected value []; codes [Pattern.userDto.nickname,Pattern.nickname,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.nickname,nickname]; arguments []; default message [nickname],[Ljakarta.validation.constraints.Pattern$Flag;@2a9dc670,^(?![\d-]+$)(?=(?:[^a-zA-Z]*[a-zA-Z]){3})[a-zA-Z0-9_-]{3,10}$]; default message [Invalid nickname format]] 
+16:37:03.797 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithEmptyNicknameNegTest
+16:37:03.797 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.797 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.798 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithEmptyPasswordNegTest
+16:37:03.805 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithEmptyPasswordNegTest
+16:37:03.805 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.805 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.806 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithExEmailNegTest
+16:37:03.874 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithExEmailNegTest
+16:37:03.874 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.874 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.875 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithExNicknameNegTest
+16:37:03.940 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithExNicknameNegTest
+16:37:03.940 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.940 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.940 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithInvalidNicknameNegTest
+16:37:03.946 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithInvalidNicknameNegTest
+16:37:03.946 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.946 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.947 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithLongLengthNicknameNegTest
+16:37:03.953 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithLongLengthNicknameNegTest
+16:37:03.953 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.953 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.954 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyInvalidSymbolNicknameNegTest
+16:37:03.960 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyInvalidSymbolNicknameNegTest
+16:37:03.960 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.960 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.961 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyInvalidSymbolsPasswordNegTest
+16:37:03.967 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyInvalidSymbolsPasswordNegTest
+16:37:03.967 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.967 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.967 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyLettersPasswordNegTest
+16:37:03.974 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyLettersPasswordNegTest
+16:37:03.974 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.974 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.974 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyLowercasePasswordNegTest
+Response body: Validation failed for argument [0] in public de.aittr.online_lessons.domain.dto.UserDto de.aittr.online_lessons.controllers.UserController.register(de.aittr.online_lessons.domain.dto.UserDto): [Field error in object 'userDto' on field 'password': rejected value [ekaterina1!]; codes [Pattern.userDto.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userDto.password,password]; arguments []; default message [password],[Ljakarta.validation.constraints.Pattern$Flag;@2a9dc670,^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!$#%])[a-zA-Z0-9!$#%]{8,}$]; default message [Invalid password format]] 
+16:37:03.980 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyLowercasePasswordNegTest
+16:37:03.980 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.980 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.981 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyNumbersNicknameNegTest
+16:37:03.987 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyNumbersNicknameNegTest
+16:37:03.987 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.987 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.988 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyNumbersPasswordNegTest
+16:37:03.994 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyNumbersPasswordNegTest
+16:37:03.994 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:03.994 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:03.995 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyUppercasePasswordNegTest
+16:37:04.001 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyUppercasePasswordNegTest
+16:37:04.001 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.001 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.003 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithOnlyValidSymbolsPasswordNegTest
+16:37:04.010 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithOnlyValidSymbolsPasswordNegTest
+16:37:04.010 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.010 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.010 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithShortLength7PasswordNegTest
+16:37:04.017 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithShortLength7PasswordNegTest
+16:37:04.017 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.017 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.017 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithShortLengthNicknameNegTest
+16:37:04.024 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithShortLengthNicknameNegTest
+16:37:04.024 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.024 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.025 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithWrongEmailFormatNegTest
+16:37:04.031 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithWrongEmailFormatNegTest
+16:37:04.032 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.032 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.032 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithoutNumbersPasswordNegTest
+16:37:04.039 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithoutNumbersPasswordNegTest
+16:37:04.039 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.039 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.040 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithoutSpecialSymbolPasswordNegTest
+16:37:04.045 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: regWithoutSpecialSymbolPasswordNegTest
+16:37:04.045 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:04.045 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:04.046 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: registrationPositiveTestwith data: []
+16:37:09.958 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: registrationWithWrongPathTest
+16:37:09.959 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:09.959 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

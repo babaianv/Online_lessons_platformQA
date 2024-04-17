@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.CartController.GetCoursesFromCartNegativeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:35:13" hostname="DESKTOP-M6NQQR2" time="0.044">
+  <properties/>
+  <testcase name="getCourseFromNotExistsCartNegTest" classname="com.learn.RAtests.CartController.GetCoursesFromCartNegativeTests" time="0.009"/>
+  <testcase name="getCoursesInCartWithWrongPathTest" classname="com.learn.RAtests.CartController.GetCoursesFromCartNegativeTests" time="0.01"/>
+  <testcase name="getCoursesInCartWithoutAUTHTest" classname="com.learn.RAtests.CartController.GetCoursesFromCartNegativeTests" time="0.007"/>
+  <system-out><![CDATA[16:35:13.887 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCourseFromNotExistsCartNegTest
+16:35:13.896 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCourseFromNotExistsCartNegTest
+16:35:13.897 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.897 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.923 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesInCartWithWrongPathTest
+16:35:13.923 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.923 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:35:13.924 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: getCoursesInCartWithoutAUTHTest
+16:35:13.931 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: getCoursesInCartWithoutAUTHTest
+16:35:13.931 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:35:13.931 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

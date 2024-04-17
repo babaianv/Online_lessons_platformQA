@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.RegistrationPositiveTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:36:45" hostname="DESKTOP-M6NQQR2" time="19.131">
+  <properties/>
+  <testcase name="regWithBoundaryValue10NicknameTest" classname="com.learn.UItests.Positive.RegistrationPositiveTests" time="1.244"/>
+  <testcase name="regWithBoundaryValue3NicknameTest" classname="com.learn.UItests.Positive.RegistrationPositiveTests" time="0.665"/>
+  <testcase name="regWithBoundaryValue8PasswordTest" classname="com.learn.UItests.Positive.RegistrationPositiveTests" time="0.667"/>
+  <testcase name="registrationPositiveTest" classname="com.learn.UItests.Positive.RegistrationPositiveTests" time="0.646"/>
+  <system-out><![CDATA[16:36:45.561 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: regWithBoundaryValue10NicknameTestwith data: []
+16:36:51.962 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithBoundaryValue10NicknameTest
+16:36:51.962 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:36:51.962 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:36:51.963 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithBoundaryValue3NicknameTest
+16:36:57.875 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithBoundaryValue3NicknameTest
+16:36:57.875 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:36:57.875 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:36:57.876 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: regWithBoundaryValue8PasswordTest
+16:37:03.778 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: regWithBoundaryValue8PasswordTest
+16:37:03.778 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:37:03.778 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:37:09.796 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: registrationPositiveTest
+16:37:09.797 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:37:09.797 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

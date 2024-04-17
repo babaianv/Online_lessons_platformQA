@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.LessonController.DeleteLessonNegativeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:33:52" hostname="DESKTOP-M6NQQR2" time="0.147">
+  <properties/>
+  <testcase name="deleteLessonWithWrongPathTest" classname="com.learn.RAtests.LessonController.DeleteLessonNegativeTests" time="0.01"/>
+  <testcase name="deleteLessonWithoutAuthNegTest" classname="com.learn.RAtests.LessonController.DeleteLessonNegativeTests" time="0.007"/>
+  <testcase name="deleteNotExistLessonNegTest" classname="com.learn.RAtests.LessonController.DeleteLessonNegativeTests" time="0.011"/>
+  <system-out><![CDATA[16:33:52.152 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteLessonWithWrongPathTest
+16:33:52.195 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteLessonWithWrongPathTest
+16:33:52.196 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:52.196 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:33:52.197 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteLessonWithoutAuthNegTest
+16:33:52.236 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteLessonWithoutAuthNegTest
+16:33:52.237 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:52.237 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:33:52.238 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: deleteNotExistCourseNgTest
+16:33:52.333 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: deleteNotExistLessonNegTest
+16:33:52.333 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:33:52.333 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

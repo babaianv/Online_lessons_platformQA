@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.UItests.Positive.CreateLessonsPositiveTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:32:50" hostname="DESKTOP-M6NQQR2" time="279.11">
+  <properties/>
+  <testcase name="createLessonPositiveTest" classname="com.learn.UItests.Positive.CreateLessonsPositiveTests" time="0.647"/>
+  <testcase name="submitCreatedLessonPositiveTest" classname="com.learn.UItests.Positive.CreateLessonsPositiveTests" time="1.232"/>
+  <system-out><![CDATA[16:32:42.919 [Test worker] INFO  com.learn.UItests.TestBase -- Start test: createLessonPositiveTestwith data: []
+16:32:56.664 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: createLessonPositiveTest
+16:32:56.664 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:32:56.664 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+16:32:56.667 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: createLessonWithEmptyContentTest
+16:37:35.153 [Test worker] INFO  com.learn.UItests.TestBase -- PASSED: submitCreatedLessonPositiveTest
+16:37:35.153 [Test worker] INFO  com.learn.UItests.TestBase -- Stop test
+16:37:35.153 [Test worker] INFO  com.learn.UItests.TestBase -- ************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

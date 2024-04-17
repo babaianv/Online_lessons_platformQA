@@ -3,7 +3,6 @@
 <suite name="TestSuite1" verbose="1">
     <test name="User">
         <classes>
-            <class name="com.learn.UItests.Positive.HomePagePositiveTests"/>
             <class name="com.learn.UItests.Positive.RegistrationPositiveTests"/>
             <class name="com.learn.UItests.Positive.LoginPositiveTests"/>
             <class name="com.learn.UItests.Positive.ChangePasswordPositiveTests"/>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.learn.RAtests.LessonController.UpdateLessonsPositiveTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-04-17T14:37:35" hostname="DESKTOP-M6NQQR2" time="0.091">
+  <properties/>
+  <testcase name="updateLessonContentPositiveTest" classname="com.learn.RAtests.LessonController.UpdateLessonsPositiveTests" time="0.013"/>
+  <testcase name="updateLessonPhotoPositiveTest" classname="com.learn.RAtests.LessonController.UpdateLessonsPositiveTests" time="0.013"/>
+  <testcase name="updateLessonTitlePositiveTest" classname="com.learn.RAtests.LessonController.UpdateLessonsPositiveTests" time="0.013"/>
+  <system-out><![CDATA[16:37:35.154 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateLessonContentPositiveTest
+16:37:35.196 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateLessonContentPositiveTest
+16:37:35.197 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:35.197 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:35.197 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateLessonPhotoPositiveTest
+16:37:35.234 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateLessonPhotoPositiveTest
+16:37:35.234 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:35.234 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+16:37:35.235 [Test worker] INFO  com.learn.RAtests.TestBase -- Start test: updateLessonTitlePositiveTest
+16:37:35.273 [Test worker] INFO  com.learn.RAtests.TestBase -- PASSED: updateLessonTitlePositiveTest
+16:37:35.274 [Test worker] INFO  com.learn.RAtests.TestBase -- Stop test
+16:37:35.274 [Test worker] INFO  com.learn.RAtests.TestBase -- *******************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
