@@ -15,8 +15,5 @@ public class User {
     private String username;
     private String email;
     private String password;
-    private Cart[] cart;
-    private Token[] token;
-    private GrantedAuthority[] authorities;
 }
 
