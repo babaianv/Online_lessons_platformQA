@@ -51,7 +51,7 @@ task runApiTestSuite(type: Test) {
         }else if(suite4){
             suites 'src/test/resources/user_api.xml'
         }else if (suite5){
-            'src/test/resources/lesson_api.xml'
+            suites 'src/test/resources/lesson_api.xml'
         }
     }
 }

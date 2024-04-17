@@ -3,7 +3,6 @@ package com.learn.RAtests.LessonController;
 import com.learn.RAtests.TestBase;
 import com.learn.dto.*;
 import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -20,6 +19,7 @@ public class UpdateLessonsNegativeTests extends TestBase {
     @BeforeMethod
     public void precondition() {
         lessonDto = LessonDto.builder()
+                .number("1")
                 .title("GitHub basic")
                 .photoPath("https://kanzlei-baumfalk.de/wp-content/uploads/2022/12/programmers-cooperating-at-information-technology-2021-08-28-19-22-29-utc-1024x665.jpg")
                 .content("GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking.")

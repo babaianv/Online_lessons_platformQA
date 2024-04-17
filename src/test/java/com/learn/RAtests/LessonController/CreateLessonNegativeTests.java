@@ -20,6 +20,7 @@ public class CreateLessonNegativeTests extends TestBase {
     @Test(description = "API: Create Lesson with Empty Title Neg Test")
     public void createLessonWithEmptyTitleTest() {
         LessonDto lessonDto = LessonDto.builder()
+                .number("1")
                 .photoPath("https://kanzlei-baumfalk.de/wp-content/uploads/2022/12/programmers-cooperating-at-information-technology-2021-08-28-19-22-29-utc-1024x665.jpg")
                 .content("GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking.")
                 .build();
@@ -41,6 +42,7 @@ public class CreateLessonNegativeTests extends TestBase {
     @Test(description = "API: Create Lesson with Empty Content Neg Test")
     public void createLessonWithEmptyContentTest() {
         LessonDto lessonDto = LessonDto.builder()
+                .number("1")
                 .title("GitHub basic")
                 .photoPath("https://kanzlei-baumfalk.de/wp-content/uploads/2022/12/programmers-cooperating-at-information-technology-2021-08-28-19-22-29-utc-1024x665.jpg")
                 .build();
@@ -62,6 +64,7 @@ public class CreateLessonNegativeTests extends TestBase {
     @Test(description = "API: Create Lesson with Empty Photo Neg Test")
     public void createLessonWithEmptyPhotoTest() {
         LessonDto lessonDto = LessonDto.builder()
+                .number("1")
                 .title("GitHub basic")
                 .content("GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking.")
                 .build();
@@ -84,6 +87,7 @@ public class CreateLessonNegativeTests extends TestBase {
     @Test(description = "API: Create Lesson Without Auth Neg Test")
     public void createLessonWithoutAuthNegTest() {
         LessonDto lessonDto = LessonDto.builder()
+                .number("1")
                 .title("GitHub basic")
                 .photoPath("https://kanzlei-baumfalk.de/wp-content/uploads/2022/12/programmers-cooperating-at-information-technology-2021-08-28-19-22-29-utc-1024x665.jpg")
                 .content("GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking.")
@@ -107,6 +111,7 @@ public class CreateLessonNegativeTests extends TestBase {
     @Test(description = "API: Create Lesson with wrong Path Neg Test")
     public void createLessonWithWrongPathNegTest() {
         LessonDto lessonDto = LessonDto.builder()
+                .number("1")
                 .title("GitHub basic")
                 .photoPath("https://kanzlei-baumfalk.de/wp-content/uploads/2022/12/programmers-cooperating-at-information-technology-2021-08-28-19-22-29-utc-1024x665.jpg")
                 .content("GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking.")
@@ -129,6 +134,7 @@ public class CreateLessonNegativeTests extends TestBase {
     @Test(description = "API: Create Lesson for NOT exist Course Neg Test")
     public void createLessonForNotExistCourseNegTest() {
         LessonDto lessonDto = LessonDto.builder()
+                .number("1")
                 .title("GitHub basic")
                 .photoPath("https://kanzlei-baumfalk.de/wp-content/uploads/2022/12/programmers-cooperating-at-information-technology-2021-08-28-19-22-29-utc-1024x665.jpg")
                 .content("GitHub is a developer platform that allows developers to create, store, manage and share their code. It uses Git software, providing the distributed version control of Git plus access control, bug tracking.")
