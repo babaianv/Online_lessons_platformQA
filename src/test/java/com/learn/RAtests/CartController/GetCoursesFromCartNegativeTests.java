@@ -5,6 +5,7 @@ import com.learn.dto.CartNotFoundError;
 import com.learn.dto.ForbiddenError;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -13,6 +14,7 @@ import static io.restassured.RestAssured.given;
 public class GetCoursesFromCartNegativeTests extends TestBase {
 
     SoftAssert softAssert = new SoftAssert();
+
 
     @Test(description = "API: Get course from NOT exists Cart Neg test")
     public void getCourseFromNotExistsCartNegTest(){
@@ -63,6 +65,18 @@ public class GetCoursesFromCartNegativeTests extends TestBase {
 
         String responseBody = response.getBody().asString();
         Assert.assertTrue(responseBody.contains("Not Found"));
+    }
+
+    @AfterMethod
+    public void clean(){
+        given()
+                .contentType("application/json")
+                .auth().oauth2(token)
+                .when()
+                .delete("cart/clear/1")
+                .then()
+                .assertThat().statusCode(200)
+                .extract().response();
     }
 }
 

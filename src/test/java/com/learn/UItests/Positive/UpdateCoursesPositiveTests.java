@@ -26,8 +26,8 @@ public class UpdateCoursesPositiveTests extends TestBase {
         app.getCourseHelper().fillCourseForm(new Course()
                 .setTitle(CourseData.TITLE)
                 .setPrice(CourseData.PRICE)
-                .setDescription(CourseData.DESCRIPTION));
-        app.getCourseHelper().uploadCoverPhoto(CourseData.PHOTO);
+                .setDescription(CourseData.DESCRIPTION)
+                .setPhotoPath(CourseData.PHOTO));
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
         app.getUserHelper().pause(3000);
     }
@@ -44,8 +44,7 @@ public class UpdateCoursesPositiveTests extends TestBase {
     public void editCourseTitlePositiveTest(){
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
         app.getCourseHelper().clickOnEditCourseBtn();
-        app.getCourseHelper().fillCourseForm(new Course()
-                .setTitle(CourseData.TITLE_NEW));
+        app.getCourseHelper().changeCourseTitle(CourseData.TITLE_NEW);
         app.getCourseHelper().clickOnSubmitEditCourseBtn();
 
         Assert.assertTrue(app.getCourseHelper().isUpdateCourseSuccessPopUpPresent());
@@ -55,8 +54,7 @@ public class UpdateCoursesPositiveTests extends TestBase {
     public void editCoursePricePositiveTest(){
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
         app.getCourseHelper().clickOnEditCourseBtn();
-        app.getCourseHelper().fillCourseForm(new Course()
-                .setPrice(CourseData.PRICE_NEW));
+        app.getCourseHelper().changeCoursePrice(CourseData.PRICE_NEW);
         app.getCourseHelper().clickOnSubmitEditCourseBtn();
 
         Assert.assertTrue(app.getCourseHelper().isUpdateCourseSuccessPopUpPresent());
@@ -66,8 +64,7 @@ public class UpdateCoursesPositiveTests extends TestBase {
     public void editCourseDescriptionPositiveTest(){
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
         app.getCourseHelper().clickOnEditCourseBtn();
-        app.getCourseHelper().fillCourseForm(new Course()
-                .setDescription(CourseData.DESCRIPTION_NEW));
+        app.getCourseHelper().changeCourseDesc(CourseData.DESCRIPTION_NEW);
         app.getCourseHelper().clickOnSubmitEditCourseBtn();
 
         Assert.assertTrue(app.getCourseHelper().isUpdateCourseSuccessPopUpPresent());

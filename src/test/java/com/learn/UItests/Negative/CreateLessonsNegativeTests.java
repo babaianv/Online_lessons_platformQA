@@ -29,7 +29,7 @@ public class CreateLessonsNegativeTests extends TestBase {
                 .setTitle(CourseData.TITLE)
                 .setPrice(CourseData.PRICE)
                 .setDescription(CourseData.DESCRIPTION)
-                        .setPhotoPath(CourseData.PHOTO));
+                .setPhotoPath(CourseData.PHOTO));
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
         app.getUserHelper().pause(3000);
@@ -48,8 +48,8 @@ public class CreateLessonsNegativeTests extends TestBase {
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
                 .setNumber(LessonData.NUMBER)
-                .setContent(LessonData.CONTENT));
-        app.getLessonHelper().uploadLessonPhoto(LessonData.PHOTO);
+                .setContent(LessonData.CONTENT)
+                .setLessonPhoto(LessonData.PHOTO));
         app.getLessonHelper().clickSubmitAddLessonBtn();
 
         Assert.assertTrue(app.getLessonHelper().isErrorEmptyFieldMessagePopUpPresent());
@@ -60,8 +60,8 @@ public class CreateLessonsNegativeTests extends TestBase {
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
                 .setNumber(LessonData.NUMBER)
-                .setTitle(LessonData.TITLE));
-        app.getLessonHelper().uploadLessonPhoto(LessonData.PHOTO);
+                .setTitle(LessonData.TITLE)
+                .setLessonPhoto(LessonData.PHOTO));
         app.getLessonHelper().clickSubmitAddLessonBtn();
 
         Assert.assertTrue(app.getLessonHelper().isErrorEmptyFieldMessagePopUpPresent());

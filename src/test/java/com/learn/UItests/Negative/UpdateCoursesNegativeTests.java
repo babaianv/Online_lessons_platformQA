@@ -68,7 +68,7 @@ public class UpdateCoursesNegativeTests extends TestBase {
     public void editCourseShortDescriptionNegTest() {
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
         app.getCourseHelper().clickOnEditCourseBtn();
-        app.getCourseHelper().changeCourseDesc(CourseData.DESCRIPTION_NEW);
+        app.getCourseHelper().changeCourseDesc(CourseData.DESCRIPTION_NEWS);
         app.getCourseHelper().clickOnSubmitEditCourseBtn();
 
         softAssert.assertEquals( "The description must be at least 300 characters long.", app.getCourseHelper().getCreateCourseError().getText());

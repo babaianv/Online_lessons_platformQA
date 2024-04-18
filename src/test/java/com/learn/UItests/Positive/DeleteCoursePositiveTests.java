@@ -27,8 +27,8 @@ public class DeleteCoursePositiveTests extends TestBase {
         app.getCourseHelper().fillCourseForm(new Course()
                 .setTitle(CourseData.TITLE)
                 .setPrice(CourseData.PRICE)
-                .setDescription(CourseData.DESCRIPTION));
-        app.getCourseHelper().uploadCoverPhoto(CourseData.PHOTO);
+                .setDescription(CourseData.DESCRIPTION)
+                .setPhotoPath(CourseData.PHOTO));
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
         app.getUserHelper().pause(3000);
     }

@@ -14,6 +14,8 @@ public class AddCourseToCartNegativeTests extends TestBase {
 
     SoftAssert softAssert = new SoftAssert();
 
+
+
     @Test(description = "API: Add already exists course to cart neg test")
     public void addAlreadyExistsCourseToCartNegTest(){
 

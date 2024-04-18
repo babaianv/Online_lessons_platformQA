@@ -88,22 +88,6 @@ public class GetCoursesPositiveTests extends TestBase {
 
     @Test(description = "API: Get all purchased Courses of user Positive Test")
     public void getCoursesPurchasedByUserPositiveTest() {
-        given()
-                .contentType("application/json")
-                .auth().oauth2(token)
-                .when()
-                .put("cart/add/1/3")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
-        given()
-                .contentType("application/json")
-                .auth().oauth2(token)
-                .when()
-                .put("cart/buy/1")
-                .then()
-                .assertThat().statusCode(200)
-                .extract().response();
 
         Response response = given()
                 .contentType("application/json")

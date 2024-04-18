@@ -41,8 +41,8 @@ public class CreateCoursePositiveTests extends TestBase {
         app.getCourseHelper().fillCourseForm(new Course()
                 .setTitle(CourseData.TITLE)
                 .setPrice(CourseData.PRICE)
-                .setDescription(CourseData.DESCRIPTION));
-        app.getCourseHelper().uploadCoverPhoto(CourseData.PHOTO);
+                .setDescription(CourseData.DESCRIPTION)
+                .setPhotoPath(CourseData.PHOTO));
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
 
         Assert.assertTrue(app.getCourseHelper().isCourseCreatedSuccessPopUpPresent());

@@ -35,6 +35,7 @@ public class CoursePurchasingPositiveTests extends TestBase {
         app.getCartHelper().clickOnCourseCard();
         app.getCartHelper().clickAddToCartBtn();
         app.getCartHelper().clickCartIcon();
+        app.getCartHelper().pause(1500);
         app.getCartHelper().clickOnPayCheckbox();
         app.getCartHelper().clickOnPayNowBtn();
         Assert.assertTrue(app.getCartHelper().isPaymentSuccessPopUpPresent());

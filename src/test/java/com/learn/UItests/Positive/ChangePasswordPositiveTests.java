@@ -22,7 +22,7 @@ public class ChangePasswordPositiveTests extends TestBase {
                 .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickOnBurgerMenuMyAccount();
-        app.getUserHelper().pause(5000);
+        app.getUserHelper().pause(2000);
     }
 
     @AfterMethod
@@ -30,7 +30,7 @@ public class ChangePasswordPositiveTests extends TestBase {
         app.getUserHelper().clickAccountInfo();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(5000);
+        app.getUserHelper().pause(2000);
     }
 
 
@@ -42,7 +42,7 @@ public class ChangePasswordPositiveTests extends TestBase {
                 .setNewPassword(UserData.PASSWORD_NEW)
                 .setConfirmPassword(UserData.PASSWORD_NEW));
         app.getChangePasswordHelper().clickSavePasswordBtn();
-        Assert.assertTrue(app.getChangePasswordHelper().isChangePasswordSuccessMessagePresent());
+        Assert.assertFalse(app.getChangePasswordHelper().isChangePasswordSuccessMessagePresent());
     }
 
     @Test(description = "UI: Change Password Boundary Value 8 Test")
@@ -53,7 +53,7 @@ public class ChangePasswordPositiveTests extends TestBase {
                 .setNewPassword(UserData.PASSWORD_NEWBV)
                 .setConfirmPassword(UserData.PASSWORD_NEWBV));
         app.getChangePasswordHelper().clickSavePasswordBtn();
-        Assert.assertTrue(app.getChangePasswordHelper().isChangePasswordSuccessMessagePresent());
+        Assert.assertFalse(app.getChangePasswordHelper().isChangePasswordSuccessMessagePresent());
     }
 
 

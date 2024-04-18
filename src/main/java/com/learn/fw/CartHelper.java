@@ -26,7 +26,7 @@ public class CartHelper extends BaseHelper {
     }
 
     public void clickOnCourseCard() {
-        click(By.cssSelector("a[href='/courses/1']"));
+        click(By.cssSelector("a[href='/courses/2']"));
     }
 
     public boolean isRemoveCourseFromCartSuccessPopUpPresent() {

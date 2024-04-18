@@ -18,7 +18,15 @@ public class DeleteCoursesFromCartPositiveTests extends TestBase {
                 .contentType("application/json")
                 .auth().oauth2(token)
                 .when()
-                .delete("cart/1/1")
+                .put("cart/add/1/2")
+                .then()
+                .assertThat().statusCode(200)
+                .extract().response();
+        given()
+                .contentType("application/json")
+                .auth().oauth2(token)
+                .when()
+                .delete("cart/1/2")
                 .then()
                 .assertThat().statusCode(200)
                 .extract().response();

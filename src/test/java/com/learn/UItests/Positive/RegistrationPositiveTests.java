@@ -23,7 +23,7 @@ public class RegistrationPositiveTests extends TestBase {
     }
 
     @Test(dataProvider = "getRegisterPositiveData", dataProviderClass = DataProviders.class)
-    public void regWithBoundaryValue8PasswordTest(User user){
+    public void regPositiveTests(User user){
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(user);
         app.getUserHelper().clickSubmitSignUpBtn();
