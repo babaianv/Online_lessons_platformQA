@@ -1,6 +1,7 @@
 package com.learn.UItests.Positive;
 
 import com.learn.UItests.TestBase;
+import com.learn.data.UserData;
 import com.learn.models.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -12,12 +13,12 @@ public class DeleteAccountPositiveTests extends TestBase {
     public void precondition(){
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testdel")
-                .setEmail("testdel@gmail.com")
-                .setPassword("Test1test1!"));
+                .setNickname(UserData.NICKNAME)
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickBurgerMenu();
-        app.getUserHelper().pause(5000);
+        app.getUserHelper().pause(3000);
     }
 
     @Test(description = "UI: Delete User Account")

@@ -30,9 +30,10 @@ public class CourseHelper extends BaseHelper {
     }
 
     public void fillCourseForm(Course course) {
+        typeFile(By.id("coverPhoto"), course.getPhotoPath());
+        type(By.cssSelector("#description"), course.getDescription());
         type(By.cssSelector("#title"), course.getTitle());
         type(By.cssSelector("#price"), course.getPrice());
-        type(By.cssSelector("#description"), course.getDescription());
     }
 
     public void clickOnSubmitCreateCourseBtn() {
@@ -75,20 +76,22 @@ public class CourseHelper extends BaseHelper {
         return isElementPresent(By.xpath("//div[contains(text(), 'No changes were made.')]"));
     }
 
-    public boolean isCreateCourseFailedPopUpPresent() {
-        return isElementPresent(By.xpath("//div[contains(text(), 'Failed to create the course.')]"));
-    }
-
-    public boolean isUploadPhotoErrorMessagePresent() {
-        return isElementPresent(By.xpath("//div[contains(text(), 'Failed to upload cover photo.')]"));
-    }
-
     public void removeCourseTitle() {
         clear(By.cssSelector("#title"));
     }
 
     public void removeCourseDescription() {
         clear(By.cssSelector("#title"));
+    }
+
+    public void changeCoursePrice(String price) {
+        clear(By.cssSelector("#price"));
+        type(By.cssSelector("#price"), price);
+    }
+
+    public void changeCourseDesc(String desc) {
+        clear(By.cssSelector("#description"));
+        type(By.cssSelector("#description"), desc);
     }
 }
 

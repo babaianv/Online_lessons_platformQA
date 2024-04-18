@@ -4,6 +4,17 @@ public class Course {
     private  String title;
     private  String price;
     private  String description;
+    private String photoPath;
+    private String error;
+
+    public String getError() {
+        return error;
+    }
+
+    public Course setError(String error) {
+        this.error = error;
+        return this;
+    }
 
     public Course setTitle(String title) {
         this.title = title;
@@ -20,6 +31,15 @@ public class Course {
         return this;
     }
 
+    public String getPhotoPath() {
+        return photoPath;
+    }
+
+    public Course setPhotoPath(String photoPath) {
+        this.photoPath = photoPath;
+        return this;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -30,5 +50,12 @@ public class Course {
 
     public String getDescription() {
         return description;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "title='" + title + '\'' +
+                '}';
     }
 }

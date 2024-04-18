@@ -1,5 +1,6 @@
 package com.learn.UItests.Positive;
 
+import com.learn.data.UserData;
 import com.learn.models.ChangePassword;
 import com.learn.UItests.TestBase;
 import com.learn.models.User;
@@ -16,9 +17,9 @@ public class ChangePasswordPositiveTests extends TestBase {
 
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testcpp")
-                .setEmail("testcpp@gmail.com")
-                .setPassword("Test1test1!"));
+                .setNickname(UserData.NICKNAME)
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().pause(5000);
@@ -37,9 +38,9 @@ public class ChangePasswordPositiveTests extends TestBase {
     public void changePasswordPositiveTest(){
         app.getChangePasswordHelper().clickChangePasswordLink();
         app.getChangePasswordHelper().fillChangePasswordForm(new ChangePassword()
-                .setOldPassword("Test1test1!")
-                .setNewPassword("Test2test2!")
-                .setConfirmPassword("Test2test2!"));
+                .setOldPassword(UserData.PASSWORD)
+                .setNewPassword(UserData.PASSWORD_NEW)
+                .setConfirmPassword(UserData.PASSWORD_NEW));
         app.getChangePasswordHelper().clickSavePasswordBtn();
         Assert.assertTrue(app.getChangePasswordHelper().isChangePasswordSuccessMessagePresent());
     }
@@ -48,9 +49,9 @@ public class ChangePasswordPositiveTests extends TestBase {
     public void changePasswordBoundaryValue8Test(){
         app.getChangePasswordHelper().clickChangePasswordLink();
         app.getChangePasswordHelper().fillChangePasswordForm(new ChangePassword()
-                .setOldPassword("Test1test1!")
-                .setNewPassword("Test123!")
-                .setConfirmPassword("Test123!"));
+                .setOldPassword(UserData.PASSWORD)
+                .setNewPassword(UserData.PASSWORD_NEWBV)
+                .setConfirmPassword(UserData.PASSWORD_NEWBV));
         app.getChangePasswordHelper().clickSavePasswordBtn();
         Assert.assertTrue(app.getChangePasswordHelper().isChangePasswordSuccessMessagePresent());
     }

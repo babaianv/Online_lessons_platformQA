@@ -9,7 +9,7 @@
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>src/test_logs/log-${bySecond}.log</file>
         <append>true</append>
-        <maxHistory>30</maxHistory>
+        <maxHistory>3</maxHistory>
         <immediateFlush>true</immediateFlush>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
