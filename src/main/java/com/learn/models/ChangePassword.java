@@ -31,4 +31,13 @@ public class ChangePassword {
     public String getConfirmPassword() {
         return confirmPassword;
     }
+
+    @Override
+    public String toString() {
+        return "ChangePassword{" +
+                "oldPassword='" + oldPassword + '\'' +
+                ", newPassword='" + newPassword + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                '}';
+    }
 }

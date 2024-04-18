@@ -1,6 +1,7 @@
 package com.learn.UItests.Positive;
 
 import com.learn.UItests.TestBase;
+import com.learn.data.UserData;
 import com.learn.models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -14,9 +15,9 @@ public class CoursePurchasingPositiveTests extends TestBase {
 
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testcart")
-                .setEmail("testcart@gmail.com")
-                .setPassword("Test1test1!"));
+                .setNickname(UserData.NICKNAME)
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().pause(5000);
     }

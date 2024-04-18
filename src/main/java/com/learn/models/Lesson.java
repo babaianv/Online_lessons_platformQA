@@ -42,5 +42,13 @@ public class Lesson {
     public String getLessonPhoto() {
         return lessonPhoto;
     }
+
+    @Override
+    public String toString() {
+        return "Lesson{" +
+                "number='" + number + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
 

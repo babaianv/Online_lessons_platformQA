@@ -1,6 +1,7 @@
 package com.learn.UItests.Positive;
 
 import com.learn.UItests.TestBase;
+import com.learn.data.UserData;
 import com.learn.models.User;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,24 +17,24 @@ public class LogoutPositiveTest extends TestBase {
 
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testlogout")
-                .setEmail("testlogout@gmail.com")
-                .setPassword("Test1test1!"));
+                .setNickname(UserData.NICKNAME)
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
-        app.getUserHelper().pause(5000);
+        app.getUserHelper().pause(3000);
     }
 
     @AfterMethod
     public void clean(){
         app.getUserHelper().clickOnLoginBtn();
         app.getUserHelper().fillLoginForm(new User()
-                .setEmail("testlogout@gmail.com")
-                .setPassword( "Test1test1!"));
+                .setEmail(UserData.EMAIL)
+                .setPassword( UserData.PASSWORD));
         app.getUserHelper().clickSubmitLoginBtn();
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
         app.getUserHelper().isAlertAppears();
-        app.getUserHelper().pause(5000);
+        app.getUserHelper().pause(3000);
     }
 
     @Test(description = "Logout Positive Test")

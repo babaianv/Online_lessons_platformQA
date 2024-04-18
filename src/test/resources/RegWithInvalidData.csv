@@ -1,0 +1,15 @@
+Te,shortnick@gmail.com,Test1test1!,Invalid nickname format
+Testnegat123,longnick@gmail.com,Test1test1!,Invalid nickname format
+12345,numbersnickk@gmail.com,Test1test1!,Invalid nickname format
+Test#$,imvalidsymnick@gmail.com,Test1test1!,Invalid nickname format
+*#$%)#,onlysymbnick@gmail.com,Test1test1!,Invalid nickname format
+testus,test11gmail.com,Test1test1!,Invalid email format
+Testreg11,shortpass@gmail.com,Test12!,Invalid password format
+TestSh,passnumbers@gmail.com,123456789,Invalid password format
+Test_let,onlyletpass@gmail.com,Testtest,Invalid password format
+Test_PW,onlysympass@gmail.com,!$#%!$#%,Invalid password format
+PassSymb,invalsymon@gmail.com,*@@.)&?-=,Invalid password format
+TestUp,uppercase@gmail.com,TEST1TEST1!,Invalid password format
+TestLow,lowcase@gmail.com,test1test1!,Invalid password format
+testnegp,testnosym@gmail.com,Test1test1,Invalid password format
+test_pass,testnonum@gmail.com,Testtest!,Invalid password format

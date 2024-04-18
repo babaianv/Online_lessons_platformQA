@@ -57,7 +57,7 @@ public class UserHelper extends BaseHelper {
     }
 
     public boolean isDeleteAccountSuccessPopUpPresent() {
-        return isElementPresent(By.xpath("//div[contains(text(), 'User Testdel deleted')]"));
+        return isElementPresent(By.xpath("//div[contains(text(), 'User Testval deleted')]"));
     }
 
     public boolean isRegisterSuccessPopUpPresent() {

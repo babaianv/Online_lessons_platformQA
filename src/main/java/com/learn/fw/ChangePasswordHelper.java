@@ -28,8 +28,8 @@ public class ChangePasswordHelper extends BaseHelper {
         return isElementPresent(By.cssSelector("#success"));
     }
 
-    public boolean isChangePasswordErrorMessagePresent() {
-        return isElementPresent(By.cssSelector("#error"));
+    public boolean isChangePasswordSuccessPopupPresent() {
+        return isElementPresent(By.xpath("//div[contains(text(), 'Password changed successfully')]"));
     }
 }
 

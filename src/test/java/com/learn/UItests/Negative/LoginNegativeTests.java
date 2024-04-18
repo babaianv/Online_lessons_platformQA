@@ -1,11 +1,14 @@
 package com.learn.UItests.Negative;
 
 import com.learn.UItests.TestBase;
+import com.learn.data.UserData;
+import com.learn.fw.DataProviders;
 import com.learn.models.User;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 
 public class LoginNegativeTests extends TestBase {
 
@@ -16,9 +19,9 @@ public class LoginNegativeTests extends TestBase {
         app.getUserHelper().pause(3000);
         app.getUserHelper().clickOnSignUpBtn();
         app.getUserHelper().fillRegisterForm(new User()
-                .setNickname("Testlogn")
-                .setEmail("testlogn@gmail.com")
-                .setPassword("Test1test1!"));
+                .setNickname(UserData.NICKNAME)
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitSignUpBtn();
         app.getUserHelper().clickBurgerMenuLogoutBtn();
     }
@@ -26,8 +29,8 @@ public class LoginNegativeTests extends TestBase {
     @AfterMethod
     public void clean(){
         app.getUserHelper().fillLoginForm(new User()
-                .setEmail("testlogn@gmail.com")
-                .setPassword("Test1test1!"));
+                .setEmail(UserData.EMAIL)
+                .setPassword(UserData.PASSWORD));
         app.getUserHelper().clickSubmitLoginBtn();
         app.getUserHelper().clickOnBurgerMenuMyAccount();
         app.getUserHelper().clickOnDeleteAccountBtn();
@@ -35,12 +38,22 @@ public class LoginNegativeTests extends TestBase {
         app.getUserHelper().pause(3000);
     }
 
-    @Test(description = "UI: Login with wrong Email NEG Test ")
-    public void loginWithWrongEmailNegTest(){
+
+    @Test(dataProvider = "getLoginEmptyData", dataProviderClass = DataProviders.class)
+    public void loginNegativeEmptyDataTests(User user){
         app.getUserHelper().clickOnLoginBtn();
-        app.getUserHelper().fillLoginForm(new User()
-                .setEmail("testwrong@gmail.com")
-                .setPassword("Test1test1!"));
+        app.getUserHelper().fillLoginForm(user);
+        app.getUserHelper().clickSubmitLoginBtn();
+
+        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
+        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
+        softAssert.assertAll();
+    }
+
+    @Test(dataProvider = "getLoginInvalidData", dataProviderClass = DataProviders.class)
+    public void loginNegativeTests(User user){
+        app.getUserHelper().clickOnLoginBtn();
+        app.getUserHelper().fillLoginForm(user);
         app.getUserHelper().clickSubmitLoginBtn();
 
         softAssert.assertTrue(app.getUserHelper().isLoginErrorIncorrectPopUpPresent());
@@ -48,43 +61,6 @@ public class LoginNegativeTests extends TestBase {
         softAssert.assertAll();
     }
 
-
-//    @Test(description = "UI: Login with empty Email NEG Test")
-//    public void loginWithEmptyEmailNegTest(){
-//        app.getUserHelper().clickOnLoginBtn();
-//        app.getUserHelper().fillLoginForm(new User()
-//                .setPassword("Test1test1!"));
-//        app.getUserHelper().clickSubmitLoginBtn();
-//
-//        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
-//        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
-//        softAssert.assertAll();
-//    }
-
-    @Test(description = "UI: Login With Wrong Password Neg Test")
-    public void loginWithWrongPasswordNegTest(){
-        app.getUserHelper().clickOnLoginBtn();
-        app.getUserHelper().fillLoginForm(new User()
-                .setEmail("testlogn@gmail.com")
-                .setPassword("Test1wrong1!"));
-        app.getUserHelper().clickSubmitLoginBtn();
-
-        softAssert.assertTrue(app.getUserHelper().isLoginErrorIncorrectPopUpPresent());
-        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
-        softAssert.assertAll();
-    }
-
-//    @Test(description = "UI: Login With empty Password NEG Test")
-//    public void loginWithEmptyPasswordNegTest(){
-//        app.getUserHelper().clickOnLoginBtn();
-//        app.getUserHelper().fillLoginForm(new User()
-//                .setEmail("testwrong@gmail.com"));
-//        app.getUserHelper().clickSubmitLoginBtn();
-//
-//        softAssert.assertTrue(app.getUserHelper().isLoginErrorEmptyPopUpPresent());
-//        softAssert.assertFalse(app.getUserHelper().isBurgerMenuPresent());
-//        softAssert.assertAll();
-//    }
 
 }
 
