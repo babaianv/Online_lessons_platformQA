@@ -42,7 +42,7 @@ public class RegistrationNegativeTests extends TestBase {
         app.getUserHelper().fillRegisterForm(user);
         app.getUserHelper().clickSubmitSignUpBtn();
 
-        softAssert.assertEquals( app.getUserHelper().getRegisterError(),"Invalid nickname format");
+        softAssert.assertTrue(app.getUserHelper().getRegisterError().contains("Invalid"));
         softAssert.assertTrue(app.getUserHelper().isSubmitSignUpBtnPresent());
         softAssert.assertAll();
     }

@@ -17,7 +17,14 @@ public class BuyCourseNegativeTests extends TestBase {
 
     @Test(description = "API: Course has already been purchased neg test")
     public void courseAlreadyPurchasedNegTest(){
-
+        given()
+                .contentType("application/json")
+                .auth().oauth2(token)
+                .when()
+                .put("cart/add/1/3")
+                .then()
+                .assertThat().statusCode(200)
+                .extract().response();
         Response response = given()
                 .contentType("application/json")
                 .auth().oauth2(token)
@@ -36,6 +43,14 @@ public class BuyCourseNegativeTests extends TestBase {
 
     @Test(description = "API: Purchase course with a non-existent cart neg test")
     public void purchaseCourseInNonExistentCartNegTest(){
+        given()
+                .contentType("application/json")
+                .auth().oauth2(token)
+                .when()
+                .put("cart/add/1/4")
+                .then()
+                .assertThat().statusCode(200)
+                .extract().response();
         Response response = given()
                 .contentType("application/json")
                 .auth().oauth2(token)
@@ -54,6 +69,15 @@ public class BuyCourseNegativeTests extends TestBase {
 
     @Test(description = "API: Purchase course without Auth neg test")
     public void purchaseCourseWithoutAuthNegTest(){
+        given()
+                .contentType("application/json")
+                .auth().oauth2(token)
+                .when()
+                .put("cart/add/1/4")
+                .then()
+                .assertThat().statusCode(200)
+                .extract().response();
+
         Response response = given()
                 .contentType("application/json")
                 .when()
@@ -66,7 +90,7 @@ public class BuyCourseNegativeTests extends TestBase {
         Assert.assertEquals(forbiddenError.getError(), "Forbidden");
     }
 
-    @AfterSuite
+    @AfterMethod
     public void clean(){
         given()
                 .contentType("application/json")

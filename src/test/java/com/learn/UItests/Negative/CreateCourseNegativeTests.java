@@ -14,7 +14,6 @@ import org.testng.asserts.SoftAssert;
 
 public class CreateCourseNegativeTests extends TestBase {
 
-    SoftAssert softAssert = new SoftAssert();
 
     @BeforeMethod
     public void precondition(){

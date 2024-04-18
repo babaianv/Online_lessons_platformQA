@@ -28,8 +28,8 @@ public class CreateLessonsPositiveTests extends TestBase {
         app.getCourseHelper().fillCourseForm(new Course()
                 .setTitle(CourseData.TITLE)
                 .setPrice(CourseData.PRICE)
-                .setDescription(CourseData.DESCRIPTION));
-        app.getCourseHelper().uploadCoverPhoto(CourseData.PHOTO);
+                .setDescription(CourseData.DESCRIPTION)
+                .setPhotoPath(CourseData.PHOTO));
         app.getCourseHelper().clickOnSubmitCreateCourseBtn();
         app.getCourseHelper().clickOnMyCreatedCoursesLink();
         app.getUserHelper().pause(3000);
@@ -47,10 +47,10 @@ public class CreateLessonsPositiveTests extends TestBase {
     public void createLessonPositiveTest(){
         app.getLessonHelper().clickOnAddLessonBtn();
         app.getLessonHelper().fillLessonForm(new Lesson()
+                .setLessonPhoto(LessonData.PHOTO)
                 .setNumber(LessonData.NUMBER)
                 .setTitle(LessonData.TITLE)
                 .setContent(LessonData.CONTENT));
-        app.getLessonHelper().uploadLessonPhoto(LessonData.PHOTO);
         app.getLessonHelper().clickSubmitAddLessonBtn();
 
         Assert.assertTrue(app.getLessonHelper().isSuccessAddLessonPopUpPresent());

@@ -93,5 +93,10 @@ public class CourseHelper extends BaseHelper {
         clear(By.cssSelector("#description"));
         type(By.cssSelector("#description"), desc);
     }
+
+    public void changeCourseTitle(String title) {
+        clear(By.cssSelector("#title"));
+        type(By.cssSelector("#title"), title);
+    }
 }
 
