@@ -46,8 +46,8 @@ In TestLink, requirements were entered, a test plan was created, and test cases 
 <ul>
   <li><a href="https://docs.google.com/spreadsheets/d/1Iv8FBbw5Wq2YfuaBKhIHxDvuJNV0Ul1Z/edit?usp=drive_web&ouid=104174358876654605216&rtpof=true" target="_blank">General Test Plan Metrics</a></li>
   <li><a href="https://docs.google.com/spreadsheets/d/1RhG0RcqCOEtva9K5xUKhKp3Vb_kdc7Wk/edit#gid=2089969486" target="_blank">Test result matrix</a></li>
-  <li><a href="https://drive.google.com/drive/folders/1cU6qs00lWLdul23_okeyLs7D1V1DwrhE" target="_blank">Example of Positive Test Case</a></li> 
-  <li><a href="https://drive.google.com/drive/folders/1cU6qs00lWLdul23_okeyLs7D1V1DwrhE" target="_blank">Example of Negative Test Case</a></li> 
+  <li><a href="https://drive.google.com/file/d/1utALx4iZsQdNlKHmcr9XwJxd1E7E-4Fi/view?usp=sharing" target="_blank">Example of Positive Test Case</a></li> 
+  <li><a href="https://drive.google.com/file/d/1gWPiQTj2Y8I8vz7vmoY-9iHHvbkFyvbQ/view?usp=sharing" target="_blank">Example of Negative Test Case</a></li> 
 </ul>
 
 ---
