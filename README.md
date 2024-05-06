@@ -28,7 +28,7 @@ I chose to do UI testing with Selenium along with the Value Object Module approa
   <li><a href="https://docs.google.com/document/d/1EMd2ddNjRm1-IBK_kJ-7-L0MKCk5d89pSazEED2Zwpo/edit" target="_blank">Test plan</a></li>
   <li><a href="https://drive.mindmup.com/map/1tVoHbt4kEinCuAX-t31Nyrd_RCJXcowA" target="_blank">Mind map</a></li>
   <li><a href="https://docs.google.com/spreadsheets/d/16isSIZwTCewDa6AofON1k2LK6I9sBLj8KcSNO0Db36g/edit#gid=0" target="_blank">Decision table</a></li>
-  <li><a href="https://docs.google.com/spreadsheets/d/1AeaZ7UqhTECI3YJkomPDHCYZVAxc9r1kW0b3JP9bUf0/edit#gid=0" target="_blank">State Transition Diagram</a></li>
+  <li><a href="https://drive.google.com/file/d/19T8r5vgCZRRUi72o5VhScxYdH9LPSUlN/view?usp=sharing" target="_blank">State Transition Diagram</a></li>
   <li><a href="https://docs.google.com/spreadsheets/d/1AeaZ7UqhTECI3YJkomPDHCYZVAxc9r1kW0b3JP9bUf0/edit#gid=0" target="_blank">State Transition Analysis</a></li>
 </ul>
 
