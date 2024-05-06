@@ -86,7 +86,7 @@ In TestLink, requirements were entered, a test plan was created, and test cases 
 
 ---
 
-I also used [Jenkins](https://drive.google.com/drive/folders/1cU6qs00lWLdul23_okeyLs7D1V1DwrhE) for continuous integration (CI), which helps automate and manage the software development lifecycle.
+I also used [Jenkins](https://drive.google.com/file/d/1cFxItZW8l65Os2WKmstv1-zLYYRWFnkY/view?usp=sharing) for continuous integration (CI), which helps automate and manage the software development lifecycle.
 
 ---
 
