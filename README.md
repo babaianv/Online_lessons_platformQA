@@ -5,17 +5,30 @@ This project aims to create a user-friendly and efficient platform for both lear
 Key features include user registration and authentication, user profiles, course and lesson creation, course search, course purchase, and interactive learning materials.
 
 <h3>Key Features:</h3>
-1. User Authentication and Profiles:
-Users can register on the platform using a nickname, email, and password.
-2. Authentication occurs via entering credentials.
-User profiles are categorized into Admin, Registered User, and Guest.
-3. Course and Lesson Creation
-Authenticated users can create new courses and lessons, adding descriptions and course materials.
-Multimedia materials, downloadable files, and other educational resources can be included.
-If a course is purchased, the user who created it receives a percentage of the course sale.
-4. Course Search and Purchase
-All users can view available courses.
-Authenticated users can purchase courses.
+<ol>
+  <li>User Authentication and Profiles:
+    <ul>
+      <li>Users can register on the platform using a nickname, email, and password.</li>
+      <li>Authentication occurs via entering credentials.</li>
+      <li>User profiles are categorized into Admin, Registered User, and Guest.</li>
+    </ul>
+  </li>
+  <li>Course and Lesson Creation
+    <ul>
+      <li>Authenticated users can create new courses and lessons, adding descriptions and course materials.</li>
+      <li>Multimedia materials, downloadable files, and other educational resources can be included.</li>
+      <li>If a course is purchased, the user who created it receives a percentage of the course sale.</li>
+    </ul>
+  </li>
+  <li>Course Search and Purchase
+    <ul>
+      <li>All users can view available courses.</li>
+      <li>Authenticated users can purchase courses.</li>
+      <li>Authenticated users can purchase courses.</li>
+    </ul>
+  </li>
+</ol>
+
 
 ---
 
